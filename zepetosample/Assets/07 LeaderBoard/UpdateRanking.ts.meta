@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: 73d94e30b748e7841b3a1a7a2e8c3ddc
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst SetScoreExample_1 = require(\"./SetScoreExample\");\r\nvar
+    cs;\r\nclass UpdateRanking extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n   
+    OnTriggerEnter(coll) {\r\n        if (coll.GetComponent($typeof(UnityEngine_1.CharacterController))
+    != null) {\r\n            //SetScoreExample.getInstance().Init();\r\n           
+    //cs = this.clientStarter.GetComponent<ClientStarter>();\r\n            //cs.updateRankingBoard(this.text.GetComponent<Text>());\r\n           
+    SetScoreExample_1.default.getInstance().updateRankingBoard();\r\n        }\r\n   
+    }\r\n}\r\nexports.default = UpdateRanking;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVXBkYXRlUmFua2luZy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlVwZGF0ZVJhbmtpbmcudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBd0U7QUFHeEUsaURBQXFEO0FBR3JELHVEQUFnRDtBQUVoRCxJQUFJLEVBQUUsQ0FBQztBQUNQLE1BQXFCLGFBQWMsU0FBUSxxQ0FBcUI7SUFNNUQsY0FBYyxDQUFDLElBQWM7UUFFekIsSUFBRyxJQUFJLENBQUMsWUFBWSxTQUFDLGlDQUFtQixNQUFPLElBQUksRUFDbkQ7WUFDSSx1Q0FBdUM7WUFDdkMsd0RBQXdEO1lBQ3hELHdEQUF3RDtZQUV4RCx5QkFBZSxDQUFDLFdBQVcsRUFBRSxDQUFDLGtCQUFrQixFQUFFLENBQUM7U0FDdEQ7SUFDTCxDQUFDO0NBRUo7QUFsQkQsZ0NBa0JDIn0=","assetPath":"Assets/LeaderBoard/UpdateRanking.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"text","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"clientStarter","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"UpdateRanking","description":""},"isCompiled":true}'
+  typescriptHash: bb02d2fd8f648c4c586417d82313167f
