@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: 505dfbea70a0a0c4b908883275c42bb6
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst Timer_1 = require(\"./Timer\");\r\nclass
+    TimerOn extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    OnTriggerEnter(coll)
+    {\r\n        if (coll.gameObject.name == $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name)
+    {\r\n            this.script.GetComponent($typeof(Timer_1.default)).timerOn =
+    true;\r\n            console.log(\"timer on\");\r\n        }\r\n    }\r\n}\r\nexports.default
+    = TimerOn;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGltZXJPbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlRpbWVyT24udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSw2Q0FBNkU7QUFDN0UsNkVBQTREO0FBQzVELGlEQUFxRDtBQUNyRCxtQ0FBNEI7QUFHNUIsTUFBcUIsT0FBUSxTQUFRLHFDQUFxQjtJQU10RCxjQUFjLENBQUMsSUFBYTtRQUN4QixJQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsSUFBSSxJQUFFLGdEQUF1QixtQkFBbUIsQ0FBMUMsMkNBQWEsQ0FBQyxRQUFRLEVBQXFCLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsTUFBTSxFQUFFLFNBQVMsQ0FBQyxJQUFJLEVBQUM7WUFDdkksSUFBSSxDQUFDLE1BQU0sQ0FBQyxZQUFZLFNBQUMsZUFBSyxHQUFJLE9BQU8sR0FBQyxJQUFJLENBQUM7WUFDL0MsT0FBTyxDQUFDLEdBQUcsQ0FBQyxVQUFVLENBQUMsQ0FBQztTQUMzQjtJQUVMLENBQUM7Q0FFSjtBQWRELDBCQWNDIn0=","assetPath":"Assets/01
+    Timer/script/TimerOn.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"script","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"TimerOn","description":""},"isCompiled":true}'
+  typescriptHash: 262b131c9d6634674a074319bf7ee69f
