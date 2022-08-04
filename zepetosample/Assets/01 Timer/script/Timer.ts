@@ -6,69 +6,37 @@ import { MinMaxAttribute } from 'UnityEngine.Rendering.PostProcessing';
 export default class Timer extends ZepetoScriptBehaviour {
 
     public ClockText:GameObject;
-    public timer: float;
+    public timer: float=0;
     public timeSpeed: float = 1;
-    public timerOn:bool=false;
-    public timerOff:bool=false;
-    public timerRestart:bool=false;
-    public timerPause : bool = false;
+    private timerOn:boolean = false;
+    private timerPause : boolean = false;
     private min:number;
     private sec:number
 
-    Awake(){
-        this.timer = 0;
-        this.timerOn = false;
-        if(this.timerOn==false){
-            console.log("timerOff");
-        }else console.log("timerOn");
+    Start(){this.timer = 0;}
+    Update(){
+        if(this.timerOn==true){
+            if(this.timerPause==true){
+                this.timer+=0;
+                this.ClockText.GetComponent<Text>().text = this.TimerCalc();
+                return 0;
+            }else if(this.timerPause==false){
+                this.timer+=Time.deltaTime*this.timeSpeed;
+                this.ClockText.GetComponent<Text>().text = this.TimerCalc();
+                return 0;
+            }
+
+        }else if(this.timerOn ==false ){ this.timer=0; }
     }
-
-    FixedUpdate(){
-
-        if(this.timerOn&&this.timerPause==false){
-
-            this.timer+=Time.deltaTime*this.timeSpeed;
-            this.ClockText.GetComponent<Text>().text = this.TimerCalc();
-            console.log("타이머 진행중");
-            // <text> : <> 안에있는 내용은 받아올 component
-            // ().text : ()다음에 있는 내용은 받아올 compoenent의 내용
-        }
-        else if( this.timerPause==true&&this.timerOn==true&&this.timerRestart==false&&this.timerOff==false){
-            this.timer +=0;
-            this.ClockText.GetComponent<Text>().text = this.TimerCalc();
-            console.log("일시정지 "+this.timer);
-        }
-        else if(this.timerPause==false && this.timerOn==true&&this.timerRestart==true&&this.timerOff==false){
-            this.timer+=Time.deltaTime*this.timeSpeed;
-            this.ClockText.GetComponent<Text>().text = this.TimerCalc();
-        }
-        else if(this.timerOff==true){
-            this.timer=0;
-            this.ClockText.GetComponent<Text>().text = this.TimerCalc();
-        }
-
-
-
-    }
-
     TimerCalc(){
         this.sec = Math.floor(this.timer%60);
         this.min = Math.floor((this.timer/60));
-
         return this.min+" : " + this.sec;
     }
-
-    getTimerOn():bool {
-        return this.timerOn;
-    }
-
-    //public setTimerOn(timeron:bool){
-    //    this.timerOn=timeron;
-    //}
-    //public setTimerPause(timerp:bool){
-    //    this.timerPause=timerp;
-    //}
-
-
-
+    getTimerOn() : boolean {return this.timerOn;}
+    public setTimerOn(timer:boolean){this.timerOn = timer;}
+    public SetTimerPause(timer:boolean){this.timerPause = timer;}
+    public GetTimerPause():boolean{return this.timerPause;}
+    GetTime() : float {return this.timer;}
+    
 }

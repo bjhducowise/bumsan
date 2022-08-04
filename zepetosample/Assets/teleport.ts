@@ -1,9 +1,13 @@
-import { Collider, Color, GameObject, Material, Mesh, MeshRenderer, Quaternion, Vector3} from 'UnityEngine'
+import { Collider, Color, GameObject, Material, Mesh, MeshRenderer, Quaternion} from 'UnityEngine'
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { ZepetoCharacter,ZepetoPlayer,ZepetoPlayers } from 'ZEPETO.Character.Controller';
 import QuarterViewController from './ZepetoScripts/QuarterView/QuarterViewController';
+import ClientStarter from './ZepetoScripts/Multiplay/ClientStarter';
+import { ThemeStyleSheet } from 'UnityEngine.UIElements';
+import {Vector3} from 'ZEPETO.Multiplay.Schema'
 
 export default class teleport extends ZepetoScriptBehaviour {
+    
     
 
     public oj:GameObject;
@@ -11,6 +15,8 @@ export default class teleport extends ZepetoScriptBehaviour {
     private zepetoCharacter: ZepetoCharacter;
     public mat:Material;
     private clone: GameObject;
+    public cs:GameObject;
+    
     
     Start() 
     {    
@@ -34,7 +40,12 @@ export default class teleport extends ZepetoScriptBehaviour {
 
     playerTeleport(){
         this.zepetoCharacter.Teleport(this.targetpoint.transform.position,Quaternion.identity);
+        this.cs.GetComponent<ClientStarter>().r_Teleport(this.targetpoint.transform.position);
 
     }
+    
+    
+
+    
     
 }

@@ -13,7 +13,7 @@ export default class TimerOn extends ZepetoScriptBehaviour {
 
     OnTriggerEnter(coll:Collider){
         if(coll.gameObject.name==ZepetoPlayers.instance.GetPlayerWithUserId(ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name){
-            this.script.GetComponent<Timer>().timerOn=true;
+            this.script.GetComponent<Timer>().setTimerOn(true);
             console.log("timer on");
         }
         
