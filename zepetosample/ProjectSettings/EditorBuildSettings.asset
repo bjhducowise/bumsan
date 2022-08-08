@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/bumsan.unity
     guid: 022844c594831294b968fa1bdcd36616
+  - enabled: 0
+    path: Assets/Scenes/SideView/SideView.unity
+    guid: 426ca890541e94966bcb62f85974075d
   m_configObjects:
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 09cac3b0e41604dacab6217291fdc87b, type: 2}

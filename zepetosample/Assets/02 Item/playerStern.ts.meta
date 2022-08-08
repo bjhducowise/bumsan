@@ -1,0 +1,42 @@
+fileFormatVersion: 2
+guid: 6a6360ee97aa41e448d526555bef8fb1
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine = require(\"UnityEngine\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\n//import { Vector3 } from ''ZEPETO.Multiplay.Schema'';\r\nclass
+    playerStern extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n       
+    this.timer = 0;\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            //this.playerController = ZepetoPlayers.instance.GetPlayerWithUserId(ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.gameObject.GetComponent<PlayerController>();\r\n       
+    });\r\n    }\r\n    OnTriggerEnter(coll) {\r\n        if (coll.gameObject.name
+    == $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name)
+    {\r\n            //ZepetoPlayers.instance.GetPlayerWithUserId(ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.StopMoving();\r\n       
+    }\r\n        while (this.timer < 5000) {\r\n            this.timer += UnityEngine.Time.deltaTime;\r\n           
+    $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.StopMoving();\r\n           
+    //ZepetoPlayers.instance.GetPlayerWithUserId(ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.Teleport(new
+    UnityEngine.Vector3(0,0,0),new UnityEngine.Quaternion(0,0,0,0));\r\n           
+    //ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.gameObject.transform.position
+    = new UnityEngine.Vector3(0,0,0);\r\n        }\r\n        this.timer = 0;\r\n   
+    }\r\n}\r\nexports.default = playerStern;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGxheWVyU3Rlcm4uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJwbGF5ZXJTdGVybi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCwyQ0FBMEM7QUFDMUMsNkVBQTZFO0FBRTdFLG9EQUFvRDtBQUNwRCxNQUFxQixXQUFZLFNBQVEscUNBQXFCO0lBRzFELEtBQUs7UUFDRCxJQUFJLENBQUMsS0FBSyxHQUFDLENBQUMsQ0FBQztRQUNiLDJDQUFhLENBQUMsUUFBUSxDQUFDLGtCQUFrQixDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDdkQsbUxBQW1MO1FBQ3ZMLENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUVELGNBQWMsQ0FBQyxJQUEwQjtRQUNyQyxJQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsSUFBSSxJQUFFLGdEQUF1QixtQkFBbUIsQ0FBMUMsMkNBQWEsQ0FBQyxRQUFRLEVBQXFCLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsTUFBTSxFQUFFLFNBQVMsQ0FBQyxJQUFJLEVBQUM7WUFDdkksNEhBQTRIO1NBQy9IO1FBQ0QsT0FBTSxJQUFJLENBQUMsS0FBSyxHQUFDLElBQUksRUFBQztZQUNsQixJQUFJLENBQUMsS0FBSyxJQUFHLFdBQVcsQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDO1lBQ3hDLGdEQUF1QixtQkFBbUIsQ0FBMUMsMkNBQWEsQ0FBQyxRQUFRLEVBQXFCLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsTUFBTSxFQUFFLFNBQVMsQ0FBQyxVQUFVLEVBQUUsQ0FBQztZQUMxSCw0TEFBNEw7WUFDNUwsMkhBQTJIO1NBQzlIO1FBQ0QsSUFBSSxDQUFDLEtBQUssR0FBQyxDQUFDLENBQUM7SUFDakIsQ0FBQztDQUNKO0FBdEJELDhCQXNCQyJ9","assetPath":"Assets/02
+    Item/playerStern.ts","manifest":{"properties":[],"name":"playerStern","description":""},"isCompiled":true}'
+  typescriptHash: 94123f9f1646157bf4295bce23b25061
+  onlyWriteTrigger: 0

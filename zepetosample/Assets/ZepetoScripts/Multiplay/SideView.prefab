@@ -1,0 +1,184 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1523994660379894542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1523994660379894547}
+  - component: {fileID: 1523994660379894544}
+  - component: {fileID: 1523994660379894545}
+  m_Layer: 0
+  m_Name: SideView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1523994660379894547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523994660379894542}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -21, y: 0.25, z: 20.08}
+  m_LocalScale: {x: 28.346155, y: 28.346155, z: 28.346155}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1523994660379894544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523994660379894542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: ed4b49729e9cff74eaca6c0a50d1f561, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 27c7a978-5d82-4062-bfa9-4c407a55aa7d
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9a5c77fa-ba4d-4828-823e-6f64ff4c446b
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 487d92de-4c03-464c-b737-6d420d30e672
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e0b0395b-f40e-40d7-995d-1da42d6ad37c
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 98b88956-1e64-484f-b84a-47f8aa9b732d
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e90623ef-d0e2-4dc9-bf92-a5e5ea568453
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 95f81e1e-63f5-4ab3-a218-4f3e612a917b
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 398fb37d-0897-4fcf-a4fb-6bed8957f971
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 89b24f84-80f6-4f12-9d8c-3a89115c5942
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fb60bc27-0642-426b-9d7e-6de76599a21a
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d30b9fac-c9ba-4a63-bf2f-0835af5fc0dc
+    m_ActionName: Camera/Scroll[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 31791c93-f296-4dc2-8794-7510f3eae5d8
+    m_ActionName: Camera/PrimaryTouchPosition[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f099c9db-ebcd-4149-b260-c41ce97af943
+    m_ActionName: Camera/PrimaryTouchContact[/Mouse/press]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 32b9e46b-6eaf-4fe3-bd51-74323bce748d
+    m_ActionName: Camera/SecondaryTouchPosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 247648de-6132-458d-adc9-384eb3f74019
+    m_ActionName: Camera/SecondaryTouchContact
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4c140fc2-3def-4454-a316-a26913418e29
+    m_ActionName: Camera/TertiaryTouchPosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d375215d-fd6c-42f1-91e7-715a85fe69fe
+    m_ActionName: Camera/TertiaryTouchContact
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e1d949b7-74e4-4ee4-8c5b-c655b34deff2
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 30e1fadc-1ce2-4dc7-ad9b-ae256c50faa4
+    m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b1fee90d-da43-4bc5-b4e0-0dc3c25f829e
+    m_ActionName: Player/DoubleJump[/Keyboard/leftShift]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 138f5c9d-f486-4eda-a17e-64bb49c79a6e
+    m_ActionName: Player/PrimaryTouchContact[/Mouse/press]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 937e256f-ae0e-4062-b199-fbd77466bbdc
+    m_ActionName: Player/PrimaryTouchPosition[/Mouse/position]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &1523994660379894545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523994660379894542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - customCamera
+    - cameraDistance
+    - InputAsset
+    - text1
+    unityValues:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: -944628639613478452, guid: ed4b49729e9cff74eaca6c0a50d1f561, type: 3}
+    - {fileID: 0}
+    values:
+    - 
+    - '{"type":"System.Single, mscorlib","value":"10"}'
+    - 
+    - 
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0bb953ecb45eac4283730ed25948836, type: 3}
+    isExpaned: 0

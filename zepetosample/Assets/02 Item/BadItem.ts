@@ -5,6 +5,7 @@ import { Collider, WaitForSeconds } from 'UnityEngine';
 export default class BadItem extends ZepetoScriptBehaviour {
 
     OnTriggerEnter(coll:Collider) {    
+        console.log(`heyyyy`);
         if(coll.gameObject.name==ZepetoPlayers.instance.GetPlayerWithUserId(ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name){
             ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.additionalRunSpeed = -4;
             console.log('speed down');

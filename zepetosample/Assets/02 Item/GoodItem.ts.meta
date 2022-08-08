@@ -19,12 +19,9 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
-    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nclass
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
     GoodItem extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    OnTriggerEnter(coll)
-    {\r\n        if (coll.gameObject.name == $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
-    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name)
-    {\r\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.additionalRunSpeed
-    = 5;\r\n            console.log(''speedup'');\r\n        }\r\n    }\r\n}\r\nexports.default
-    = GoodItem;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR29vZEl0ZW0uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJHb29kSXRlbS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCw2RUFBeUQ7QUFHekQsTUFBcUIsUUFBUyxTQUFRLHFDQUFxQjtJQUV2RCxjQUFjLENBQUMsSUFBYTtRQUV4QixJQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsSUFBSSxJQUFFLGdEQUF1QixtQkFBbUIsQ0FBMUMsMkNBQWEsQ0FBQyxRQUFRLEVBQXFCLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsTUFBTSxFQUFFLFNBQVMsQ0FBQyxJQUFJLEVBQUM7WUFDdkksMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsa0JBQWtCLEdBQUcsQ0FBQyxDQUFDO1lBQ2pGLE9BQU8sQ0FBQyxHQUFHLENBQUMsU0FBUyxDQUFDLENBQUM7U0FDMUI7SUFFTCxDQUFDO0NBRUo7QUFYRCwyQkFXQyJ9","assetPath":"Assets/script/GoodItem.ts","manifest":{"properties":[],"name":"GoodItem","description":""},"isCompiled":true}'
-  typescriptHash: 860c5e6e25c18a111e4936b76c90efae
+    {\r\n    }\r\n}\r\nexports.default = GoodItem;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR29vZEl0ZW0uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJHb29kSXRlbS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUlyRCxNQUFxQixRQUFTLFNBQVEscUNBQXFCO0lBRXZELGNBQWMsQ0FBQyxJQUFhO0lBTzVCLENBQUM7Q0FFSjtBQVhELDJCQVdDIn0=","assetPath":"Assets/02
+    Item/GoodItem.ts","manifest":{"properties":[],"name":"GoodItem","description":""},"isCompiled":true}'
+  typescriptHash: fba34a701bb099521bc1403a53ac8684
+  onlyWriteTrigger: 0

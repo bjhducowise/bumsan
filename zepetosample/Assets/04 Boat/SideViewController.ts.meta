@@ -1,0 +1,111 @@
+fileFormatVersion: 2
+guid: b31c8d3efc9d9a94f9d421605345cf4f
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_InputSystem_1 = require(\"UnityEngine.InputSystem\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine = require(\"UnityEngine\");\r\nclass SideViewController extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.cameraDistance
+    = 10;\r\n        this.originSpawnPoint = new UnityEngine_1.Vector3(-16, -5, 0);\r\n       
+    this.startPos = UnityEngine_1.Vector2.zero;\r\n        this.curPos = UnityEngine_1.Vector2.zero;\r\n       
+    this.isTriggered = false;\r\n        this.isTouchDown = false;\r\n        this.isCamTriggered
+    = false;\r\n        this.isCamTouchDown = false;\r\n        this.camStartPos
+    = UnityEngine_1.Vector2.zero;\r\n        this.camCurPos = UnityEngine_1.Vector2.zero;\r\n       
+    this.cameraAngleX = 0;\r\n        this.cameraAngleY = 0;\r\n        this.playerMoveDir
+    = UnityEngine_1.Vector2.zero;\r\n        this.cameraMoveDir = UnityEngine_1.Vector2.zero;\r\n       
+    this.isPlayerMove = false;\r\n        this.isCameraMove = false;\r\n    }\r\n   
+    CanMove() {\r\n        return this.isTouchDown && !this.isTriggered;\r\n    }\r\n   
+    cameraCanMove() {\r\n        return this.isCamTouchDown && !this.isCamTriggered;\r\n   
+    }\r\n    OnEnable() {\r\n        //this.playerInput = this.gameObject.GetComponent<PlayerInput>();\r\n   
+    }\r\n    Start() {\r\n        this.playerInput = this.gameObject.GetComponent($typeof(UnityEngine_InputSystem_1.PlayerInput));\r\n       
+    this.touchTriggerAction = this.playerInput.actions.FindAction(\"MoveTrigger\");\r\n       
+    this.touchPositionAction = this.playerInput.actions.FindAction(\"Move\");\r\n       
+    this.camTouch = this.playerInput.actions.FindAction(\"cameraInput\"); //cameraTrigger\r\n       
+    this.camTouchTrigger = this.playerInput.actions.FindAction(\"cameraTrigger\");\r\n       
+    this.touchTriggerAction.add_started((context) => {\r\n            this.isTriggered
+    = true;\r\n            this.isTouchDown = true;\r\n        });\r\n        this.touchTriggerAction.add_canceled((context)
+    => {\r\n            this.isTriggered = false;\r\n            this.isTouchDown
+    = false;\r\n        });\r\n        this.touchPositionAction.add_performed((context)
+    => {\r\n            if (this.isTouchDown) {\r\n                this.curPos =
+    context.ReadValueAsObject();\r\n                if (this.isTriggered) {\r\n                   
+    this.isTriggered = false;\r\n                    this.startPos = this.curPos;\r\n               
+    }\r\n            }\r\n        });\r\n        this.camTouchTrigger.add_started((context)
+    => {\r\n            this.text2.text = \"starttttttt\";\r\n            this.isCamTriggered
+    = true;\r\n            this.isCamTouchDown = true;\r\n        });\r\n       
+    this.camTouchTrigger.add_canceled((context) => {\r\n            this.text2.text
+    = \"stoppppppppp\";\r\n            this.isCamTriggered = false;\r\n           
+    this.isCamTouchDown = false;\r\n        });\r\n        this.camTouch.add_performed((context)
+    => {\r\n            var cCurPos = context.ReadValueAsObject();\r\n           
+    this.text3.text = \"3333 :\" + cCurPos.x + \",\" + cCurPos.y;\r\n           
+    if (this.isCamTouchDown) {\r\n                this.camCurPos = context.ReadValueAsObject();\r\n               
+    this.text3.text = \"3333 :\" + this.camCurPos.x + \",\" + this.camCurPos.y;\r\n               
+    if (this.isCamTriggered) {\r\n                    this.isCamTriggered = false;\r\n                   
+    this.camStartPos = this.camCurPos;\r\n                }\r\n            }\r\n       
+    });\r\n        //turn off zepeto camera\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.gameObject.SetActive(false);\r\n           
+    this.myCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n           
+    let characterPos = this.myCharacter.transform.position;\r\n            this.cameraParent.transform.position
+    = new UnityEngine_1.Vector3(characterPos.x, characterPos.y + 1, characterPos.z);\r\n           
+    this.customCamera.transform.position = new UnityEngine_1.Vector3(characterPos.x,
+    characterPos.y + 1, characterPos.z - this.cameraDistance);\r\n            this.cameraAngleX
+    = this.customCamera.transform.rotation.eulerAngles.x;\r\n            this.cameraAngleY
+    = this.customCamera.transform.rotation.eulerAngles.y;\r\n            this.StartCoroutine(this.InputControlLoop());\r\n       
+    });\r\n    }\r\n    *InputControlLoop() {\r\n        while (true) {\r\n           
+    yield new UnityEngine.WaitForEndOfFrame();\r\n            if (this.myCharacter)
+    {\r\n                if (this.startPos.x < UnityEngine.Screen.width / 2 && this.CanMove())
+    {\r\n                    this.playerMoveDir = UnityEngine_1.Vector2.op_Subtraction(this.curPos,
+    this.startPos);\r\n                    this.isPlayerMove = true;\r\n               
+    }\r\n                else if (this.camStartPos.x < UnityEngine.Screen.width /
+    2 && this.cameraCanMove()) {\r\n                    this.playerMoveDir = UnityEngine_1.Vector2.op_Subtraction(this.camCurPos,
+    this.camStartPos);\r\n                    this.isPlayerMove = true;\r\n               
+    }\r\n                if (this.isPlayerMove) {\r\n                    var camRot
+    = UnityEngine_1.Quaternion.Euler(0, UnityEngine.Camera.main.transform.rotation.eulerAngles.y,
+    0);\r\n                    var moveDir = UnityEngine_1.Vector2.op_Division(this.playerMoveDir,
+    100);\r\n                    if (moveDir.magnitude > 0) {\r\n                       
+    if (moveDir.magnitude > 1)\r\n                            moveDir.Normalize();\r\n                       
+    //left-right\r\n                        var optMoveDir = new UnityEngine_1.Vector3(moveDir.x,
+    0, moveDir.y);\r\n                        optMoveDir = UnityEngine_1.Vector3.op_Multiply(optMoveDir,
+    UnityEngine_1.Time.deltaTime * 80);\r\n                        this.myCharacter.Move(UnityEngine_1.Quaternion.op_Multiply(camRot,
+    optMoveDir));\r\n                    }\r\n                    this.isPlayerMove
+    = false;\r\n                }\r\n            }\r\n        }\r\n    }\r\n    //follow
+    zepeto character\r\n    LateUpdate() {\r\n        if (null == this.myCharacter)
+    {\r\n            return;\r\n        }\r\n        let characterPos = this.myCharacter.transform.position;\r\n       
+    this.cameraParent.transform.position = new UnityEngine_1.Vector3(characterPos.x,
+    characterPos.y + 1, characterPos.z);\r\n        if (this.startPos.x > UnityEngine.Screen.width
+    / 2 && this.CanMove()) {\r\n            this.cameraMoveDir = UnityEngine_1.Vector2.op_Subtraction(this.curPos,
+    this.startPos);\r\n            this.isCameraMove = true;\r\n        }\r\n       
+    else if (this.camStartPos.x > UnityEngine.Screen.width / 2 && this.cameraCanMove())
+    {\r\n            this.cameraMoveDir = UnityEngine_1.Vector2.op_Subtraction(this.camCurPos,
+    this.camStartPos);\r\n            this.isCameraMove = true;\r\n        }\r\n       
+    if (this.isCameraMove) {\r\n            var moveDir = UnityEngine_1.Vector2.op_Division(this.cameraMoveDir,
+    100);\r\n            this.cameraAngleX += moveDir.x;\r\n            this.cameraAngleY
+    += moveDir.y;\r\n            this.cameraParent.transform.rotation = UnityEngine.Quaternion.Euler(this.cameraAngleY,
+    this.cameraAngleX, 0);\r\n            this.isCameraMove = false;\r\n        }\r\n       
+    //this.text2.text =\"2 : \"+UnityEngine.Input.GetTouch(1).position.x + \",\"
+    +UnityEngine.Input.GetTouch(1).position.y;\r\n        //let cameraPosition =
+    new Vector3(characterPos.x - this.cameraDistance, this.customCamera.transform.position.y,
+    characterPos.z);\r\n        //let cameraPosition = new Vector3(characterPos.x,
+    characterPos.y + 1, characterPos.z-this.cameraDistance);\r\n        //this.customCamera.transform.position
+    = cameraPosition;\r\n    }\r\n}\r\nexports.default = SideViewController;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2lkZVZpZXdDb250cm9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU2lkZVZpZXdDb250cm9sbGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQW1EO0FBQ25ELHFFQUErRDtBQUUvRCw2RUFBd0c7QUFDeEcsNkNBQStEO0FBQy9ELDJDQUEyQztBQUczQyxNQUFxQixrQkFBbUIsU0FBUSxxQ0FBcUI7SUFBckU7O1FBUVcsbUJBQWMsR0FBWSxFQUFFLENBQUM7UUFFNUIscUJBQWdCLEdBQWEsSUFBSSxxQkFBTyxDQUFDLENBQUMsRUFBRSxFQUFDLENBQUMsQ0FBQyxFQUFDLENBQUMsQ0FBQyxDQUFDO1FBRW5ELGFBQVEsR0FBWSxxQkFBTyxDQUFDLElBQUksQ0FBQztRQUNqQyxXQUFNLEdBQVkscUJBQU8sQ0FBQyxJQUFJLENBQUM7UUFNL0IsZ0JBQVcsR0FBWSxLQUFLLENBQUM7UUFDN0IsZ0JBQVcsR0FBWSxLQUFLLENBQUM7UUFLN0IsbUJBQWMsR0FBYSxLQUFLLENBQUM7UUFDakMsbUJBQWMsR0FBYSxLQUFLLENBQUM7UUFFakMsZ0JBQVcsR0FBWSxxQkFBTyxDQUFDLElBQUksQ0FBQztRQUNwQyxjQUFTLEdBQVkscUJBQU8sQ0FBQyxJQUFJLENBQUM7UUFFbEMsaUJBQVksR0FBVyxDQUFDLENBQUM7UUFDekIsaUJBQVksR0FBVyxDQUFDLENBQUM7UUFHekIsa0JBQWEsR0FBeUIscUJBQU8sQ0FBQyxJQUFJLENBQUM7UUFDbkQsa0JBQWEsR0FBeUIscUJBQU8sQ0FBQyxJQUFJLENBQUM7UUFFbkQsaUJBQVksR0FBYSxLQUFLLENBQUM7UUFDL0IsaUJBQVksR0FBYSxLQUFLLENBQUM7SUE2STNDLENBQUM7SUE1SVcsT0FBTztRQUNYLE9BQU8sSUFBSSxDQUFDLFdBQVcsSUFBSSxDQUFDLElBQUksQ0FBQyxXQUFXLENBQUM7SUFDakQsQ0FBQztJQUNPLGFBQWE7UUFDakIsT0FBTyxJQUFJLENBQUMsY0FBYyxJQUFJ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","assetPath":"Assets/04
+    Boat/SideViewController.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"text","type":"UnityEngine.UI.Text","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"text2","type":"UnityEngine.UI.Text","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"text3","type":"UnityEngine.UI.Text","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"cameraParent","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"customCamera","type":"UnityEngine.Camera","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"cameraDistance","type":"System.Single","isArray":false,"initValue":["10"],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SideViewController","description":""},"isCompiled":true}'
+  typescriptHash: 2cbeb57a7de836765ce655c626225cbb
+  onlyWriteTrigger: 0
