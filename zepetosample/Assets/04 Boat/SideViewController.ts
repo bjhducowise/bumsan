@@ -8,10 +8,6 @@ import * as UnityEngineUI from "UnityEngine.UI";
 
 export default class SideViewController extends ZepetoScriptBehaviour {
 
-    public text : UnityEngineUI.Text;
-    public text2 : UnityEngineUI.Text;
-    public text3 : UnityEngineUI.Text;
-
     public cameraParent : UnityEngine.GameObject;
     public customCamera : UnityEngine.Camera;
     public cameraDistance : number = 10;
@@ -85,23 +81,18 @@ export default class SideViewController extends ZepetoScriptBehaviour {
             }
         });
         this.camTouchTrigger .add_started((context)=>{
-            this.text2.text = "starttttttt";
             this.isCamTriggered = true;
             this.isCamTouchDown = true;
         })
         this.camTouchTrigger.add_canceled((context)=>{
-            
-            this.text2.text = "stoppppppppp";
             this.isCamTriggered = false;
             this.isCamTouchDown = false;
         });
         this.camTouch.add_performed((context)=>{
             var cCurPos = context.ReadValueAsObject() as Vector2;
-            this.text3.text = "3333 :"+cCurPos.x +","+cCurPos.y;
             if(this.isCamTouchDown)
             {
                 this.camCurPos = context.ReadValueAsObject() as Vector2;
-                this.text3.text = "3333 :"+this.camCurPos.x +","+this.camCurPos.y;
                 if(this.isCamTriggered) {
                     this.isCamTriggered = false;
                     this.camStartPos = this.camCurPos;
@@ -181,9 +172,5 @@ export default class SideViewController extends ZepetoScriptBehaviour {
             this.cameraParent.transform.rotation = UnityEngine.Quaternion.Euler(this.cameraAngleY,this.cameraAngleX,0);
             this.isCameraMove = false;
         }
-        //this.text2.text ="2 : "+UnityEngine.Input.GetTouch(1).position.x + "," +UnityEngine.Input.GetTouch(1).position.y;
-        //let cameraPosition = new Vector3(characterPos.x - this.cameraDistance, this.customCamera.transform.position.y, characterPos.z);
-        //let cameraPosition = new Vector3(characterPos.x, characterPos.y + 1, characterPos.z-this.cameraDistance);
-        //this.customCamera.transform.position = cameraPosition;
     }
 }

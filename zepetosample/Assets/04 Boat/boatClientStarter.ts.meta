@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: 73afe5debced78f4fb915e1dcc7889bf
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ZEPETO_Multiplay_1 = require(\"ZEPETO.Multiplay\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst UnityEngine = require(\"UnityEngine\");\r\nconst
+    PlayerController_1 = require(\"./PlayerController\");\r\nconst UIController_1
+    = require(\"./UIController\");\r\nconst Carpet_1 = require(\"./Carpet\");\r\nconst
+    CharacterControllerSample_1 = require(\"./CharacterControllerSample\");\r\nclass
+    boatClientStarter extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
+    {\r\n        super(...arguments);\r\n        this.currentPlayers = new Map();\r\n       
+    this.boatHeight = -11.5;\r\n        this.carpetOnOff = false;\r\n        this.isMove
+    = false;\r\n        this.moveP = new UnityEngine.Vector3(0, 0, 0);\r\n       
+    this.boatCreatePoint = new UnityEngine.Vector3(0, 0, 0);\r\n    }\r\n    Start()
+    {\r\n        var go = UnityEngine.Object.Instantiate(this.ui);\r\n        this.uiController
+    = go.GetComponent($typeof(UIController_1.default));\r\n        this.multiplay.add_RoomCreated((room)
+    => {\r\n            this.room = room;\r\n        });\r\n        this.multiplay.add_RoomJoined((room)
+    => {\r\n            room.add_OnStateChange(this.OnStateChange.bind(this));\r\n       
+    });\r\n        this.StartCoroutine(this.SendMessageLoop(0.1));\r\n    }\r\n   
+    // Send the local character transform to the server at the scheduled Interval
+    Time.\r\n    *SendMessageLoop(tick) {\r\n        while (true) {\r\n           
+    yield new UnityEngine.WaitForSeconds(tick);\r\n            if (this.room != null
+    && this.room.IsConnected) {\r\n                const hasPlayer = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.HasPlayer(this.room.SessionId);\r\n               
+    if (hasPlayer) {\r\n                    const myPlayer = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.GetPlayer(this.room.SessionId);\r\n                   
+    this.SendTransform(myPlayer.character.transform); //add\r\n                }\r\n           
+    }\r\n        }\r\n    }\r\n    FixedUpdate() {\r\n        if (this.uiController)
+    {\r\n            if (this.uiController.isdown && this.carpetOnOff) {\r\n               
+    this.carpet.Move(this.moveP);\r\n            }\r\n        }\r\n    }\r\n    OnStateChange(state,
+    isFirst) {\r\n        // When the first OnStateChange event is received, a state
+    full snapshot is received.\r\n        if (isFirst) {\r\n            // [CharacterController]
+    (Local) Called when the Player instance is fully loaded in Scene\r\n           
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n                const myPlayer = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer;\r\n               
+    //add\r\n                let _player = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer;\r\n               
+    this.playerController = _player.zepetoPlayer.character.gameObject.AddComponent($typeof(PlayerController_1.default));\r\n               
+    this.uiController.HideCarpetButton();\r\n                this.uiController.downAction
+    = () => {\r\n                    console.log(`[CreateCarpet] carpet : ${this.carpet}`);\r\n                   
+    if (this.carpet)\r\n                        this.carpet.MoveStart();\r\n               
+    };\r\n                this.uiController.dragAction = (dir) => {\r\n                   
+    if (this.carpet)\r\n                        this.carpet.Move(dir);\r\n                   
+    console.log(`${dir}`);\r\n                };\r\n                this.uiController.upAction
+    = () => {\r\n                    if (this.carpet)\r\n                       
+    this.carpet.MoveStop();\r\n                };\r\n                this.uiController.carpetBtn.onClick.AddListener(()
+    => {\r\n                    this.carpetOnOff = !this.carpetOnOff;\r\n                   
+    if (this.carpetOnOff) {\r\n                        this.boatCreatePoint = _player.zepetoPlayer.character.transform.position;\r\n                       
+    //this.r_Teleport(new UnityEngine.Vector3(this.boatCreatePoint.x,-11.5,this.boatCreatePoint.y));\r\n                       
+    console.log(`boat Point 1 : ${this.boatCreatePoint.x} ${this.boatCreatePoint.y}
+    ${this.boatCreatePoint.z}`);\r\n                        _player.StopMoving();\r\n                       
+    this.CreateCarpet(this.playerController.gameObject.transform.position);\r\n                       
+    this.playerController.Ride(this.carpet);\r\n                        this.sendIsRide(this.carpetOnOff);\r\n                   
+    }\r\n                    if (!this.carpetOnOff) {\r\n                       
+    $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.gameObject.transform.position
+    = (new UnityEngine.Vector3(this.carpetGo.transform.position.x, 0, this.carpetGo.transform.position.z));\r\n                       
+    this.carpetGo.transform.DetachChildren();\r\n                        this.playerController.offController();\r\n                       
+    this.sendIsRide(this.carpetOnOff);\r\n                        UnityEngine.GameObject.Destroy(this.carpetGo);\r\n                       
+    console.log(`boat Point 2 : ${this.boatCreatePoint.x} ${this.boatCreatePoint.y}
+    ${this.boatCreatePoint.z}`);\r\n                        _player.zepetoPlayer.character.Teleport(this.boatCreatePoint,
+    _player.zepetoPlayer.character.transform.rotation);\r\n                       
+    //this.r_Teleport(this.boatCreatePoint);\r\n                        _player.zepetoPlayer.character.StopMoving();\r\n                   
+    }\r\n                });\r\n                //--------------------\r\n               
+    myPlayer.character.OnChangedState.AddListener((cur, prev) => {\r\n                   
+    this.SendState(cur);\r\n                });\r\n            });\r\n           
+    // [CharacterController] Called when the Player instance is fully loaded in Scene\r\n           
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedPlayer.AddListener((sessionId)
+    => {\r\n                const isLocal = this.room.SessionId === sessionId;\r\n               
+    if (!isLocal) {\r\n                    const player = this.currentPlayers.get(sessionId);\r\n                   
+    let _player = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.GetPlayer(sessionId);
+    //add\r\n                    _player.character.gameObject.AddComponent($typeof(CharacterControllerSample_1.default));
+    //add\r\n                    // Called whenever the state of the [RoomState]
+    player instance is updated.\r\n                    player.add_OnChange((changeValues)
+    => this.OnUpdatePlayer(sessionId, player));\r\n                }\r\n           
+    });\r\n        }\r\n        let join = new Map();\r\n        let leave = new
+    Map(this.currentPlayers);\r\n        state.players.ForEach((sessionId, player)
+    => {\r\n            if (!this.currentPlayers.has(sessionId)) {\r\n               
+    join.set(sessionId, player);\r\n            }\r\n            leave.delete(sessionId);\r\n       
+    });\r\n        // [RoomState] Create a player instance that entered the Room\r\n       
+    join.forEach((player, sessionId) => this.OnJoinPlayer(sessionId, player));\r\n       
+    // [RoomState] Remove exited player instance from Room\r\n        leave.forEach((player,
+    sessionId) => this.OnLeavePlayer(sessionId, player));\r\n    }\r\n    OnJoinPlayer(sessionId,
+    player) {\r\n        console.log(`[OnJoinPlayer] players - sessionId : ${sessionId}`);\r\n       
+    this.currentPlayers.set(sessionId, player);\r\n        const spawnInfo = new
+    ZEPETO_Character_Controller_1.SpawnInfo();\r\n        const position = this.ParseVector3(player.transform.position);\r\n       
+    const rotation = this.ParseVector3(player.transform.rotation);\r\n        spawnInfo.position
+    = position;\r\n        spawnInfo.rotation = UnityEngine.Quaternion.Euler(rotation);\r\n       
+    const isLocal = this.room.SessionId === player.sessionId;\r\n        $extension(\"ZEPETO.Character.Controller.ZepetoPlayersExtension\").CreatePlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    sessionId, player.zepetoUserId, spawnInfo, isLocal);\r\n    }\r\n    OnLeavePlayer(sessionId,
+    player) {\r\n        console.log(`[OnRemove] players - sessionId : ${sessionId}`);\r\n       
+    if (player.isRide) {\r\n            var veh = $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    player.zepetoUserId).character.gameObject.transform.parent.gameObject;\r\n           
+    veh.transform.DetachChildren();\r\n            UnityEngine.GameObject.Destroy(veh);\r\n       
+    }\r\n        this.currentPlayers.delete(sessionId);\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.RemovePlayer(sessionId);\r\n   
+    }\r\n    OnUpdatePlayer(sessionId, player) {\r\n        const position = this.ParseVector3(player.transform.position);\r\n       
+    const zepetoPlayer = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.GetPlayer(sessionId);\r\n       
+    //add\r\n        let _player = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.GetPlayer(player.sessionId);\r\n       
+    console.log(`${_player.character.gameObject.transform.name}`);\r\n        if
+    (player.isRide && _player.character.gameObject.transform.parent == null) {\r\n           
+    _player.character.StopMoving();\r\n            var obj = UnityEngine.GameObject.Instantiate(this.carpetPrefab,
+    new UnityEngine.Vector3(_player.character.transform.position.x, _player.character.transform.position.y,
+    _player.character.transform.position.z), _player.character.transform.rotation);\r\n           
+    _player.character.transform.transform.SetParent(obj.transform);\r\n           
+    obj.AddComponent($typeof(Carpet_1.default));\r\n            _player.character.enabled
+    = false;\r\n            //obj.transform.position.y = -11.5;\r\n        }\r\n       
+    else if (!player.isRide && (_player.character.gameObject.transform.parent !=
+    null)) {\r\n            _player.character.enabled = true;\r\n            var
+    _playerParent = _player.character.gameObject.transform.parent.gameObject;\r\n           
+    _player.character.transform.parent.transform.DetachChildren();\r\n           
+    UnityEngine.GameObject.Destroy(_playerParent);\r\n            this.StopCoroutine(this.moveVehicle);\r\n           
+    this.isMove = false;\r\n        }\r\n        if (player.isRide && _player.character.gameObject.transform.parent
+    != null) {\r\n            zepetoPlayer.character.transform.parent.transform.rotation
+    = UnityEngine.Quaternion.Euler(this.ParseVector3(player.transform.rotation));\r\n           
+    if (zepetoPlayer.character.transform.parent.transform.position.y == this.boatHeight)\r\n               
+    this.StartCoroutine(this.moveVehicle(player.isRide, zepetoPlayer.character.transform.parent.gameObject,
+    zepetoPlayer.character.transform.parent.position, position));\r\n           
+    else\r\n                zepetoPlayer.character.transform.parent.transform.position
+    = position;\r\n        }\r\n        else\r\n            zepetoPlayer.character.MoveToPosition(position);\r\n       
+    if (!player.isRide)\r\n            this.StopCoroutine(this.moveVehicle);\r\n       
+    //-------------\r\n        if (player.state === ZEPETO_Character_Controller_1.CharacterState.JumpIdle
+    || player.state === ZEPETO_Character_Controller_1.CharacterState.JumpMove)\r\n           
+    zepetoPlayer.character.Jump();\r\n    }\r\n    *moveVehicle(isRide, vehilceObj,
+    startPos, endPos) {\r\n        if (vehilceObj != null) {\r\n            var dir
+    = endPos.z - vehilceObj.transform.position.z;\r\n            dir / 10;\r\n           
+    var i = 1;\r\n            vehilceObj.transform.position = UnityEngine.Vector3.Lerp(startPos,
+    endPos, 0.1 / 10);\r\n        }\r\n        yield new UnityEngine.WaitForSecondsRealtime(0.1
+    / 10);\r\n    }\r\n    SendTransform(transform) {\r\n        const data = new
+    ZEPETO_Multiplay_1.RoomData();\r\n        const pos = new ZEPETO_Multiplay_1.RoomData();\r\n       
+    pos.Add(\"x\", transform.position.x);\r\n        pos.Add(\"y\", transform.position.y);\r\n       
+    pos.Add(\"z\", transform.position.z);\r\n        data.Add(\"position\", pos.GetObject());\r\n       
+    const rot = new ZEPETO_Multiplay_1.RoomData();\r\n        rot.Add(\"x\", transform.localEulerAngles.x);\r\n       
+    rot.Add(\"y\", transform.localEulerAngles.y);\r\n        rot.Add(\"z\", transform.localEulerAngles.z);\r\n       
+    data.Add(\"rotation\", rot.GetObject());\r\n        this.room.Send(\"onChangedTransform\",
+    data.GetObject());\r\n    }\r\n    SendState(state) {\r\n        const data =
+    new ZEPETO_Multiplay_1.RoomData();\r\n        data.Add(\"state\", state);\r\n       
+    this.room.Send(\"onChangedState\", data.GetObject());\r\n    }\r\n    sendIsRide(isRideS)
+    {\r\n        const data = new ZEPETO_Multiplay_1.RoomData();\r\n        data.Add(\"isRide\",
+    isRideS);\r\n        this.room.Send(\"isRideState\", data.GetObject());\r\n   
+    }\r\n    CreateCarpet(pos) {\r\n        this.carpetGo = UnityEngine.Object.Instantiate(this.carpetPrefab,
+    new UnityEngine.Vector3(pos.x, this.boatHeight - 1, pos.z), UnityEngine.Quaternion.identity);\r\n       
+    console.log(`[CreateCarpet] carpetGo : ${this.carpetGo}`);\r\n        this.carpet
+    = this.carpetGo.AddComponent($typeof(Carpet_1.default));\r\n        console.log(`[CreateCarpet]
+    carpet : ${this.carpet}`);\r\n        this.uiController.dragAction = (dir) =>
+    {\r\n            this.moveP = new UnityEngine.Vector3(dir.x * 15 * UnityEngine.Time.deltaTime,
+    dir.y * 15 * UnityEngine.Time.deltaTime, dir.z);\r\n        };\r\n    }\r\n   
+    clientShowCarpetButton() {\r\n        this.uiController.ShowCarpetButton();\r\n   
+    }\r\n    clientHideCarpetButton() {\r\n        this.uiController.HideCarpetButton();\r\n   
+    }\r\n    carpetOff() {\r\n        this.carpetOnOff = false;\r\n        $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.gameObject.transform.position
+    = (new UnityEngine.Vector3(this.carpetGo.transform.position.x, 0, this.carpetGo.transform.position.z));\r\n       
+    this.carpetGo.transform.DetachChildren();\r\n        this.playerController.offController();\r\n       
+    this.sendIsRide(this.carpetOnOff);\r\n        UnityEngine.GameObject.Destroy(this.carpetGo);\r\n   
+    }\r\n    ParseVector3(vector3) {\r\n        return new UnityEngine.Vector3(vector3.x,
+    vector3.y, vector3.z);\r\n    }\r\n}\r\nexports.default = boatClientStarter;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYm9hdENsaWVudFN0YXJ0ZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJib2F0Q2xpZW50U3RhcnRlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFtRDtBQUVuRCx1REFBK0M7QUFFL0MsNkVBQStHO0FBQy9HLDJDQUEyQztBQUMzQyx5REFBaUQ7QUFDakQsaURBQXlDO0FBQ3pDLHFDQUE2QjtBQUM3QiwyRUFBbUU7QUFDbkUsTUFBcUIsaUJBQWtCLFNBQVEscUNBQXFCO0lBQXBFOztRQUlZLG1CQUFjLEdBQXdCLElBQUksR0FBRyxFQUFrQixDQUFDO1FBSWpFLGVBQVUsR0FBVyxDQUFDLElBQUksQ0FBQztRQU0xQixnQkFBVyxHQUFVLEtBQUssQ0FBQztRQUMzQixXQUFNLEdBQVUsS0FBSyxDQUFDO1FBQ3RCLFVBQUssR0FBeUIsSUFBSSxXQUFXLENBQUMsT0FBTyxDQUFDLENBQUMsRUFBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDLENBQUM7UUFDN0Qsb0JBQWUsR0FBeUIsSUFBSSxXQUFXLENBQUMsT0FBTyxDQUFDLENBQUMsRUFBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDLENBQUM7SUFtUm5GLENBQUM7SUFqUlcsS0FBSztRQUNULElBQUksRUFBRSxHQUFHLFdBQVcsQ0FBQyxNQUFNLENBQUMsV0FBVyxDQUF5QixJQUFJLENBQUMsRUFBRSxDQUFDLENBQUM7UUFDekUsSUFBSSxDQUFDLFlBQVksR0FBRyxFQUFFLENBQUMsWUFBWSxTQUFDLHNCQUFZLEVBQUcsQ0FBQztRQUVwRCxJQUFJLENBQUMsU0FBUyxpQkFBZ0IsQ0FBQyxJQUFVLEVBQUUsRUFBRTtZQUN6QyxJQUFJLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQztRQUNyQixDQUFDLEVBQUM7UUFFRixJQUFJLENBQUMsU0FBUyxnQkFBZSxDQUFDLElBQVUsRUFBRSxFQUFFO1lBQ3hDLElBQUksbUJBQWtCLElBQUksQ0FBQyxhQUFhLGFBQUM7UUFDN0MsQ0FBQyxFQUFDO1FB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","assetPath":"Assets/04
+    Boat/boatClientStarter.ts","manifest":{"properties":[{"assembly":"ZEPETO.World","name":"multiplay","type":"ZEPETO.World.ZepetoWorldMultiplay","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"ui","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"carpetPrefab","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"boatHeight","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"boatClientStarter","description":""},"isCompiled":true}'
+  typescriptHash: 3543ad0633f6d8eadb56f028f89774a9
+  onlyWriteTrigger: 0

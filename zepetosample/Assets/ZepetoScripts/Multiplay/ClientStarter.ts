@@ -47,8 +47,6 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
 
         this.multiplay.RoomJoined += (room: Room) => {
             room.OnStateChange += this.OnStateChange;
-            
-
         };
 
         this.StartCoroutine(this.SendMessageLoop(0.1));
@@ -122,7 +120,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
                         this.CreateCarpet(this.playerController.gameObject.transform.position);
                         this.playerController.Ride(this.carpet);
                         this.sendIsRide(this.carpetOnOff);
-                        
+                        this.SendTransform(myPlayer.character.transform);
                         
                     }
                     if(!this.carpetOnOff){
@@ -135,6 +133,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
                         _player.zepetoPlayer.character.Teleport(this.boatCreatePoint,_player.zepetoPlayer.character.transform.rotation);
                         //this.r_Teleport(this.boatCreatePoint);
                         _player.zepetoPlayer.character.StopMoving();
+                        this.SendTransform(myPlayer.character.transform);
                     }
                     
                     
@@ -195,7 +194,6 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
 
         ZepetoPlayers.instance.RemovePlayer(sessionId);
     }
-
     private OnUpdatePlayer(sessionId: string, player: Player) {
 
         const position = this.ParseVector3(player.transform.position);
@@ -213,6 +211,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
             obj.AddComponent<Carpet>();
             _player.character.enabled = false;
             console.log(`hiiii`);
+            obj.transform.position=position;
             //obj.transform.position.y = -11.5;
         }
         else if(!player.isRide&&(_player.character.gameObject.transform.parent!=null)){
@@ -222,18 +221,15 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
             UnityEngine.GameObject.Destroy(_playerParent);
             this.StopCoroutine(this.moveVehicle);
             
+            
         }
         
         if(player.isRide&&_player.character.gameObject.transform.parent!=null) {
-            //zepetoPlayer.character.transform.parent.transform.position = position ;// = position;
-            //zepetoPlayer.character.transform.parent.GetComponent<Carpet>().Move(position);
+            if(zepetoPlayer.character.transform.parent.transform.position.y>-10)zepetoPlayer.character.transform.parent.transform.position=position;
+            else this.StartCoroutine(this.moveVehicle(player.isRide,zepetoPlayer.character.transform.parent.gameObject,zepetoPlayer.character.transform.parent.position,position));
             zepetoPlayer.character.transform.parent.transform.rotation = UnityEngine.Quaternion.Euler(this.ParseVector3(player.transform.rotation));
-            //zepetoPlayer.character.transform.parent.transform.position = UnityEngine.Vector3.Lerp(zepetoPlayer.character.transform.parent.transform.position,position,UnityEngine.Time.smoothDeltaTime);
-            this.StartCoroutine(this.moveVehicle(player.isRide,zepetoPlayer.character.transform.parent.gameObject,zepetoPlayer.character.transform.parent.position,position));
             
-            //zepetoPlayer.character.transform.parent.gameObject.transform.Translate(UnityEngine.Vector3.forward);
-            //this.StartCoroutine(this.moveVehicle(zepetoPlayer.character.transform.parent.gameObject,position));
-            //zepetoPlayer.character.MoveToPosition(position);
+            
         }
         else zepetoPlayer.character.MoveToPosition(position);
         if(!player.isRide) this.StopCoroutine(this.moveVehicle);
