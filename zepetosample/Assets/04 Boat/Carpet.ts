@@ -4,7 +4,7 @@ import { Action$1 } from "System"
 import * as UnityEngine from "UnityEngine";
 export default class Carpet extends ZepetoScriptBehaviour {
 
-    public speed = 2;
+    public speed = 5;
     public rotateAction : Action$1<number>;
     private isMovingTrue : bool = false;
     Start() {    
