@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: a141a78ae95951e4e9c45ca55e8d8879
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass Dance extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        this.DanceAnimator = this.GetComponent($typeof(UnityEngine_1.Animator));\r\n   
+    }\r\n    OnTriggerEnter(coll) {\r\n        coll = this.car.GetComponent($typeof(UnityEngine_1.Collider));\r\n       
+    if (coll.gameObject.Equals(this.car)) {\r\n            this.DanceAnimator.SetTrigger(\"Dance\");\r\n           
+    console.log(\"hi\");\r\n            this.StartCoroutine(this.idle());\r\n       
+    }\r\n    }\r\n    *idle() {\r\n        yield new UnityEngine_1.WaitForSeconds(3);\r\n       
+    this.DanceAnimator.SetBool(\"idleBool\", true);\r\n    }\r\n}\r\nexports.default
+    = Dance;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRGFuY2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJEYW5jZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUE0RjtBQUM1RixpREFBcUQ7QUFFckQsTUFBcUIsS0FBTSxTQUFRLHFDQUFxQjtJQUtwRCxLQUFLO1FBQ0QsSUFBSSxDQUFDLGFBQWEsR0FBQyxJQUFJLENBQUMsWUFBWSxTQUFDLHNCQUFRLEVBQUcsQ0FBQztJQUNyRCxDQUFDO0lBRUQsY0FBYyxDQUFDLElBQWE7UUFDeEIsSUFBSSxHQUFDLElBQUksQ0FBQyxHQUFHLENBQUMsWUFBWSxTQUFDLHNCQUFRLEVBQUcsQ0FBQztRQUN2QyxJQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsTUFBTSxDQUFDLElBQUksQ0FBQyxHQUFHLENBQUMsRUFBQztZQUNoQyxJQUFJLENBQUMsYUFBYSxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUMsQ0FBQztZQUN2QyxPQUFPLENBQUMsR0FBRyxDQUFDLElBQUksQ0FBQyxDQUFDO1lBQ2xCLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLElBQUksRUFBRSxDQUFDLENBQUM7U0FDcEM7SUFDTCxDQUFDO0lBRUQsQ0FBQyxJQUFJO1FBQ0QsTUFBTSxJQUFJLDRCQUFjLENBQUMsQ0FBQyxDQUFDLENBQUM7UUFDNUIsSUFBSSxDQUFDLGFBQWEsQ0FBQyxPQUFPLENBQUMsVUFBVSxFQUFDLElBQUksQ0FBQyxDQUFDO0lBQ2hELENBQUM7Q0FFSjtBQXZCRCx3QkF1QkMifQ==","assetPath":"Assets/Festival/Script/Dance.ts","manifest":{"properties":[{"assembly":"UnityEngine.AnimationModule","name":"DanceAnimator","type":"UnityEngine.Animator","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"car","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Dance","description":""},"isCompiled":true}'
+  typescriptHash: 1b9c362438b48b7c347e3ea00118ab84
+  onlyWriteTrigger: 0
