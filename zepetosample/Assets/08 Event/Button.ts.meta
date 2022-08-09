@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 950c994086993ec4ab14140ee69a8767
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass Button extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n    }\r\n    Update() {\r\n        this.GetComponent($typeof(UnityEngine_1.Canvas)).worldCamera
+    = UnityEngine_1.GameObject.Find(\"CameraParent\").transform.GetChild(0).gameObject.GetComponent($typeof(UnityEngine_1.Camera));\r\n   
+    }\r\n}\r\nexports.default = Button;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQnV0dG9uLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQnV0dG9uLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXdEO0FBRXhELGlEQUFxRDtBQUVyRCxNQUFxQixNQUFPLFNBQVEscUNBQXFCO0lBSXJELEtBQUs7SUFFTCxDQUFDO0lBRUQsTUFBTTtRQUNGLElBQUksQ0FBQyxZQUFZLFNBQUMsb0JBQU0sR0FBSSxXQUFXLEdBQUMsd0JBQVUsQ0FBQyxJQUFJLENBQUMsY0FBYyxDQUFDLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLG9CQUFNLEVBQUcsQ0FBQztJQUNwSSxDQUFDO0NBR0o7QUFiRCx5QkFhQyJ9","assetPath":"Assets/08
+    Event/Button.ts","manifest":{"properties":[],"name":"Button","description":""},"isCompiled":true}'
+  typescriptHash: 4af743d6dcea2a9600edc6e3d8f9c027
+  onlyWriteTrigger: 0

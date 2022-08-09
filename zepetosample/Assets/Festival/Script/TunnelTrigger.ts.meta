@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: 84399e694ba034b43815d3ab4bbe3d07
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst BGM_1 = require(\"./BGM\");\r\nclass
+    TunnelTrigger extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    OnTriggerEnter(coll)
+    {\r\n        var audio = this.script.GetComponent($typeof(BGM_1.default));\r\n       
+    if (coll.gameObject.name == $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name)
+    {\r\n            audio.StopAudio();\r\n        }\r\n    }\r\n}\r\nexports.default
+    = TunnelTrigger;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVHVubmVsVHJpZ2dlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlR1bm5lbFRyaWdnZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBbUQ7QUFDbkQsNkVBQTREO0FBQzVELGlEQUFxRDtBQUNyRCwrQkFBdUI7QUFFdkIsTUFBcUIsYUFBYyxTQUFRLHFDQUFxQjtJQUs1RCxjQUFjLENBQUMsSUFBYTtRQUN4QixJQUFJLEtBQUssR0FBRyxJQUFJLENBQUMsTUFBTSxDQUFDLFlBQVksU0FBQyxhQUFHLEVBQUcsQ0FBQztRQUM1QyxJQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsSUFBSSxJQUFFLGdEQUF1QixtQkFBbUIsQ0FBMUMsMkNBQWEsQ0FBQyxRQUFRLEVBQXFCLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsTUFBTSxFQUFFLFNBQVMsQ0FBQyxJQUFJLEVBQUM7WUFDeEksS0FBSyxDQUFDLFNBQVMsRUFBRSxDQUFDO1NBQ3BCO0lBRUwsQ0FBQztDQUNKO0FBWkQsZ0NBWUMifQ==","assetPath":"Assets/Festival/Script/TunnelTrigger.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"script","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"TunnelTrigger","description":""},"isCompiled":true}'
+  typescriptHash: 907ed6c470f8c8f25df8202b7a254cd6
+  onlyWriteTrigger: 0

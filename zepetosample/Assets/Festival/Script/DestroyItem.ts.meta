@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 2d137bfbcddc76b4a9c7d2b699dbb3dc
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass DestroyItem extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Destroy() {\r\n        var item = UnityEngine_1.GameObject.Find(\"FoodPivot\");\r\n       
+    UnityEngine_1.GameObject.Destroy(item);\r\n    }\r\n}\r\nexports.default = DestroyItem;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRGVzdHJveUl0ZW0uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJEZXN0cm95SXRlbS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUF3QztBQUN4QyxpREFBcUQ7QUFFckQsTUFBcUIsV0FBWSxTQUFRLHFDQUFxQjtJQUUxRCxPQUFPO1FBQ0gsSUFBSSxJQUFJLEdBQUcsd0JBQVUsQ0FBQyxJQUFJLENBQUMsV0FBVyxDQUFDLENBQUM7UUFDeEMsd0JBQVUsQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDN0IsQ0FBQztDQUVKO0FBUEQsOEJBT0MifQ==","assetPath":"Assets/Festival/Script/DestroyItem.ts","manifest":{"properties":[],"name":"DestroyItem","description":""},"isCompiled":true}'
+  typescriptHash: 51d3439c48f18ad5b63c5393787344bc
+  onlyWriteTrigger: 0

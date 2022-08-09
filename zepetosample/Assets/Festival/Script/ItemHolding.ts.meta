@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 09d92bfd89bf42c49bc71a38ac7ad2e9
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nvar item;\r\nclass ItemHolding
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    HoldingItem() {\r\n       
+    var parent = UnityEngine_1.GameObject.Find(\"ringDis_R\").transform;\r\n       
+    item = UnityEngine_1.Object.Instantiate(this.Item, parent.position, new UnityEngine_1.Quaternion(0,
+    -180, 0, 1));\r\n        if (UnityEngine_1.GameObject.Find(\"ringDis_R\") !=
+    null) {\r\n            var pivot = UnityEngine_1.GameObject.Find(\"ringDis_R\").transform;\r\n           
+    var newObj = new UnityEngine_1.GameObject(\"FoodPivot\");\r\n            newObj.transform.SetParent(pivot.transform);\r\n           
+    item.transform.SetParent(newObj.transform);\r\n            console.log(item.transform.position);\r\n       
+    }\r\n    }\r\n}\r\nexports.default = ItemHolding;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSXRlbUhvbGRpbmcuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJJdGVtSG9sZGluZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUF3RTtBQUN4RSxpREFBcUQ7QUFFckQsSUFBSSxJQUFlLENBQUM7QUFFcEIsTUFBcUIsV0FBWSxTQUFRLHFDQUFxQjtJQU0xRCxXQUFXO1FBQ1AsSUFBSSxNQUFNLEdBQUcsd0JBQVUsQ0FBQyxJQUFJLENBQUMsV0FBVyxDQUFDLENBQUMsU0FBUyxDQUFDO1FBQ2hELElBQUksR0FBRyxvQkFBTSxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsSUFBSSxFQUFFLE1BQU0sQ0FBQyxRQUFRLEVBQUUsSUFBSSx3QkFBVSxDQUFDLENBQUMsRUFBQyxDQUFDLEdBQUcsRUFBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDLENBQWUsQ0FBQztRQUNoRyxJQUFHLHdCQUFVLENBQUMsSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLElBQUksRUFDdkM7WUFDSSxJQUFJLEtBQUssR0FBRyx3QkFBVSxDQUFDLElBQUksQ0FBQyxXQUFXLENBQUMsQ0FBQyxTQUFTLENBQUM7WUFDbkQsSUFBSSxNQUFNLEdBQUcsSUFBSSx3QkFBVSxDQUFDLFdBQVcsQ0FBQyxDQUFDO1lBQ3pDLE1BQU0sQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxTQUFTLENBQUMsQ0FBQztZQUM1QyxJQUFJLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLENBQUM7WUFDM0MsT0FBTyxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDO1NBQ3hDO0lBQ1QsQ0FBQztDQUVKO0FBbkJELDhCQW1CQyJ9","assetPath":"Assets/Festival/Script/ItemHolding.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"Item","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"ItemHolding","description":""},"isCompiled":true}'
+  typescriptHash: d2b18b893241baef7bcdfc7eea69db9e
+  onlyWriteTrigger: 0

@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: a8e9f37f73e17e243b25d00255936328
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ClientStarter_1 = require(\"../ZepetoScripts/Multiplay/ClientStarter\");\r\nclass
+    TigerEvent extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    /*Start() {\r\n       
+    ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(() => {\r\n           
+    this.zepetoCharacter = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    });\r\n        //this.Btn1.onClick.AddListener(()=>{this.ButtonClick();});\r\n   
+    }*/\r\n    Teleport() {\r\n        this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    console.log(\"buttonclick\");\r\n        if (this.zepetoCharacter == null) {\r\n           
+    console.log(\"null\");\r\n            return 0;\r\n        }\r\n        this.zepetoCharacter.Teleport(new
+    UnityEngine_1.Vector3(80, 54.9, 5), UnityEngine_1.Quaternion.identity);\r\n       
+    this.cs.GetComponent($typeof(ClientStarter_1.default)).r_Teleport(new UnityEngine_1.Vector3(80,
+    54.9, 5));\r\n    }\r\n}\r\nexports.default = TigerEvent;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGlnZXJFdmVudC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlRpZ2VyRXZlbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBNEQ7QUFFNUQsNkVBQTZFO0FBQzdFLGlEQUFxRDtBQUNyRCw0RUFBcUU7QUFFckUsTUFBcUIsVUFBVyxTQUFRLHFDQUFxQjtJQU96RDs7Ozs7T0FLRztJQUVJLFFBQVE7UUFDWCxJQUFJLENBQUMsZUFBZSxHQUFDLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDO1FBQy9FLE9BQU8sQ0FBQyxHQUFHLENBQUMsYUFBYSxDQUFDLENBQUM7UUFDM0IsSUFBSSxJQUFJLENBQUMsZUFBZSxJQUFJLElBQUksRUFBRTtZQUFDLE9BQU8sQ0FBQyxHQUFHLENBQUMsTUFBTSxDQUFDLENBQUM7WUFBQyxPQUFPLENBQUMsQ0FBQztTQUFDO1FBQ2xFLElBQUksQ0FBQyxlQUFlLENBQUMsUUFBUSxDQUFDLElBQUkscUJBQU8sQ0FBQyxFQUFFLEVBQUMsSUFBSSxFQUFDLENBQUMsQ0FBQyxFQUFDLHdCQUFVLENBQUMsUUFBUSxDQUFDLENBQUM7UUFDMUUsSUFBSSxDQUFDLEVBQUUsQ0FBQyxZQUFZLFNBQUMsdUJBQWEsR0FBSSxVQUFVLENBQUMsSUFBSSxxQkFBTyxDQUFDLEVBQUUsRUFBQyxJQUFJLEVBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQztJQUM3RSxDQUFDO0NBRUo7QUF0QkQsNkJBc0JDIn0=","assetPath":"Assets/08
+    Event/TigerEvent.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"Btn1","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"cs","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"ZEPETO.Character.Controller","name":"zepetoCharacter","type":"ZEPETO.Character.Controller.ZepetoCharacter","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"TigerEvent","description":""},"isCompiled":true}'
+  typescriptHash: 56dfdbd5abf292a2bc2cf0f166c61476
+  onlyWriteTrigger: 0

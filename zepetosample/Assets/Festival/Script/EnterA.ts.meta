@@ -1,0 +1,34 @@
+fileFormatVersion: 2
+guid: 9b905b512a32e1243b0d0effe841e8c2
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst BGM_1 = require(\"./BGM\");\r\nclass
+    EnterA extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    OnTriggerEnter(coll)
+    {\r\n        var audio = this.script.GetComponent($typeof(BGM_1.default));\r\n       
+    if (coll.gameObject.name == $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name)
+    {\r\n            if (!audio.isA1Play) {\r\n                audio.isA1Play = true;\r\n               
+    audio.isA2Play = false;\r\n                audio.isA3Play = false;\r\n               
+    audio.PlayAudio();\r\n            }\r\n        }\r\n    }\r\n}\r\nexports.default
+    = EnterA;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRW50ZXJBLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRW50ZXJBLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQW1EO0FBQ25ELDZFQUE0RDtBQUM1RCxpREFBcUQ7QUFDckQsK0JBQXVCO0FBRXZCLE1BQXFCLE1BQU8sU0FBUSxxQ0FBcUI7SUFJckQsY0FBYyxDQUFDLElBQWE7UUFDeEIsSUFBSSxLQUFLLEdBQUcsSUFBSSxDQUFDLE1BQU0sQ0FBQyxZQUFZLFNBQUMsYUFBRyxFQUFHLENBQUM7UUFDNUMsSUFBRyxJQUFJLENBQUMsVUFBVSxDQUFDLElBQUksSUFBRSxnREFBdUIsbUJBQW1CLENBQTFDLDJDQUFhLENBQUMsUUFBUSxFQUFxQiwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLE1BQU0sRUFBRSxTQUFTLENBQUMsSUFBSSxFQUFDO1lBQ3ZJLElBQUcsQ0FBQyxLQUFLLENBQUMsUUFBUSxFQUFDO2dCQUNmLEtBQUssQ0FBQyxRQUFRLEdBQUMsSUFBSSxDQUFDO2dCQUNwQixLQUFLLENBQUMsUUFBUSxHQUFDLEtBQUssQ0FBQztnQkFDckIsS0FBSyxDQUFDLFFBQVEsR0FBQyxLQUFLLENBQUM7Z0JBQ3JCLEtBQUssQ0FBQyxTQUFTLEVBQUUsQ0FBQzthQUNyQjtTQUNKO0lBQ0wsQ0FBQztDQUNKO0FBZkQseUJBZUMifQ==","assetPath":"Assets/Festival/Script/EnterA.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"script","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"EnterA","description":""},"isCompiled":true}'
+  typescriptHash: c62356fb11c1fe8322b0fbc1cade1800
+  onlyWriteTrigger: 0

@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: a6736115a9b9f1f4382ddf4a51c59eff
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass EventCamera extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Update() {\r\n        this.GetComponent($typeof(UnityEngine_1.Canvas)).worldCamera
+    = UnityEngine_1.GameObject.Find(\"CameraParent\").transform.\r\n            GetChild(0).gameObject.GetComponent($typeof(UnityEngine_1.Camera));\r\n   
+    }\r\n}\r\nexports.default = EventCamera;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRXZlbnRDYW1lcmEuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFdmVudENhbWVyYS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUF5RDtBQUN6RCxpREFBcUQ7QUFFckQsTUFBcUIsV0FBWSxTQUFRLHFDQUFxQjtJQUcxRCxNQUFNO1FBQUksSUFBSSxDQUFDLFlBQVksU0FBQyxvQkFBTSxHQUFJLFdBQVcsR0FBRSx3QkFBVSxDQUFDLElBQUksQ0FBQyxjQUFjLENBQUMsQ0FBQyxTQUFTO1lBQ3hGLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLG9CQUFNLEVBQUcsQ0FBQztJQUMxQyxDQUFDO0NBR1o7QUFSRCw4QkFRQyJ9","assetPath":"Assets/Festival/Script/EventCamera.ts","manifest":{"properties":[],"name":"EventCamera","description":""},"isCompiled":true}'
+  typescriptHash: 8768d73a332a4a3926d9fdf94f17e879
+  onlyWriteTrigger: 0

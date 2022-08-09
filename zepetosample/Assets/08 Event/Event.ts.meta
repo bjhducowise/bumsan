@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 5dfcef11daaa82e4ab15251bbd2e7f93
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass Event extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        this.particle.Stop();\r\n    }\r\n    Update()
+    {\r\n        this.transform.RotateAround(this.rotTarget.transform.position, UnityEngine_1.Vector3.up,
+    this.rotSpeed * UnityEngine_1.Time.deltaTime);\r\n        if (this.startDelay
+    > 0) {\r\n            this.startDelay -= UnityEngine_1.Time.deltaTime;\r\n           
+    return;\r\n        }\r\n        this.timer += UnityEngine_1.Time.deltaTime;\r\n       
+    if (this.timer > this.interval) {\r\n            this.particle.Play();\r\n           
+    this.timer = 0;\r\n            this.active = !this.active;\r\n            this.mesh.enabled
+    = this.active;\r\n        }\r\n    }\r\n}\r\nexports.default = Event;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRXZlbnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFdmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUE4RjtBQUM5RixpREFBcUQ7QUFFckQsTUFBcUIsS0FBTSxTQUFRLHFDQUFxQjtJQWVwRCxLQUFLO1FBQ0QsSUFBSSxDQUFDLFFBQVEsQ0FBQyxJQUFJLEVBQUUsQ0FBQztJQUN6QixDQUFDO0lBQ0QsTUFBTTtRQUVGLElBQUksQ0FBQyxTQUFTLENBQUMsWUFBWSxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBQyxxQkFBTyxDQUFDLEVBQUUsRUFBQyxJQUFJLENBQUMsUUFBUSxHQUFDLGtCQUFJLENBQUMsU0FBUyxDQUFFLENBQUM7UUFFeEcsSUFBRyxJQUFJLENBQUMsVUFBVSxHQUFDLENBQUMsRUFBQztZQUNqQixJQUFJLENBQUMsVUFBVSxJQUFFLGtCQUFJLENBQUMsU0FBUyxDQUFDO1lBQ2hDLE9BQU87U0FDVjtRQUVELElBQUksQ0FBQyxLQUFLLElBQUcsa0JBQUksQ0FBQyxTQUFTLENBQUM7UUFDNUIsSUFBRyxJQUFJLENBQUMsS0FBSyxHQUFDLElBQUksQ0FBQyxRQUFRLEVBQUM7WUFDeEIsSUFBSSxDQUFDLFFBQVEsQ0FBQyxJQUFJLEVBQUUsQ0FBQztZQUNyQixJQUFJLENBQUMsS0FBSyxHQUFDLENBQUMsQ0FBQztZQUNiLElBQUksQ0FBQyxNQUFNLEdBQUUsQ0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDO1lBQzFCLElBQUksQ0FBQyxJQUFJLENBQUMsT0FBTyxHQUFDLElBQUksQ0FBQyxNQUFNLENBQUM7U0FDakM7SUFFTCxDQUFDO0NBRUo7QUFyQ0Qsd0JBcUNDIn0=","assetPath":"Assets/08
+    Event/Event.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"rotTarget","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"rotSpeed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"timer","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"interval","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"mesh","type":"UnityEngine.MeshRenderer","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"active","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"startDelay","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.ParticleSystemModule","name":"particle","type":"UnityEngine.ParticleSystem","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Event","description":""},"isCompiled":true}'
+  typescriptHash: 492eecc74d13f4c29ec168e10a94a372
+  onlyWriteTrigger: 0

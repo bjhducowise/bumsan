@@ -3,6 +3,7 @@ import { Vector3,Quaternion,Time, GameObject } from 'UnityEngine';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { ZepetoCharacter,ZepetoPlayer,ZepetoPlayers } from 'ZEPETO.Character.Controller';
 import Timer from './Timer'
+import ClientStarter from '../../ZepetoScripts/Multiplay/ClientStarter';
 
 export default class Button1 extends ZepetoScriptBehaviour {
 
@@ -11,6 +12,8 @@ export default class Button1 extends ZepetoScriptBehaviour {
     public GetTimerPause : boolean;
     public pos : Vector3;
     public GetTimerOn : boolean;
+    public cs:GameObject; //clientstarter
+
     
     
 
@@ -20,7 +23,6 @@ export default class Button1 extends ZepetoScriptBehaviour {
             this.zepetoCharacter = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;
         });      
         this.testBtn.onClick.AddListener(()=>{this.ButtonClick();});
-
         
 
     }
@@ -54,14 +56,16 @@ export default class Button1 extends ZepetoScriptBehaviour {
     }
 
     private teleport_1(){
-        if (this.zepetoCharacter == null) 
-            return 0;
+        if (this.zepetoCharacter == null) {return 0;}
+
         this.zepetoCharacter.Teleport(new Vector3(30.1,-12.24,-13.9),Quaternion.identity);
+        this.cs.GetComponent<ClientStarter>().r_Teleport(new Vector3(30.1,-12.24,-13.9));
+        
     }
     private teleport_2(){
-        if (this.zepetoCharacter == null) 
-            return 0;
+        if (this.zepetoCharacter == null) {return 0;}
         this.zepetoCharacter.Teleport(this.pos,Quaternion.identity);
+        this.cs.GetComponent<ClientStarter>().r_Teleport(this.pos);
     }
 
     //private timerPause(timer : bool){

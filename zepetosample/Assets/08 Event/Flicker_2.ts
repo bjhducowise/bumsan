@@ -1,4 +1,4 @@
-import { BoxCollider, MeshCollider, MeshRenderer, Time } from 'UnityEngine';
+import { BoxCollider, MeshCollider, MeshRenderer, ParticleSystem, Time } from 'UnityEngine';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 
 export default class Flicker_2 extends ZepetoScriptBehaviour {
@@ -6,14 +6,13 @@ export default class Flicker_2 extends ZepetoScriptBehaviour {
     private timer:float=0;
     public interval:float;
     public mesh:MeshRenderer;
-    public collider:MeshCollider;
+    public particle:ParticleSystem;
     public active:bool;
-
     public startDelay:float;
 
 
     Start() {    
-        this.gameObject.SetActive(false);
+        this.particle.Stop();
     }
     Update(){
 
@@ -23,10 +22,9 @@ export default class Flicker_2 extends ZepetoScriptBehaviour {
         }
         this.timer +=Time.deltaTime;
         if(this.timer>this.interval){
+            this.particle.Play();
             this.timer=0;
-            this.active=!this.active;
-            this.mesh.enabled=this.active;
-            this.collider.enabled=this.active;
+            
         }
     }
 
