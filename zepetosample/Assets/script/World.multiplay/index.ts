@@ -73,6 +73,10 @@ export default class extends Sandbox {
         // client 객체의 고유 키값인 sessionId 를 사용해서 Player 객체를 관리.
         // set 으로 추가된 player 객체에 대한 정보를 클라이언트에서는 players 객체에 add_OnAdd 이벤트를 추가하여 확인 할 수 있음.
         this.state.players.set(client.sessionId, player);
+
+        this.onMessage("Teleport", (client, message) => {
+            this.broadcast("Teleport", message, { except: client});
+            });
     }
 
     onTick(deltaTime: number): void {
