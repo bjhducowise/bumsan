@@ -19,16 +19,13 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
-    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
-    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass BestItem extends ZEPETO_Script_1.ZepetoScriptBehaviour
-    {\r\n    Start() {\r\n    }\r\n    OnTriggerEnter(coll) {\r\n        if (coll.gameObject.name
-    == $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
-    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name)
-    {\r\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.localScale
-    = new UnityEngine_1.Vector3(2, 2, 2);\r\n            console.log(''scale up'');\r\n           
-    this.StartCoroutine(this.Fade(5));\r\n        }\r\n    }\r\n    *Fade(tick) {\r\n       
-    yield new UnityEngine_1.WaitForSeconds(tick);\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.localScale
-    = new UnityEngine_1.Vector3(1, 1, 1);\r\n        console.log(\"default scale\");\r\n   
-    }\r\n}\r\nexports.default = BestItem;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQmVzdEl0ZW0uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJCZXN0SXRlbS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUErRDtBQUMvRCw2RUFBNEQ7QUFDNUQsaURBQXFEO0FBRXJELE1BQXFCLFFBQVMsU0FBUSxxQ0FBcUI7SUFFdkQsS0FBSztJQUVMLENBQUM7SUFHRCxjQUFjLENBQUMsSUFBYTtRQUN4QixJQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsSUFBSSxJQUFFLGdEQUF1QixtQkFBbUIsQ0FBMUMsMkNBQWEsQ0FBQyxRQUFRLEVBQXFCLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsTUFBTSxFQUFFLFNBQVMsQ0FBQyxJQUFJLEVBQUM7WUFDdkksMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLFVBQVUsR0FBRyxJQUFJLHFCQUFPLENBQUMsQ0FBQyxFQUFDLENBQUMsRUFBQyxDQUFDLENBQUMsQ0FBQztZQUN4RixPQUFPLENBQUMsR0FBRyxDQUFDLFVBQVUsQ0FBQyxDQUFDO1lBQ3BDLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO1NBR3JDO0lBRUwsQ0FBQztJQUVELENBQUMsSUFBSSxDQUFDLElBQVc7UUFDYixNQUFNLElBQUksNEJBQWMsQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUMvQiwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsVUFBVSxHQUFHLElBQUkscUJBQU8sQ0FBQyxDQUFDLEVBQUMsQ0FBQyxFQUFDLENBQUMsQ0FBQyxDQUFDO1FBQ3BHLE9BQU8sQ0FBQyxHQUFHLENBQUMsZUFBZSxDQUFDLENBQUM7SUFFakMsQ0FBQztDQUdKO0FBMUJELDJCQTBCQyJ9","assetPath":"Assets/script/BestItem.ts","manifest":{"properties":[],"name":"BestItem","description":""},"isCompiled":true}'
-  typescriptHash: 578402c69e11d320c6ee68817c51cc1b
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    BestItem extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n   
+    }\r\n    OnTriggerEnter(coll) {\r\n        /*\r\n        if(coll.gameObject.name==ZepetoPlayers.instance.GetPlayerWithUserId(ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name){\r\n           
+    ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.localScale
+    = new Vector3(2,2,2);\r\n                        console.log(''scale up'');\r\n           
+    this.StartCoroutine(this.Fade(5));\r\n\r\n            \r\n        }\r\n    */\r\n   
+    }\r\n}\r\nexports.default = BestItem;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQmVzdEl0ZW0uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJCZXN0SXRlbS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUVBLGlEQUFxRDtBQUVyRCxNQUFxQixRQUFTLFNBQVEscUNBQXFCO0lBRXZELEtBQUs7SUFFTCxDQUFDO0lBR0QsY0FBYyxDQUFDLElBQWE7UUFDeEI7Ozs7Ozs7O01BUUY7SUFDRixDQUFDO0NBVUo7QUEzQkQsMkJBMkJDIn0=","assetPath":"Assets/02
+    Item/BestItem.ts","manifest":{"properties":[],"name":"BestItem","description":""},"isCompiled":true}'
+  typescriptHash: 33d27d46dfcc9f9654ae5ce1a6ea0132
+  onlyWriteTrigger: 0

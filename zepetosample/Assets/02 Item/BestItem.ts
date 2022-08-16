@@ -10,6 +10,7 @@ export default class BestItem extends ZepetoScriptBehaviour {
 
 
     OnTriggerEnter(coll:Collider) {    
+        /*
         if(coll.gameObject.name==ZepetoPlayers.instance.GetPlayerWithUserId(ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name){
             ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.localScale = new Vector3(2,2,2);
                         console.log('scale up');
@@ -17,15 +18,15 @@ export default class BestItem extends ZepetoScriptBehaviour {
 
             
         }
-    
+    */
     }
-
+/*
     *Fade(tick:number){
         yield new WaitForSeconds(tick);
         ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.localScale = new Vector3(1,1,1);
         console.log("default scale");
 
     }
-
+*/
 
 }

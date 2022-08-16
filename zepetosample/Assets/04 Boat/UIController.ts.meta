@@ -1,0 +1,49 @@
+fileFormatVersion: 2
+guid: 86ab5b25786e5b94d911a3c2e10b565f
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst UnityEngine_EventSystems_1
+    = require(\"UnityEngine.EventSystems\");\r\nconst UnityEngine_EventSystems_EventTrigger_1
+    = require(\"UnityEngine.EventSystems.EventTrigger\");\r\nclass UIController extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        this.isdown
+    = false;\r\n        this.AddEventTrigger(UnityEngine_EventSystems_1.EventTriggerType.PointerDown,
+    () => {\r\n            //console.log(''move start'');\r\n            //console.log(`move
+    start : ${this.handleOriginGo.transform.position.x} // ${this.handleOriginGo.transform.position.y}`)\r\n           
+    this.isdown = true;\r\n            this.downAction();\r\n        });\r\n       
+    this.AddEventTrigger(UnityEngine_EventSystems_1.EventTriggerType.Drag, () =>
+    {\r\n            var dir = (UnityEngine_1.Vector3.op_Subtraction(this.handleGo.transform.position,
+    this.handleOriginGo.transform.position)).normalized;\r\n            //console.log(dir.x,
+    dir.y);\r\n            //this.gameObject.transform.position+=dir;\r\n           
+    this.dragAction(dir);\r\n        });\r\n        this.AddEventTrigger(UnityEngine_EventSystems_1.EventTriggerType.PointerUp,
+    () => {\r\n            console.log(''move complete'');\r\n            this.isdown
+    = false;\r\n            this.upAction();\r\n        });\r\n    }\r\n    AddEventTrigger(type,
+    callback) {\r\n        if (this.trigger === undefined)\r\n            return;\r\n       
+    console.log(`this.trigger: ${this.trigger}, type : ${type}`);\r\n        // create
+    eventsystem entry\r\n        var entry = new UnityEngine_EventSystems_EventTrigger_1.Entry();\r\n       
+    // specify event type & delegation\r\n        entry.eventID = type;\r\n       
+    entry.callback.AddListener(callback);\r\n        // register event entry\r\n       
+    this.trigger.triggers.Add(entry);\r\n    }\r\n    ShowCarpetButton() {\r\n       
+    this.carpetBtn.gameObject.SetActive(true);\r\n    }\r\n    HideCarpetButton()
+    {\r\n        this.carpetBtn.gameObject.SetActive(false);\r\n    }\r\n}\r\nexports.default
+    = UIController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVUlDb250cm9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVUlDb250cm9sbGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXFEO0FBQ3JELDZDQUFnRDtBQUNoRCx1RUFBd0U7QUFDeEUsaUdBQTREO0FBTzVELE1BQXFCLFlBQWEsU0FBUSxxQ0FBcUI7SUFZM0QsS0FBSztRQUNELElBQUksQ0FBQyxNQUFNLEdBQUcsS0FBSyxDQUFDO1FBQ3BCLElBQUksQ0FBQyxlQUFlLENBQUMsMkNBQWdCLENBQUMsV0FBVyxFQUFFLEdBQUUsRUFBRTtZQUNuRCw0QkFBNEI7WUFDNUIsd0hBQXdIO1lBQ3hILElBQUksQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDO1lBQ25CLElBQUksQ0FBQyxVQUFVLEVBQUUsQ0FBQztRQUN0QixDQUFDLENBQUMsQ0FBQztRQUNILElBQUksQ0FBQyxlQUFlLENBQUMsMkNBQWdCLENBQUMsSUFBSSxFQUFFLEdBQUUsRUFBRTtZQUM1QyxJQUFJLEdBQUcsR0FBRyxDQTlCRCxxQkFBTyxDQXVFbTFtQixjQUFlLENBekN2Mm1CLElBQUksQ0FBQyxRQUFRLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBRyxJQUFJLENBQUMsY0FBYyxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQUMsQ0FBQyxVQUFVLENBQUM7WUFDakcsNEJBQTRCO1lBQzVCLDBDQUEwQztZQUMxQyxJQUFJLENBQUMsVUFBVSxDQUFDLEdBQUcsQ0FBQyxDQUFDO1FBQ3pCLENBQUMsQ0FBQyxDQUFDO1FBQ0gsSUFBSSxDQUFDLGVBQWUsQ0FBQywyQ0FBZ0IsQ0FBQyxTQUFTLEVBQUUsR0FBRSxFQUFFO1lBQ2pELE9BQU8sQ0FBQyxHQUFHLENBQUMsZUFBZSxDQUFDLENBQUM7WUFDN0IsSUFBSSxDQUFDLE1BQU0sR0FBRyxLQUFLLENBQUM7WUFDcEIsSUFBSSxDQUFDLFFBQVEsRUFBRSxDQUFDO1FBQ3BCLENBQUMsQ0FBQyxDQUFDO0lBR1AsQ0FBQztJQUVNLGVBQWUsQ0FBQyxJQUFxQixFQUFFLFFBQVE7UUFFbEQsSUFBRyxJQUFJLENBQUMsT0FBTyxLQUFLLFNBQVM7WUFBRSxPQUFPO1FBRXRDLE9BQU8sQ0FBQyxHQUFHLENBQUMsaUJBQWlCLElBQUksQ0FBQyxPQUFPLFlBQVksSUFBSSxFQUFFLENBQUMsQ0FBQztRQUU3RCwyQkFBMkI7UUFDM0IsSUFBSSxLQUFLLEdBQUcsSUFBSSw2Q0FBSyxFQUFFLENBQUM7UUFFeEIsa0NBQWtDO1FBQ2xDLEtBQUssQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDO1FBQ3JCLEtBQUssQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFFBQVEsQ0FBQyxDQUFDO1FBRXJDLHVCQUF1QjtRQUN2QixJQUFJLENBQUMsT0FBTyxDQUFDLFFBQVEsQ0FBQyxHQUFHLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDckMsQ0FBQztJQUVPLGdCQUFnQjtRQUVwQixJQUFJLENBQUMsU0FBUyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDOUMsQ0FBQztJQUVPLGdCQUFnQjtRQUVwQixJQUFJLENBQUMsU0FBUyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDL0MsQ0FBQztDQUVKO0FBOURELCtCQThEQyJ9","assetPath":"Assets/04
+    Boat/UIController.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"carpetBtn","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"trigger","type":"UnityEngine.EventSystems.EventTrigger","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"handleGo","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"handleOriginGo","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"","name":"downAction","type":"__type","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"","name":"dragAction","type":"__type","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"","name":"upAction","type":"__type","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"isdown","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"UIController","description":""},"isCompiled":true}'
+  typescriptHash: 56a99ca8eff7c66111a27a25a9e9727f
+  onlyWriteTrigger: 0

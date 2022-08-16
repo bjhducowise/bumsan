@@ -1,16 +1,18 @@
 import {ZepetoScriptBehaviour} from 'ZEPETO.Script'
-import {PlayerInput,InputAction} from "UnityEngine.InputSystem"
+import {PlayerInput,InputAction, InputActionAsset} from "UnityEngine.InputSystem"
 import {CallbackContext} from "UnityEngine.InputSystem.InputAction"
 import {CharacterState, ZepetoCharacter, ZepetoPlayers, ZepetoCamera} from 'ZEPETO.Character.Controller'
 import {Quaternion, Time, Vector2, Vector3} from "UnityEngine";
 import * as UnityEngine from "UnityEngine";
+import * as UnityEngineUI from 'UnityEngine.UI';
+export default class NewTypescript extends ZepetoScriptBehaviour {
 
-
-export default class SideViewController extends ZepetoScriptBehaviour {
-
+    public InputAsset : InputActionAsset;
+    
     public customCamera : UnityEngine.Camera;
     public cameraDistance : number = 10;
 
+    public text1 :  UnityEngineUI.Text;
     private originSpawnPoint : Vector3 = new Vector3(-16,-5,0);
     private myCharacter: ZepetoCharacter;
     private startPos: Vector2 = Vector2.zero;
@@ -23,7 +25,13 @@ export default class SideViewController extends ZepetoScriptBehaviour {
     private isTriggered: boolean = false;
     private isTouchDown: boolean = false;
 
-    private CanMove() : boolean {
+    private camtouchPositionAction : InputAction;
+    private camstartPos: Vector2 = Vector2.zero;
+    private camcurPos: Vector2 = Vector2.zero;
+
+    
+    private touch : TouchList;
+     private CanMove() : boolean {
         return this.isTouchDown && !this.isTriggered;
     }
 
@@ -34,9 +42,9 @@ export default class SideViewController extends ZepetoScriptBehaviour {
 
     Start() {
 
-        this.touchTriggerAction = this.playerInput.actions.FindAction("MoveTrigger");
-        this.touchPositionAction = this.playerInput.actions.FindAction("Move");
-
+        //this.touchTriggerAction = this.InputAsset.FindActionMap("Player").FindAction("MoveTrigger");//PrimaryTouchPosition
+        this.touchPositionAction = this.InputAsset.FindActionMap("Player").FindAction("Move");
+        this.camtouchPositionAction = this.InputAsset.FindActionMap("Player").FindAction("PrimaryTouchPosition");
         this.touchTriggerAction.add_started((context)=>{
             this.isTriggered = true;
             this.isTouchDown = true;
@@ -48,7 +56,15 @@ export default class SideViewController extends ZepetoScriptBehaviour {
         });
 
         this.touchPositionAction.add_performed((context)=>{
+            console.log(`${this.touch[0].identifier}`);
+            this.text1.text += "/" +UnityEngine.Input.touchCount;
+            var conbool = true;
+            this.curPos = context.ReadValueAsObject() as Vector2;
 
+                if(conbool) {
+                    conbool = false;
+                    this.startPos = this.curPos;
+                }
             if(this.isTouchDown)
             {
                 this.curPos = context.ReadValueAsObject() as Vector2;
@@ -60,6 +76,26 @@ export default class SideViewController extends ZepetoScriptBehaviour {
             }
         });
 
+        this.camtouchPositionAction.add_performed((context)=>{
+            console.log(`${this.camcurPos.x}`);
+            console.log(`${this.touch[1].identifier}`);
+            var conbool = true;
+            this.camcurPos = context.ReadValueAsObject() as Vector2;
+
+                if(conbool) {
+                    conbool = false;
+                    this.camstartPos = this.camcurPos;
+                }
+            if(this.isTouchDown)
+            {
+                this.curPos = context.ReadValueAsObject() as Vector2;
+
+                if(this.isTriggered) {
+                    this.isTriggered = false;
+                    this.startPos = this.curPos;
+                }
+            }
+        });
         //turn off zepeto camera
         ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(() => {
             ZepetoPlayers.instance.LocalPlayer.zepetoCamera.gameObject.SetActive(false);
@@ -74,7 +110,7 @@ export default class SideViewController extends ZepetoScriptBehaviour {
         {
             yield new UnityEngine.WaitForEndOfFrame();
 
-            if (this.myCharacter && this.CanMove()) {
+            if (this.myCharacter) {
 
                 var camRot = Quaternion.Euler(0, UnityEngine.Camera.main.transform.rotation.eulerAngles.y, 0);
                 var moveDir = Vector2.op_Subtraction(this.curPos, this.startPos);

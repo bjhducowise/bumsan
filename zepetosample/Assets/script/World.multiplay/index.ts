@@ -1,7 +1,6 @@
 import {Sandbox, SandboxOptions, SandboxPlayer} from "ZEPETO.Multiplay";
 import {DataStorage} from "ZEPETO.Multiplay.DataStorage";
 import {Player, Transform, Vector3} from "ZEPETO.Multiplay.Schema";
-
 export default class extends Sandbox {
 
 
@@ -32,11 +31,21 @@ export default class extends Sandbox {
 
             player.transform = transform;
         });
-
+        this.onMessage("isRideState",(client,message)=>
+        {
+            const player = this.state.players.get(client.sessionId);
+            player.isRide = message.isRide;
+            console.log(`${player.isRide}`);
+            
+        });
         this.onMessage("onChangedState", (client, message) => {
             const player = this.state.players.get(client.sessionId);
             player.state = message.state;
             player.subState = message.subState; // Character Controller V2
+        });
+        this.onMessage("Teleport", (client, message) => {
+            
+            this.broadcast("Teleport", message, { except: client});
         });
     }
     
@@ -56,6 +65,7 @@ export default class extends Sandbox {
         if (client.userId) {
             player.zepetoUserId = client.userId;
         }
+        
 
         // [DataStorage] 입장한 Player의 DataStorage Load
         const storage: DataStorage = client.loadDataStorage();
