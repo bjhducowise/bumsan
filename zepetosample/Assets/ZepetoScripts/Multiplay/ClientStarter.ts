@@ -1,6 +1,7 @@
 import {ZepetoScriptBehaviour} from 'ZEPETO.Script'
 import {ZepetoWorldMultiplay} from 'ZEPETO.World'
 import {Room, RoomData} from 'ZEPETO.Multiplay'
+<<<<<<< HEAD
 import {Player, State, Vector3, Transform} from 'ZEPETO.Multiplay.Schema'
 import {CharacterState, SpawnInfo, ZepetoPlayers, ZepetoPlayer, LocalPlayer} from 'ZEPETO.Character.Controller'
 import * as UnityEngine from "UnityEngine";
@@ -15,12 +16,24 @@ interface TeleportMessageModel {
     transform: Vector3
     }
 export default class ClientStarter extends ZepetoScriptBehaviour {
+=======
+import {Player, State, Vector3} from 'ZEPETO.Multiplay.Schema'
+import {CharacterState, SpawnInfo, ZepetoPlayers, ZepetoPlayer} from 'ZEPETO.Character.Controller'
+import * as UnityEngine from "UnityEngine";
+
+
+export default class Starter extends ZepetoScriptBehaviour {
+
+>>>>>>> parent of e080bf4 (Merge branch 'main' into Jaemin)
     public multiplay: ZepetoWorldMultiplay;
     public ui : UnityEngine.GameObject;
     private room: Room;
     private currentPlayers: Map<string, Player> = new Map<string, Player>();
+<<<<<<< HEAD
 
     static instance: any
+=======
+>>>>>>> parent of e080bf4 (Merge branch 'main' into Jaemin)
 
     //vehicle
     public carpetPrefab : UnityEngine.GameObject;
@@ -35,6 +48,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
     private testM : TeleportMessageModel;
     private Start() {
 
+<<<<<<< HEAD
         var go = UnityEngine.Object.Instantiate<UnityEngine.GameObject>(this.ui);
         
         this.uiController = go.GetComponent<UIController>();
@@ -47,14 +61,14 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
                 return ZepetoPlayers.instance.GetPlayer(message.clientId).character.Teleport(this.ParseVector3(message.transform),UnityEngine.Quaternion.identity)
             });
 
+=======
+        this.multiplay.RoomCreated += (room: Room) => {
+            this.room = room;
+>>>>>>> parent of e080bf4 (Merge branch 'main' into Jaemin)
         };
-        
 
         this.multiplay.RoomJoined += (room: Room) => {
             room.OnStateChange += this.OnStateChange;
-            room.AddMessageHandler("Teleport", (message: TeleportMessageModel) => {
-                return ZepetoPlayers.instance.GetPlayer(message.clientId).character.Teleport(pos,UnityEngine.Quaternion.identity)
-                });
         };
 
         this.StartCoroutine(this.SendMessageLoop(0.1));
@@ -82,8 +96,6 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
                 }
             }
         }
-
-
     }
     FixedUpdate(){
         if(this.uiController){
@@ -300,6 +312,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
             vector3.z
         );
     }
+<<<<<<< HEAD
 
 
     public r_Teleport(position:UnityEngine.Vector3){
@@ -372,8 +385,6 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
 
     }
     
+=======
+>>>>>>> parent of e080bf4 (Merge branch 'main' into Jaemin)
 }
-
-
-
-    

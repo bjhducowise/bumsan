@@ -1,5 +1,4 @@
-import { BooleanLiteral } from 'typescript';
-import { Time, Vector3, Coroutine, WaitForSeconds, Random, Collider, GameObject, AnimationClip} from 'UnityEngine';
+import { Time, Vector3, Coroutine, WaitForSeconds, Random, Collider} from 'UnityEngine';
 import { TimeScope } from 'UnityEngine.SocialPlatforms';
 import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
@@ -12,10 +11,6 @@ export default class ScaleUp extends ZepetoScriptBehaviour {
     private originscale:Vector3;
     public scaleupdate:Vector3;
     private timer : float;
-    public gesture:AnimationClip;
-    
-    private stun: bool;
-
 
 
     Awake(){
@@ -42,29 +37,17 @@ export default class ScaleUp extends ZepetoScriptBehaviour {
         }
         
     }
+    OnTriggerEnter(coll :Collider){
+        while(this.timer<1000){
+            ZepetoPlayers.instance.GetPlayerWithUserId(ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.StopMoving();
+            this.timer+=Time.deltaTime;
+        }
+        this.timer=0;
+    }
     
-    OnCollisionEnter(coll: Collider){
-        if(coll.gameObject.name==ZepetoPlayers.instance.GetPlayerWithUserId(ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name){
-            ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.StopMoving();
-            
-            
-                const character = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;
-                character.SetGesture(this.gesture);
-                this.StartCoroutine(this.StopCharacterGesture(this.gesture.length - 0.6));
-                
-            
-        }
-    }
-    *StopCharacterGesture(length:number){
-        yield new WaitForSeconds(length);
-        const character = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;
-        character.CancelGesture();   
-            
-        }
-        
-
-    }
+    
 
 
+}
 
 
