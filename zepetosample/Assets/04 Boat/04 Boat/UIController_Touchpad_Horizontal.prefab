@@ -554,10 +554,10 @@ MonoBehaviour:
   OnPointDownEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4458252877524076426, guid: af74f5dcf53922f49a34a64799cb276d, type: 3}
+      - m_Target: {fileID: 7334025019283600016, guid: 3ab0e77a21c9b4013b1f6931717f766a, type: 3}
         m_TargetAssemblyTypeName: ZEPETO.Character.Controller.UIZepetoPlayerControl,
           ZEPETO.Character.Controller
-        m_MethodName: 
+        m_MethodName: Jump
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
