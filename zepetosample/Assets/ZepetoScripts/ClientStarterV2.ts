@@ -1,7 +1,7 @@
 import {ZepetoScriptBehaviour} from 'ZEPETO.Script'
 import {ZepetoWorldMultiplay} from 'ZEPETO.World'
 import {Room, RoomData} from 'ZEPETO.Multiplay'
-import {Player, State, Vector3} from 'ZEPETO.Multiplay.Schema'
+import {Player, State, Transform, Vector3} from 'ZEPETO.Multiplay.Schema'
 import {CharacterState, SpawnInfo, ZepetoPlayers, ZepetoPlayer, CharacterJumpState} from 'ZEPETO.Character.Controller'
 import * as UnityEngine from "UnityEngine";
 
@@ -23,6 +23,18 @@ export default class ClientStarterV2 extends ZepetoScriptBehaviour {
 
         this.multiplay.RoomJoined += (room: Room) => {
             room.OnStateChange += this.OnStateChange;
+            room.AddMessageHandler("ChangePlayerTransform",(message:Transform)=>{
+                var global=ZepetoPlayers.instance.GetPlayer(message.clientId).character;
+                var local = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;
+
+                ZepetoPlayers.instance.GetPlayer(message.clientId).character.Teleport(this.ParseVector3(message.position),new UnityEngine.Quaternion(message.rotation.x,message.rotation.y,message.rotation.z,1));
+                ZepetoPlayers.instance.GetPlayer(message.clientId).character.transform.SetPositionAndRotation(this.ParseVector3(message.position),new UnityEngine.Quaternion(message.rotation.x,message.rotation.y,message.rotation.z,1));
+
+                if(UnityEngine.Vector3.op_Equality(global.transform.position,local.transform.position)){
+                    local.Teleport(global.transform.position,global.transform.rotation);
+                }
+
+            })
         };
 
         this.StartCoroutine(this.SendMessageLoop(0.04));
@@ -168,7 +180,22 @@ export default class ClientStarterV2 extends ZepetoScriptBehaviour {
         );
     }
 
+    public customTeleport(p:UnityEngine.Vector3,r:UnityEngine.Quaternion){
+        if(this.room){
+            const data = new RoomData();
+            const pos = new RoomData();
+            pos.Add("x",p.x);
+            pos.Add("y",p.y);
+            pos.Add("z",p.z);
+            data.Add("position",pos.GetObject());
 
-
-
+            const rot=new RoomData();
+            rot.Add("x",r.x);
+            rot.Add("y",r.y);
+            rot.Add("z",r.z);
+            data.Add("rotation",rot.GetObject());
+            this.room.Send("onTeleport",data.GetObject());
+            
+        }
+    }
 }

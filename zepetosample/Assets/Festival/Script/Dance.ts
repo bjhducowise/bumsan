@@ -11,11 +11,14 @@ export default class Dance extends ZepetoScriptBehaviour {
     }
 
     OnTriggerEnter(coll:Collider){
-        coll=this.car.GetComponent<Collider>();
-        if(coll.gameObject.Equals(this.car)){
+        //coll=this.car.GetComponent<Collider>();
+        //coll.gameObject.Equals(this.car.GetComponent<Collider>())
+        if(coll==this.car.GetComponent<Collider>()){
             this.DanceAnimator.SetTrigger("Dance");
             console.log("hi");
             this.StartCoroutine(this.idle());
+        }else{
+            console.log("bye");
         }
     }
 

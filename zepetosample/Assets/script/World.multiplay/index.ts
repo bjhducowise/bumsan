@@ -38,6 +38,28 @@ export default class extends Sandbox {
             player.state = message.state;
             player.subState = message.subState; // Character Controller V2
         });
+
+        this.onMessage("onTeleport", (client, message) => {
+            const player = this.state.players.get(client.sessionId);
+            const transform = new Transform();
+
+            transform.position=new Vector3();
+            transform.position.x=message.position.x;
+            transform.position.y=message.position.y;
+            transform.position.z=message.position.z;
+
+            transform.rotation=new Vector3();
+            transform.rotation.x=message.rotation.x;
+            transform.rotation.y=message.rotation.y;
+            transform.rotation.z=message.rotation.z;
+
+            transform.clientId=client.sessionId;
+            player.transform=transform;
+
+            console.log("hi there");
+            this.broadcast("ChangePlayerTransform",transform);
+            });
+
     }
     
    
@@ -74,9 +96,8 @@ export default class extends Sandbox {
         // set 으로 추가된 player 객체에 대한 정보를 클라이언트에서는 players 객체에 add_OnAdd 이벤트를 추가하여 확인 할 수 있음.
         this.state.players.set(client.sessionId, player);
 
-        this.onMessage("Teleport", (client, message) => {
-            this.broadcast("Teleport", message, { except: client});
-            });
+        
+    
     }
 
     onTick(deltaTime: number): void {

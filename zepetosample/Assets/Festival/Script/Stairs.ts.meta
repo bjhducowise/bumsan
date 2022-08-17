@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: 90fb22f6e4d9d684580ae49cf77f39c7
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass Stairs extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.Setintensity
+    = 62;\r\n    }\r\n    Start() {\r\n        this.light = this.GetComponent($typeof(UnityEngine_1.Light));\r\n       
+    this.light.intensity = 0;\r\n    }\r\n    OnTriggerEnter(coll) {\r\n        this.sound.Play();\r\n       
+    this.light.intensity = this.Setintensity;\r\n        this.StartCoroutine(this.LightOn());\r\n   
+    }\r\n    *LightOn() {\r\n        yield new UnityEngine_1.WaitForSeconds(3);\r\n       
+    this.light.intensity = 0;\r\n    }\r\n}\r\nexports.default = Stairs;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3RhaXJzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU3RhaXJzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXlFO0FBQ3pFLGlEQUFxRDtBQUVyRCxNQUFxQixNQUFPLFNBQVEscUNBQXFCO0lBQXpEOztRQUlZLGlCQUFZLEdBQU8sRUFBRSxDQUFDO0lBaUJsQyxDQUFDO0lBZkcsS0FBSztRQUNELElBQUksQ0FBQyxLQUFLLEdBQUcsSUFBSSxDQUFDLFlBQVksU0FBQyxtQkFBSyxFQUFHLENBQUM7UUFDeEMsSUFBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLEdBQUMsQ0FBQyxDQUFDO0lBQzNCLENBQUM7SUFFRCxjQUFjLENBQUMsSUFBYTtRQUN4QixJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksRUFBRSxDQUFDO1FBQ2xCLElBQUksQ0FBQyxLQUFLLENBQUMsU0FBUyxHQUFDLElBQUksQ0FBQyxZQUFZLENBQUM7UUFDdkMsSUFBSSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsT0FBTyxFQUFFLENBQUMsQ0FBQztJQUN4QyxDQUFDO0lBRUQsQ0FBQyxPQUFPO1FBQ0osTUFBTSxJQUFJLDRCQUFjLENBQUMsQ0FBQyxDQUFDLENBQUM7UUFDNUIsSUFBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLEdBQUMsQ0FBQyxDQUFDO0lBQzNCLENBQUM7Q0FDSjtBQXJCRCx5QkFxQkMifQ==","assetPath":"Assets/Festival/Script/Stairs.ts","manifest":{"properties":[{"assembly":"UnityEngine.AudioModule","name":"sound","type":"UnityEngine.AudioSource","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"light","type":"UnityEngine.Light","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Stairs","description":""},"isCompiled":true}'
+  typescriptHash: 60018baf58e67675571354fd7a61c6d3
+  onlyWriteTrigger: 0

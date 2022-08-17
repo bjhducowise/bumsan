@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: f1e7455b069a8b840a9a61cee1b67310
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst GoBackBtn_1 = require(\"./GoBackBtn\");\r\nconst
+    Timer_1 = require(\"./Timer\");\r\nclass CaveTrigger extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    OnTriggerEnter(coll) {\r\n        if (coll.gameObject.name == $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name)
+    {\r\n            this.Timerscript.GetComponent($typeof(Timer_1.default)).setTimerOn(true);\r\n           
+    console.log(\"timer on\");\r\n            var v = this.GoScript.GetComponent($typeof(GoBackBtn_1.default)).Vally;\r\n           
+    var c = this.GoScript.GetComponent($typeof(GoBackBtn_1.default)).Cave;\r\n           
+    if (v == true && c == false) {\r\n                this.GoScript.GetComponent($typeof(GoBackBtn_1.default)).SetVally(false);\r\n               
+    this.GoScript.GetComponent($typeof(GoBackBtn_1.default)).SetCave(true);\r\n           
+    }\r\n            else if (v == false && c == true) {\r\n                this.GoScript.GetComponent($typeof(GoBackBtn_1.default)).SetVally(true);\r\n               
+    this.GoScript.GetComponent($typeof(GoBackBtn_1.default)).SetCave(false);\r\n           
+    }\r\n        }\r\n    }\r\n}\r\nexports.default = CaveTrigger;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2F2ZVRyaWdnZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJDYXZlVHJpZ2dlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFtRDtBQUNuRCw2RUFBNEQ7QUFDNUQsaURBQXFEO0FBQ3JELDJDQUFvQztBQUNwQyxtQ0FBNEI7QUFHNUIsTUFBcUIsV0FBWSxTQUFRLHFDQUFxQjtJQUsxRCxjQUFjLENBQUMsSUFBYTtRQUN4QixJQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsSUFBSSxJQUFFLGdEQUF1QixtQkFBbUIsQ0FBMUMsMkNBQWEsQ0FBQyxRQUFRLEVBQXFCLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsTUFBTSxFQUFFLFNBQVMsQ0FBQyxJQUFJLEVBQUM7WUFDdkksSUFBSSxDQUFDLFdBQVcsQ0FBQyxZQUFZLFNBQUMsZUFBSyxHQUFJLFVBQVUsQ0FBQyxJQUFJLENBQUMsQ0FBQztZQUN4RCxPQUFPLENBQUMsR0FBRyxDQUFDLFVBQVUsQ0FBQyxDQUFDO1lBQ3hCLElBQUksQ0FBQyxHQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsWUFBWSxTQUFDLG1CQUFTLEdBQUksS0FBSyxDQUFDO1lBQ3BELElBQUksQ0FBQyxHQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsWUFBWSxTQUFDLG1CQUFTLEdBQUksSUFBSSxDQUFDO1lBQ25ELElBQUcsQ0FBQyxJQUFFLElBQUksSUFBRSxDQUFDLElBQUUsS0FBSyxFQUFDO2dCQUNqQixJQUFJLENBQUMsUUFBUSxDQUFDLFlBQVksU0FBQyxtQkFBUyxHQUFJLFFBQVEsQ0FBQyxLQUFLLENBQUMsQ0FBQztnQkFDeEQsSUFBSSxDQUFDLFFBQVEsQ0FBQyxZQUFZLFNBQUMsbUJBQVMsR0FBSSxPQUFPLENBQUMsSUFBSSxDQUFDLENBQUM7YUFDekQ7aUJBQUssSUFBRyxDQUFDLElBQUUsS0FBSyxJQUFFLENBQUMsSUFBRSxJQUFJLEVBQUM7Z0JBQ3ZCLElBQUksQ0FBQyxRQUFRLENBQUMsWUFBWSxTQUFDLG1CQUFTLEdBQUksUUFBUSxDQUFDLElBQUksQ0FBQyxDQUFDO2dCQUN2RCxJQUFJLENBQUMsUUFBUSxDQUFDLFlBQVksU0FBQyxtQkFBUyxHQUFJLE9BQU8sQ0FBQyxLQUFLLENBQUMsQ0FBQzthQUMxRDtTQUNKO0lBQ0wsQ0FBQztDQUNKO0FBcEJELDhCQW9CQyJ9","assetPath":"Assets/Bumsan/Script/Timer/CaveTrigger.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"Timerscript","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"GoScript","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"CaveTrigger","description":""},"isCompiled":true}'
+  typescriptHash: 8e4db4fa3dc0ec5ac633d161109eb2d3
+  onlyWriteTrigger: 0

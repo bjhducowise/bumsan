@@ -13,10 +13,12 @@ declare module "ZEPETO.Multiplay.Schema" {
 		transform: Transform;
 		state: number;
 		subState: number;
+        isRide: any;
 	}
 	class Transform extends Schema {
 		position: Vector3;
 		rotation: Vector3;
+		clientId: string;
 	}
 	class Vector3 extends Schema {
 		x: number;

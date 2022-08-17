@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 67dba0ddb745a9b4f890be4ad0475bcf
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst MusicNote_1 = require(\"./MusicNote\");\r\nclass
+    FireWork extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n       
+    this.pinkP.Stop();\r\n        this.greenP.Stop();\r\n    }\r\n    OnTriggerEnter(coll)
+    {\r\n        var pink = this.script.GetComponent($typeof(MusicNote_1.default)).GetPink();\r\n       
+    var green = this.script.GetComponent($typeof(MusicNote_1.default)).GetGreen();\r\n       
+    console.log(\"trigger\");\r\n        if (pink) {\r\n            this.pinkP.Play();\r\n           
+    console.log(\"pink\");\r\n        }\r\n        if (green) {\r\n            this.greenP.Play();\r\n           
+    console.log(\"green\");\r\n        }\r\n    }\r\n}\r\nexports.default = FireWork;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRmlyZVdvcmsuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJGaXJlV29yay50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFrRTtBQUVsRSxpREFBcUQ7QUFDckQsMkNBQW9DO0FBRXBDLE1BQXFCLFFBQVMsU0FBUSxxQ0FBcUI7SUFNdkQsS0FBSztRQUNELElBQUksQ0FBQyxLQUFLLENBQUMsSUFBSSxFQUFFLENBQUM7UUFDbEIsSUFBSSxDQUFDLE1BQU0sQ0FBQyxJQUFJLEVBQUUsQ0FBQztJQUN2QixDQUFDO0lBRUQsY0FBYyxDQUFDLElBQWE7UUFDeEIsSUFBSSxJQUFJLEdBQUcsSUFBSSxDQUFDLE1BQU0sQ0FBQyxZQUFZLFNBQUMsbUJBQVMsR0FBSSxPQUFPLEVBQUUsQ0FBQztRQUMzRCxJQUFJLEtBQUssR0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDLFlBQVksU0FBQyxtQkFBUyxHQUFJLFFBQVEsRUFBRSxDQUFDO1FBQzNELE9BQU8sQ0FBQyxHQUFHLENBQUMsU0FBUyxDQUFDLENBQUM7UUFDdkIsSUFBRyxJQUFJLEVBQUM7WUFDSixJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksRUFBRSxDQUFDO1lBQ2xCLE9BQU8sQ0FBQyxHQUFHLENBQUMsTUFBTSxDQUFDLENBQUM7U0FDdkI7UUFDRCxJQUFHLEtBQUssRUFBQztZQUNMLElBQUksQ0FBQyxNQUFNLENBQUMsSUFBSSxFQUFFLENBQUM7WUFDbkIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxPQUFPLENBQUMsQ0FBQztTQUN4QjtJQUNMLENBQUM7Q0FFSjtBQXpCRCwyQkF5QkMifQ==","assetPath":"Assets/Festival/Script/FireWork.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"script","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.ParticleSystemModule","name":"pinkP","type":"UnityEngine.ParticleSystem","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.ParticleSystemModule","name":"greenP","type":"UnityEngine.ParticleSystem","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"FireWork","description":""},"isCompiled":true}'
+  typescriptHash: 0049caeb6e8e6eec7bf8c5f70edba451
+  onlyWriteTrigger: 0

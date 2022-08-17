@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zepetoApiHost: https://gw-napi.zepeto.io
   multiplayHost: 192.168.0.177
-  multiplayPort: 53040
+  multiplayPort: 49493
   isSecure: 0
   gameSystemHost: api.gamesystem.zepeto.run
   zepetoStudioHost: https://api-studio.zepeto.me

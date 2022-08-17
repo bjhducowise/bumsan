@@ -1,0 +1,42 @@
+fileFormatVersion: 2
+guid: 0a20895cd7dc1dd4292f8d155af4aa22
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nclass
+    Timer extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n       
+    super(...arguments);\r\n        this.timer = 0;\r\n        this.timeSpeed = 1;\r\n       
+    this.timerOn = false;\r\n        this.timerPause = false;\r\n    }\r\n    Start()
+    { this.timer = 0; }\r\n    Update() {\r\n        if (this.timerOn == true) {\r\n           
+    if (this.timerPause == true) {\r\n                this.timer += 0;\r\n               
+    this.ClockText.GetComponent($typeof(UnityEngine_UI_1.Text)).text = this.TimerCalc();\r\n               
+    return 0;\r\n            }\r\n            else if (this.timerPause == false)
+    {\r\n                this.timer += UnityEngine_1.Time.deltaTime * this.timeSpeed;\r\n               
+    this.ClockText.GetComponent($typeof(UnityEngine_UI_1.Text)).text = this.TimerCalc();\r\n               
+    return 0;\r\n            }\r\n        }\r\n        else if (this.timerOn == false)
+    {\r\n            this.timer = 0;\r\n        }\r\n    }\r\n    TimerCalc() {\r\n       
+    this.sec = Math.floor(this.timer % 60);\r\n        this.min = Math.floor((this.timer
+    / 60));\r\n        return this.min + \" : \" + this.sec;\r\n    }\r\n    getTimerOn()
+    { return this.timerOn; }\r\n    setTimerOn(timer) { this.timerOn = timer; }\r\n   
+    SetTimerPause(timer) { this.timerPause = timer; }\r\n    GetTimerPause() { return
+    this.timerPause; }\r\n    GetTime() { return this.timer; }\r\n}\r\nexports.default
+    = Timer;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGltZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUaW1lci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUErQztBQUMvQyxpREFBcUQ7QUFDckQsbURBQW1EO0FBR25ELE1BQXFCLEtBQU0sU0FBUSxxQ0FBcUI7SUFBeEQ7O1FBR1csVUFBSyxHQUFRLENBQUMsQ0FBQztRQUNmLGNBQVMsR0FBVSxDQUFDLENBQUM7UUFDcEIsWUFBTyxHQUFXLEtBQUssQ0FBQztRQUN4QixlQUFVLEdBQWEsS0FBSyxDQUFDO0lBK0J6QyxDQUFDO0lBMUJHLEtBQUssS0FBRyxJQUFJLENBQUMsS0FBSyxHQUFHLENBQUMsQ0FBQyxDQUFBLENBQUM7SUFDeEIsTUFBTTtRQUNGLElBQUcsSUFBSSxDQUFDLE9BQU8sSUFBRSxJQUFJLEVBQUM7WUFDbEIsSUFBRyxJQUFJLENBQUMsVUFBVSxJQUFFLElBQUksRUFBQztnQkFDckIsSUFBSSxDQUFDLEtBQUssSUFBRSxDQUFDLENBQUM7Z0JBQ2QsSUFBSSxDQUFDLFNBQVMsQ0FBQyxZQUFZLFNBQUMscUJBQUksR0FBSSxJQUFJLEdBQUcsSUFBSSxDQUFDLFNBQVMsRUFBRSxDQUFDO2dCQUM1RCxPQUFPLENBQUMsQ0FBQzthQUNaO2lCQUFLLElBQUcsSUFBSSxDQUFDLFVBQVUsSUFBRSxLQUFLLEVBQUM7Z0JBQzVCLElBQUksQ0FBQyxLQUFLLElBQUUsa0JBQUksQ0FBQyxTQUFTLEdBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQztnQkFDMUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxZQUFZLFNBQUMscUJBQUksR0FBSSxJQUFJLEdBQUcsSUFBSSxDQUFDLFNBQVMsRUFBRSxDQUFDO2dCQUM1RCxPQUFPLENBQUMsQ0FBQzthQUNaO1NBRUo7YUFBSyxJQUFHLElBQUksQ0FBQyxPQUFPLElBQUcsS0FBSyxFQUFFO1lBQUUsSUFBSSxDQUFDLEtBQUssR0FBQyxDQUFDLENBQUM7U0FBRTtJQUNwRCxDQUFDO0lBQ0QsU0FBUztRQUNMLElBQUksQ0FBQyxHQUFHLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUMsS0FBSyxHQUFDLEVBQUUsQ0FBQyxDQUFDO1FBQ3JDLElBQUksQ0FBQyxHQUFHLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFDLElBQUksQ0FBQyxLQUFLLEdBQUMsRUFBRSxDQUFDLENBQUMsQ0FBQztRQUN2QyxPQUFPLElBQUksQ0FBQyxHQUFHLEdBQUMsS0FBSyxHQUFHLElBQUksQ0FBQyxHQUFHLENBQUM7SUFDckMsQ0FBQztJQUNNLFVBQVUsS0FBYyxPQUFPLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQSxDQUFDO0lBQzdDLFVBQVUsQ0FBQyxLQUFhLElBQUUsSUFBSSxDQUFDLE9BQU8sR0FBRyxLQUFLLENBQUMsQ0FBQSxDQUFDO0lBQ2hELGFBQWEsQ0FBQyxLQUFhLElBQUUsSUFBSSxDQUFDLFVBQVUsR0FBRyxLQUFLLENBQUMsQ0FBQSxDQUFDO0lBQ3RELGFBQWEsS0FBVyxPQUFPLElBQUksQ0FBQyxVQUFVLENBQUMsQ0FBQSxDQUFDO0lBQ3ZELE9BQU8sS0FBWSxPQUFPLElBQUksQ0FBQyxLQUFLLENBQUMsQ0FBQSxDQUFDO0NBRXpDO0FBckNELHdCQXFDQyJ9","assetPath":"Assets/Bumsan/Script/Timer/Timer.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"ClockText","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"timer","type":"System.Single","isArray":false,"initValue":["0"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"timeSpeed","type":"System.Single","isArray":false,"initValue":["1"],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Timer","description":""},"isCompiled":true}'
+  typescriptHash: e79f5a8c3f60034e3c88754047973e4c
+  onlyWriteTrigger: 0
