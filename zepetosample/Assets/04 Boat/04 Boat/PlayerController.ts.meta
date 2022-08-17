@@ -1,0 +1,46 @@
+fileFormatVersion: 2
+guid: 1487f3ce7a132e34fa5ff7d8ac72c170
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst UnityEngine_Events_1 = require(\"UnityEngine.Events\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nclass
+    PlayerController extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
+    {\r\n        super(...arguments);\r\n        this.enterAreaEvent = new UnityEngine_Events_1.UnityEvent();\r\n       
+    this.exitAreaEvent = new UnityEngine_Events_1.UnityEvent();\r\n    }\r\n    Start()
+    {\r\n        this.anim = this.gameObject.GetComponentInChildren($typeof(UnityEngine_1.Animator));\r\n       
+    this.characterController = this.gameObject.GetComponent($typeof(UnityEngine_1.CharacterController));\r\n       
+    this.zepetoCharacter = this.gameObject.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n   
+    }\r\n    offController() {\r\n        this.characterController.enabled = true;\r\n       
+    this.zepetoCharacter.enabled = true;\r\n    }\r\n    Ride(carpet) {\r\n       
+    console.log(\"Ride!\");\r\n        this.anim.SetTrigger(\"Ride\");\r\n       
+    this.characterController.enabled = false;\r\n        this.zepetoCharacter.enabled
+    = false;\r\n        this.gameObject.transform.position = carpet.transform.position;\r\n       
+    this.transform.SetParent(carpet.transform);\r\n        //carpet.transform.SetParent(this.transform);\r\n       
+    carpet.rotateAction = (angle) => {\r\n            this.transform.rotation = UnityEngine_1.Quaternion.AngleAxis(angle,
+    UnityEngine_1.Vector3.up);\r\n        };\r\n        carpet.Fly(UnityEngine_1.Vector3.op_Addition(carpet.transform.position,
+    UnityEngine_1.Vector3.up), 0.1);\r\n    }\r\n    OnTriggerEnter(coll) {\r\n       
+    if (coll.tag == \"Area\") {\r\n            this.enterAreaEvent.Invoke();\r\n       
+    }\r\n    }\r\n    OnTriggerExit(coll) {\r\n        if (coll.tag == \"Area\")
+    {\r\n            this.exitAreaEvent.Invoke();\r\n        }\r\n    }\r\n}\r\nexports.default
+    = PlayerController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUGxheWVyQ29udHJvbGxlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlBsYXllckNvbnRyb2xsZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFDckQsNkNBQXdGO0FBQ3hGLDJEQUFnRDtBQUVoRCw2RUFBb0c7QUFFcEcsTUFBcUIsZ0JBQWlCLFNBQVEscUNBQXFCO0lBQW5FOztRQUVXLG1CQUFjLEdBQWdCLElBQUksK0JBQVUsRUFBRSxDQUFDO1FBQy9DLGtCQUFhLEdBQWdCLElBQUksK0JBQVUsRUFBRSxDQUFDO0lBeUN6RCxDQUFDO0lBckNHLEtBQUs7UUFDRCxJQUFJLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsc0JBQXNCLFNBQUMsc0JBQVEsRUFBRyxDQUFDO1FBQy9ELElBQUksQ0FBQyxtQkFBbUIsR0FBRSxJQUFJLENBQUMsVUFBVSxDQUFDLFlBQVksU0FBQyxpQ0FBbUIsRUFBRyxDQUFDO1FBQzlFLElBQUksQ0FBQyxlQUFlLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsNkNBQWUsRUFBRyxDQUFDO0lBQzNFLENBQUM7SUFDTSxhQUFhO1FBQ2hCLElBQUksQ0FBQyxtQkFBbUIsQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDO1FBQ3hDLElBQUksQ0FBQyxlQUFlLENBQUMsT0FBTyxHQUFHLElBQUksQ0FBQztJQUN4QyxDQUFDO0lBQ00sSUFBSSxDQUFDLE1BQWU7UUFFdkIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxPQUFPLENBQUMsQ0FBQztRQUNyQixJQUFJLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxNQUFNLENBQUMsQ0FBQztRQUM3QixJQUFJLENBQUMsbUJBQW1CLENBQUMsT0FBTyxHQUFHLEtBQUssQ0FBQztRQUN6QyxJQUFJLENBQUMsZUFBZSxDQUFDLE9BQU8sR0FBRyxLQUFLLENBQUM7UUFDckMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDO1FBQy9ELElBQUksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsQ0FBQztRQUMzQyw2Q0FBNkM7UUFDN0MsTUFBTSxDQUFDLFlBQVksR0FBRyxDQUFDLEtBQUssRUFBQyxFQUFFO1lBQzNCLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLHdCQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssRUFBRSxxQkFBTyxDQUFDLEVBQUUsQ0FBQyxDQUFDO1FBQ3RFLENBQUMsQ0FBQztRQUVGLE1BQU0sQ0FBQyxHQUFHLENBQUMscUJBQU8sQ0FBQyxXQUFXLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQUUscUJBQU8sQ0FBQyxFQUFFLENBQUMsRUFBRSxHQUFHLENBQUMsQ0FBQztJQUNoRixDQUFDO0lBRUQsY0FBYyxDQUFDLElBQWM7UUFDekIsSUFBRyxJQUFJLENBQUMsR0FBRyxJQUFJLE1BQU0sRUFBQztZQUNsQixJQUFJLENBQUMsY0FBYyxDQUFDLE1BQU0sRUFBRSxDQUFDO1NBQ2hDO0lBQ0wsQ0FBQztJQUVELGFBQWEsQ0FBQyxJQUFjO1FBQ3hCLElBQUcsSUFBSSxDQUFDLEdBQUcsSUFBSSxNQUFNLEVBQUM7WUFDbEIsSUFBSSxDQUFDLGFBQWEsQ0FBQyxNQUFNLEVBQUUsQ0FBQztTQUMvQjtJQUNMLENBQUM7Q0FFSjtBQTVDRCxtQ0E0Q0MifQ==","assetPath":"Assets/04
+    Boat/04 Boat/PlayerController.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"enterAreaEvent","type":"UnityEngine.Events.UnityEvent","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"exitAreaEvent","type":"UnityEngine.Events.UnityEvent","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"PlayerController","description":""},"isCompiled":true}'
+  typescriptHash: 40668d39da298d4de90055528fb23e9a
+  onlyWriteTrigger: 0

@@ -1,0 +1,42 @@
+fileFormatVersion: 2
+guid: 3557798dc4e9e044ba3f3d1c5fa73e15
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nclass Carpet extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.speed
+    = 5;\r\n        this.isMovingTrue = false;\r\n    }\r\n    Start() {\r\n    }\r\n   
+    Move(dir) {\r\n        var moveDir = new UnityEngine_1.Vector3(dir.x, 0, dir.y);\r\n       
+    var angle = UnityEngine_1.Mathf.Atan2(dir.x, dir.y) * UnityEngine_1.Mathf.Rad2Deg;\r\n       
+    this.rotateAction(angle);\r\n        this.transform.rotation = UnityEngine_1.Quaternion.AngleAxis(angle,
+    UnityEngine_1.Vector3.up);\r\n        this.transform.Translate(UnityEngine_1.Vector3.op_Multiply(UnityEngine_1.Vector3.op_Multiply(UnityEngine_1.Vector3.forward,
+    this.speed), UnityEngine_1.Time.deltaTime));\r\n    }\r\n    MoveStart() {\r\n       
+    console.log(\"move start\");\r\n    }\r\n    MoveStop() {\r\n        console.log(\"move
+    stop\");\r\n    }\r\n    Fly(endValue, duration) {\r\n        this.StartCoroutine(this.FlyRoutine(endValue,
+    duration));\r\n    }\r\n    //https://gamedevbeginner.com/the-right-way-to-lerp-in-unity-with-examples/\r\n   
+    *FlyRoutine(endValue, duration) {\r\n        var time = 0;\r\n        var startValue
+    = this.transform.position;\r\n        while (time < duration) {\r\n           
+    this.transform.position = UnityEngine_1.Vector3.Lerp(startValue, endValue, time
+    / duration);\r\n            time += UnityEngine_1.Time.deltaTime;\r\n           
+    yield null;\r\n        }\r\n        this.transform.position = endValue;\r\n   
+    }\r\n}\r\nexports.default = Carpet;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2FycGV0LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQ2FycGV0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXFEO0FBQ3JELDZDQUE2RDtBQUc3RCxNQUFxQixNQUFPLFNBQVEscUNBQXFCO0lBQXpEOztRQUVXLFVBQUssR0FBRyxDQUFDLENBQUM7UUFFVCxpQkFBWSxHQUFVLEtBQUssQ0FBQztJQWlEeEMsQ0FBQztJQWhERyxLQUFLO0lBRUwsQ0FBQztJQUVNLElBQUksQ0FBQyxHQUFhO1FBR3JCLElBQUksT0FBTyxHQUFHLElBQUkscUJBQU8sQ0FBQyxHQUFHLENBQUMsQ0FBQyxFQUFFLENBQUMsRUFBRSxHQUFHLENBQUMsQ0FBQyxDQUFDLENBQUM7UUFFM0MsSUFBSSxLQUFLLEdBQUcsbUJBQUssQ0FBQyxLQUFLLENBQUMsR0FBRyxDQUFDLENBQUMsRUFBRSxHQUFHLENBQUMsQ0FBQyxDQUFDLEdBQUcsbUJBQUssQ0FBQyxPQUFPLENBQUM7UUFDdEQsSUFBSSxDQUFDLFlBQVksQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUV6QixJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyx3QkFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLEVBQUUscUJBQU8sQ0FBQyxFQUFFLENBQUMsQ0FBQztRQUVsRSxJQUFJLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0F0QnhCLHFCQUFPLENBd0RrOW9CLFdBQVksQ0F4RHIrb0IscUJBQU8sQ0F3RGs5b0IsV0FBWSxDQWxDNThvQixxQkFBTyxDQUFDLE9BQU8sRUFBRyxJQUFJLENBQUMsS0FBSyxHQUFHLGtCQUFJLENBQUMsU0FBUyxFQUFDLENBQUM7SUFDNUUsQ0FBQztJQUNPLFNBQVM7UUFFYixPQUFPLENBQUMsR0FBRyxDQUFDLFlBQVksQ0FBQyxDQUFDO0lBQzlCLENBQUM7SUFFTyxRQUFRO1FBRVosT0FBTyxDQUFDLEdBQUcsQ0FBQyxXQUFXLENBQUMsQ0FBQztJQUM3QixDQUFDO0lBRU0sR0FBRyxDQUFDLFFBQVEsRUFBRSxRQUFRO1FBRXpCLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxRQUFRLEVBQUUsUUFBUSxDQUFDLENBQUMsQ0FBQztJQUM3RCxDQUFDO0lBRUQsMkVBQTJFO0lBQ25FLENBQUUsVUFBVSxDQUFDLFFBQVEsRUFBRSxRQUFRO1FBRW5DLElBQUksSUFBSSxHQUFHLENBQUMsQ0FBQztRQUNiLElBQUksVUFBVSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDO1FBRXpDLE9BQU8sSUFBSSxHQUFHLFFBQVEsRUFDdEI7WUFDSSxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxxQkFBTyxDQUFDLElBQUksQ0FBQyxVQUFVLEVBQUUsUUFBUSxFQUFFLElBQUksR0FBRyxRQUFRLENBQUMsQ0FBQztZQUM5RSxJQUFJLElBQUksa0JBQUksQ0FBQyxTQUFTLENBQUM7WUFDdkIsTUFBTSxJQUFJLENBQUM7U0FDZDtRQUNELElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLFFBQVEsQ0FBQztJQUN2QyxDQUFDO0NBSUo7QUFyREQseUJBcURDIn0=","assetPath":"Assets/04
+    Boat/Carpet.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"speed","type":"System.Single","isArray":false,"initValue":["5"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"","name":"rotateAction","type":"__type","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Carpet","description":""},"isCompiled":true}'
+  typescriptHash: 2c51c9a5f47d4f84a4611123f1b5937a
+  onlyWriteTrigger: 0
