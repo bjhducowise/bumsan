@@ -26,5 +26,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bumsan 1.unity
     guid: 4e16d99b8b506ec44883238697ebd583
+  - enabled: 0
+    path: Assets/Scenes/TigerMountain.unity
+    guid: 376290b9c0cd00443ad8bfa9c0a174bd
+  - enabled: 0
+    path: Assets/Scenes/JMT Town 01.unity
+    guid: 3387e5913c2e24e46b4bf9c8887115fd
   m_configObjects:
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 09cac3b0e41604dacab6217291fdc87b, type: 2}

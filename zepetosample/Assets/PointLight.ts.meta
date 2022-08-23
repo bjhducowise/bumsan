@@ -1,0 +1,34 @@
+fileFormatVersion: 2
+guid: 264682f6c2edab3448e4224a82ad1d6c
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass PointLight extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    });\r\n    }\r\n    Update() {\r\n        this.gameObject.transform.position
+    = UnityEngine_1.Vector3.op_Addition(this.zepetoCharacter.transform.position,
+    new UnityEngine_1.Vector3(2, 2, 0));\r\n        this.gameObject.transform.position
+    = UnityEngine_1.Vector3.Lerp(this.gameObject.transform.position, this.gameObject.transform.position,
+    1 * UnityEngine_1.Time.deltaTime);\r\n        //this.gameObject.transform.Rotate(0,1,0);\r\n   
+    }\r\n}\r\nexports.default = PointLight;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUG9pbnRMaWdodC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlBvaW50TGlnaHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBNEM7QUFDNUMsNkVBQTREO0FBQzVELGlEQUFxRDtBQUVyRCxNQUFxQixVQUFXLFNBQVEscUNBQXFCO0lBR3pELEtBQUs7UUFDRCwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxrQkFBa0IsQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ3ZELElBQUksQ0FBQyxlQUFlLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUM7UUFDckYsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0lBQ0QsTUFBTTtRQUNGLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxxQkFBTyxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsZUFBZSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQUMsSUFBSSxxQkFBTyxDQUFDLENBQUMsRUFBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQztRQUNySCxJQUFJLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUMscUJBQU8sQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsUUFBUSxFQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBQyxDQUFDLEdBQUMsa0JBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQztRQUN4SSwwQ0FBMEM7SUFDOUMsQ0FBQztDQUVKO0FBZEQsNkJBY0MifQ==","assetPath":"Assets/PointLight.ts","manifest":{"properties":[{"assembly":"","name":"zepetoCharacter","type":"any","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"PointLight","description":""},"isCompiled":true}'
+  typescriptHash: aa3bb00c945af9890b0a92c067cf0f7d
+  onlyWriteTrigger: 0

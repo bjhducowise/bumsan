@@ -1,49 +1,26 @@
 import {ZepetoScriptBehaviour} from 'ZEPETO.Script'
 import {ZepetoWorldMultiplay} from 'ZEPETO.World'
 import {Room, RoomData} from 'ZEPETO.Multiplay'
-import {Player, State,Vector3} from 'ZEPETO.Multiplay.Schema'
+import {Player, State, Vector3} from 'ZEPETO.Multiplay.Schema'
 import {CharacterState, SpawnInfo, ZepetoPlayers, ZepetoPlayer} from 'ZEPETO.Character.Controller'
 import * as UnityEngine from "UnityEngine";
-import teleport from '../../teleport';
-
-var pos;
 
 
-interface TeleportMessageModel {
-    clientId: string,
-    transform: UnityEngine.Transform
-    }
-    
-
-export default class ClientStarter extends ZepetoScriptBehaviour {
+export default class Starter extends ZepetoScriptBehaviour {
 
     public multiplay: ZepetoWorldMultiplay;
 
     private room: Room;
     private currentPlayers: Map<string, Player> = new Map<string, Player>();
-    static instance: any
 
     private Start() {
 
-        
-
         this.multiplay.RoomCreated += (room: Room) => {
             this.room = room;
-            if(this.room!=null){
-                console.log(this.room,"this is room");
-
-            }
-            console.log("Room Created"+ "session id: "+room.SessionId);
-            
-            
         };
-        
 
         this.multiplay.RoomJoined += (room: Room) => {
             room.OnStateChange += this.OnStateChange;
-            room.AddMessageHandler("Teleport", (message: TeleportMessageModel) => {
-                return ZepetoPlayers.instance.GetPlayer(message.clientId).character.Teleport(pos,UnityEngine.Quaternion.identity)
-                });
         };
 
         this.StartCoroutine(this.SendMessageLoop(0.1));
@@ -63,8 +40,6 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
                 }
             }
         }
-
-
     }
 
     private OnStateChange(state: State, isFirst: boolean) {
@@ -173,35 +148,4 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
             vector3.z
         );
     }
-
-    public r_Teleport(position:UnityEngine.Vector3){
-        
-        pos = position;
-        if(this.room){
-            console.log(`sessionID : ${JSON.stringify(this.room.SessionId)}`);
-            let message = { clientId : this.room.SessionId, transform : this.transform} as TeleportMessageModel 
-            this.room.Send("Teleport", message);
-
-        }else{
-            console.log("no session id");
-        }
-       
-            
-        
-    }
-   
-    public static getInstance():ClientStarter
-    {
-        if(this.instance == null)
-        {
-            this.instance= new ClientStarter();
-        }
-
-        return this.instance;
-    }
-    
 }
-
-
-
-    

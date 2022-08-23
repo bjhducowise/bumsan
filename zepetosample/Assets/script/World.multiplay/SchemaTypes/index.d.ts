@@ -14,6 +14,7 @@ declare module "ZEPETO.Multiplay.Schema" {
 		state: number;
 		subState: number;
         isRide: any;
+        gestureState: any;
 	}
 	class Transform extends Schema {
 		position: Vector3;

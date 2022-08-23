@@ -2,8 +2,8 @@ import { GameObject, Quaternion, Vector3 } from 'UnityEngine';
 import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { TimeScope } from 'UnityEngine.SocialPlatforms';
-import ClientStarterV2 from '../../../ZepetoScripts/ClientStarterV2';
 import Timer from './Timer';
+import boatClientStarter from '../../../04 Boat/04 Boat/boatClientStarter';
 
 export default class GoBackBtn extends ZepetoScriptBehaviour {
 
@@ -36,7 +36,7 @@ export default class GoBackBtn extends ZepetoScriptBehaviour {
     BackBtn(){
         if (this.zepetoCharacter == null) {return 0;}
         this.zepetoCharacter.Teleport(this.pos,Quaternion.identity);
-        this.cs.GetComponent<ClientStarterV2>().customTeleport(this.pos,Quaternion.identity);
+        this.cs.GetComponent<boatClientStarter>().customTeleport(this.pos,Quaternion.identity);
         
         this.Timerscript.GetComponent<Timer>().SetTimerPause(false);
     }
@@ -44,12 +44,12 @@ export default class GoBackBtn extends ZepetoScriptBehaviour {
     VallySideMap(){
         if (this.zepetoCharacter == null) {return 0;}
         this.zepetoCharacter.Teleport(new Vector3(29,-14,-42),Quaternion.identity);
-        this.cs.GetComponent<ClientStarterV2>().customTeleport(new Vector3(29,-14,-42),Quaternion.identity);
+        this.cs.GetComponent<boatClientStarter>().customTeleport(new Vector3(29,-14,-42),Quaternion.identity);
     }
     CaveSideMap(){
         if (this.zepetoCharacter == null) {return 0;}
         this.zepetoCharacter.Teleport(new Vector3(-9,-11,-104),Quaternion.identity);
-        this.cs.GetComponent<ClientStarterV2>().customTeleport(new Vector3(9,-11,-104),Quaternion.identity);
+        this.cs.GetComponent<boatClientStarter>().customTeleport(new Vector3(9,-11,-104),Quaternion.identity);
     }
     ForestSideMap(){
 

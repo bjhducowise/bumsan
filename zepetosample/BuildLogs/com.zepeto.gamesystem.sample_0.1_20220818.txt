@@ -1,0 +1,221 @@
+[World Settings]
+world id             com.zepeto.gamesystem.sample
+version              0.1                 
+max clients          8                   
+orientation          horizontal          
+disable invite       false               
+disable room list    false               
+disable private room false               
+
+[Build Manifest]
+[scenes]
+3 mb                 assets/scenes/tigermountain.unity
+[assets]
+13 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_base.png
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_off.anim
+2 kb                 assets/_resources/004_camping/[scriptsshader]/game/foliage_simple.shader
+2 kb                 assets/test model/rockmountaincrystal.mat
+13 kb                assets/test model/leaf boat low_defaultmaterial_emission.png
+7 mb                 assets/test model/rockmountainlp_defaultmaterial_normal.png
+2 kb                 assets/test model/treeset/tree5.prefab
+35 kb                packages/zepeto.character.controller/runtime/_resources/inputactions/zepetoinputcontrol.inputactions
+600 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landingslight.anim
+16 kb                assets/test model/rockmountaincrystal_defaultmaterial_emission.png
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action1.anim
+36 kb                packages/com.unity.postprocessing/postprocessing/gizmos/postprocesslayer.png
+733 kb               assets/test model/others_0020_height_1k.png
+1 mb                 assets/test model/rock_defaultmaterial_metallicsmoothness.png
+402 kb               assets/test model/obstacle1.fbx
+2 kb                 assets/test model/treeset/wood chips.prefab
+28 kb                assets/_resources/005_fall/[fbx]/fsf_leaf_03.fbx
+215 kb               assets/_resources/005_fall/[fbx]/fsf_tree_001.fbx
+6 kb                 assets/_resources/005_fall/shaders/treeleaf.shader
+160 kb               assets/_resources/004_camping/[texture]/fxs_blossom_petal_a_4x5.png
+4 mb                 assets/test model/snowmountain_lowpoly_default obj.001_metallicsmoothness.png
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_ziggle.anim
+29 kb                assets/_resources/005_fall/[fbx]/fsf_leaf_05.fbx
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/walk.anim
+437 kb               assets/test model/treeset/texture1/treeset_material.013_albedotransparency.png
+4 kb                 assets/test model/water.shader
+124 kb               assets/test model/grassground.fbx
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_on.anim
+2 kb                 assets/test model/clouds.003.prefab
+2 mb                 assets/test model/leaf boat low_defaultmaterial_normal.png
+2 mb                 assets/test model/grassground_defaultmaterial_normal.png
+18 kb                assets/_resources/005_fall/[prefab]/fsf_leaf_water.prefab
+3 kb                 assets/_resources/004_camping/[shader]/fx_basic_alphablend.shader
+2 kb                 assets/test model/clouds.prefab
+830 kb               assets/_resources/005_fall/[materials]/cbs_tex/fall_plants_002.png
+35 kb                assets/_resources/004_camping/game_animalrescue/mesh/basecamp_001/ar_flowers_003.fbx
+3 kb                 assets/test model/obstacle1.mat
+185 kb               assets/_resources/005_fall/[fbx]/fsf_tree_004.fbx
+1 kb                 assets/_resources/[scriptsshader]/resources-internal/standardnocolor.shader
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_move.anim
+1 mb                 assets/test model/leaf boat low_defaultmaterial_albedotransparency.png
+3 kb                 assets/test model/hojung.mat
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_horizontal.prefab
+736 kb               assets/test model/clouds.fbx
+2 kb                 assets/test model/clouds.004.prefab
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandleorigin.controller
+546 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landingroll.anim
+1 mb                 assets/test model/wild boar_defaultmaterial_albedotransparency.png
+270 kb               assets/_resources/005_fall/[materials]/cbs_tex/cbs_fall_wood_01.png
+120 kb               assets/test model/rockmountainlp.fbx
+3 mb                 assets/test model/clouds_defaultmaterial_normal.png
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action2.anim
+2 kb                 assets/_resources/005_fall/[materials]/cbs_fall_wood.mat
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_vertical.prefab
+31 kb                assets/test model/wild boar_defaultmaterial_metallicsmoothness.png
+2 kb                 assets/test model/treeset/tree3.prefab
+747 kb               assets/test model/woodstump lp_material.001_ambient occlusion.png
+4 kb                 assets/_resources/004_camping/game_animalrescue/materials/bg/ar_plants_001.mat
+2 mb                 assets/test model/obstacle1_default_normal.png
+2 kb                 assets/test model/materials/hojong_head 1.mat
+1 kb                 packages/com.unity.inputsystem/inputsystem/editor/icons/inputsystemuiinputmodule@64.png
+2 kb                 assets/test model/treeset/tree4.prefab
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandle.controller
+35 kb                assets/_resources/004_camping/game_animalrescue/mesh/basecamp_001/ar_flowers_005.fbx
+2 mb                 assets/test model/woodstump lp_material.001_albedotransparency.png
+2 mb                 assets/test model/wild boar_defaultmaterial_normal.png
+3 kb                 assets/test model/waterfall.mat
+4 mb                 assets/test model/snowmountain_lowpoly_default obj.001_normal.png
+2 kb                 assets/test model/clouds.mat
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpdash.anim
+32 kb                assets/test model/bat low_defaultmaterial_metallicsmoothness.png
+512 kb               assets/_resources/005_fall/[materials]/cbs_tex/cbs_ground_blend_plant_alp.tga
+1 mb                 assets/test model/wood sign_defaultmaterial_albedotransparency.png
+3 kb                 assets/test model/black.mat
+3 kb                 assets/test model/woodstump.mat
+2 kb                 assets/test model/rock.mat
+461 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/movewalkfast.anim
+272 kb               assets/test model/wild boar cb.fbx
+6 kb                 assets/test model/water.mat
+180 kb               assets/test model/leaf boat low.fbx
+3 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/charactershadow.prefab
+3 kb                 assets/test model/bat.mat
+3 kb                 assets/test model/wild boar.mat
+12 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_base.png
+2 kb                 assets/test model/treeset/mushroom2.prefab
+346 kb               assets/test model/rockmountaincrystal.fbx
+442 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpmove.anim
+4 kb                 assets/test model/obstacle1 1.mat
+16 kb                assets/_resources/[scriptsshader]/resources-internal/tonemappinglut.png
+69 kb                assets/test model/treeset/texture1/treeset_material.013_metallicsmoothness.png
+136 kb               assets/test model/bat low_defaultmaterial_albedotransparency.png
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/gesture.anim
+4 kb                 assets/_resources/005_fall/[materials]/fall_plants_002.mat
+2 kb                 assets/test model/rockmountainlp.mat
+2 kb                 assets/test model/treeset/tree7.prefab
+18 kb                packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimator.controller
+2 mb                 assets/test model/rock_defaultmaterial_albedotransparency.png
+2 kb                 assets/test model/grassground.mat
+2 kb                 assets/_resources/100_samplemap/plane.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_on.anim
+2 kb                 assets/_resources/005_fall/[materials]/cbs_fall_wood_01.mat
+117 kb               assets/_resources/004_camping/[texture]/fxs_fsf_leaf_5x5.png
+21 kb                assets/test model/hojong_ear.png
+1 kb                 assets/_resources/004_camping/[prefabs]/cherryblossom/material/fxs_mapleleaf_5x5_h.mat
+3 kb                 assets/test model/wood sign.mat
+64 kb                assets/test model/treeset/texture2/treeset_material.013_metallicsmoothness.png
+7 kb                 assets/test model/waterfall albedo.jpg
+495 kb               assets/test model/treeset/treeset.fbx
+2 kb                 assets/test model/treeset/texture2/treeset2.mat
+55 kb                assets/test model/others_0020_color_1k.jpg
+236 kb               assets/_resources/004_camping/[prefabs]/cherryblossom/fx_mapleleaf_01.prefab
+185 kb               assets/_resources/005_fall/[fbx]/fsf_leaves_water.anim
+560 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/idle.anim
+3 kb                 assets/test model/materials/hojong_tail.mat
+1 mb                 assets/_resources/005_fall/[materials]/cbs_tex/cbs_fallenleaves_00.png
+41 kb                assets/test model/waterfall.fbx
+214 kb               assets/_resources/005_fall/[materials]/cbs_tex/cbs_fall_wood.png
+2 kb                 assets/test model/treeset/moss.prefab
+3 mb                 assets/test model/rockmountainlp_defaultmaterial_metallicsmoothness.png
+4 kb                 assets/_resources/005_fall/[materials]/cbs_fallenleaves_00.mat
+3 kb                 assets/test model/leaf boat.mat
+1 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.png
+35 kb                assets/_resources/004_camping/game_animalrescue/mesh/basecamp_001/ar_flowers_004.fbx
+312 kb               assets/test model/bat low cb.fbx
+21 kb                assets/test model/hojong_head.png
+5 mb                 assets/test model/rockmountainlp_defaultmaterial_albedotransparency.png
+1 mb                 assets/test model/obstacle1_default_emission.png
+295 kb               packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimatorv2.controller
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/4_ok.anim
+493 kb               assets/test model/wood sign lp_defaultmaterial_metallicsmoothness.png
+374 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/moverunfast.anim
+3 kb                 assets/test model/materials/hojong_head.mat
+2 mb                 assets/test model/treeset/texture1/treeset_material.013_normal.png
+828 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/moveturn.anim
+39 kb                assets/_resources/004_camping/[fbx]/cam_ar_grass_002.fbx
+2 kb                 assets/test model/snowmountain.mat
+2 mb                 assets/test model/rock_defaultmaterial_normal.png
+16 kb                assets/test model/rockmountaincrystal_defaultmaterial_albedotransparency.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landingdeep.anim
+788 b                assets/_resources/004_camping/[materials]/fxs_blossom_petal_a_4x5.mat
+628 kb               assets/_resources/004_camping/game_animalrescue/materials/bg/texture/ar_plants_001.png
+2 kb                 assets/test model/treeset/big moss.prefab
+416 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/moverun.anim
+1 kb                 assets/_resources/[scriptsshader]/shaders/standardnocoloralphatexture_cutoff.shader
+324 kb               assets/test model/treeset/texture2/treeset_material.013_albedotransparency.png
+2 kb                 assets/scenes/samplescene_profiles/post-process volume profile.asset
+4 kb                 assets/test model/woodstump 1.mat
+2 kb                 assets/test model/clouds.001.prefab
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_idle.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_off.anim
+2 kb                 assets/test model/clouds.002.prefab
+16 kb                assets/test model/grassground_defaultmaterial_albedotransparency.png
+301 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/falling.anim
+4 kb                 assets/_resources/005_fall/[materials]/fall_plants_001.mat
+28 kb                assets/_resources/005_fall/[fbx]/fsf_leaf_01.fbx
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_icon.png
+2 mb                 assets/test model/bat low_defaultmaterial_normal.png
+618 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpidle.anim
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/stamp.anim
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_icon.png
+2 kb                 assets/_resources/004_camping/[prefabs]/cherryblossom/material/fxs_fsf_leaf_5x5_m.mat
+11 kb                assets/test model/treeset/tree2.prefab
+24 kb                assets/test model/leaf boat low_defaultmaterial_metallicsmoothness.png
+1 mb                 assets/test model/obstacle1_default_albedotransparency.png
+2 kb                 assets/test model/treeset/tree1.prefab
+22 kb                assets/test model/wood sign.fbx
+1 kb                 packages/zepeto.character.controller/runtime/_resources/camera/zepetocamera.prefab
+940 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/run.anim
+2 kb                 assets/test model/treeset/texture1/treeset1.mat
+1 mb                 assets/test model/woodstump lp_material.001_metallicsmoothness.png
+117 kb               assets/_resources/004_camping/[prefabs]/cherryblossom/fx_sakura_2.prefab
+1 mb                 assets/test model/others_0020_normal_directx_1k.png
+31 kb                assets/test model/hojong_tail.png
+93 kb                assets/test model/obstacle1_default_metallicsmoothness.png
+161 kb               assets/_resources/004_camping/[texture]/fxs_mapleleaf_01a.png
+28 kb                assets/_resources/005_fall/[fbx]/fsf_leaf_02.fbx
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/movewalk.anim
+2 kb                 assets/test model/treeset/tree8.prefab
+3 mb                 assets/test model/snowmountain_lowpoly_default obj.001_albedotransparency.png
+14 kb                assets/_resources/004_camping/[shader]/fx_master_alphablend.shader
+2 kb                 assets/test model/treeset/tree6.prefab
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.mat
+20 kb                assets/test model/grassground_defaultmaterial_metallicsmoothness.png
+565 kb               assets/test model/snowmountain_lowpoly.fbx
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/eventsystem.prefab
+1014 kb              packages/zepeto.character.controller/runtime/_resources/animations/base/v2/idle.anim
+2 mb                 assets/test model/treeset/texture2/treeset_material.013_normal.png
+187 kb               assets/test model/woodstump.fbx
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/fall_end.anim
+2 kb                 assets/test model/treeset/grass.prefab
+3 mb                 assets/test model/woodstump lp_material.001_normal.png
+160 kb               assets/test model/waterfall normal.jpg
+464 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpdouble.anim
+1 mb                 assets/test model/rock.fbx
+428 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/hand_idle_01.anim
+30 kb                assets/_resources/005_fall/[fbx]/fsf_leaf_04.fbx
+1 kb                 assets/test model/lim light.shader
+2 kb                 assets/test model/treeset/mushroom1.prefab
+37 kb                assets/_resources/004_camping/game_animalrescue/mesh/basecamp_001/ar_grass_001.fbx
+31 kb                packages/com.unity.inputsystem/inputsystem/plugins/playerinput/defaultinputactions.inputactions
+245 kb               assets/test model/wood sign_hojung.fbx
+3 mb                 assets/test model/wood sign lp_defaultmaterial_normal.png
+750 kb               assets/_resources/005_fall/[materials]/cbs_tex/fall_plants_001.png
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_ziggle.anim
+[resources]
+0 b                  assets/asset/resources
+[streamingAssets]
+0 b                  assets/streamingassets

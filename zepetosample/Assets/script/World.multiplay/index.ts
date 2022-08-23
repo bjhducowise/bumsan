@@ -38,28 +38,25 @@ export default class extends Sandbox {
             player.state = message.state;
             player.subState = message.subState; // Character Controller V2
         });
-
         this.onMessage("onTeleport", (client, message) => {
+
             const player = this.state.players.get(client.sessionId);
+
             const transform = new Transform();
+            transform.position = new Vector3();
+            transform.position.x = message.position.x;
+            transform.position.y = message.position.y;
+            transform.position.z = message.position.z;
 
-            transform.position=new Vector3();
-            transform.position.x=message.position.x;
-            transform.position.y=message.position.y;
-            transform.position.z=message.position.z;
+            transform.rotation = new Vector3();
+            transform.rotation.x = message.rotation.x;
+            transform.rotation.y = message.rotation.y;
+            transform.rotation.z = message.rotation.z;
 
-            transform.rotation=new Vector3();
-            transform.rotation.x=message.rotation.x;
-            transform.rotation.y=message.rotation.y;
-            transform.rotation.z=message.rotation.z;
-
-            transform.clientId=client.sessionId;
-            player.transform=transform;
-
-            console.log("hi there");
-            this.broadcast("ChangePlayerTransform",transform);
+            transform.clientId = client.sessionId;
+            player.transform = transform;
+            this.broadcast("Teleport", transform, { except: client});
             });
-
     }
     
    
@@ -97,7 +94,6 @@ export default class extends Sandbox {
         this.state.players.set(client.sessionId, player);
 
         
-    
     }
 
     onTick(deltaTime: number): void {

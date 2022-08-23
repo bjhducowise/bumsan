@@ -100,7 +100,7 @@ export default class NewTypescript extends ZepetoScriptBehaviour {
         ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(() => {
             ZepetoPlayers.instance.LocalPlayer.zepetoCamera.gameObject.SetActive(false);
             this.myCharacter = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;
-            this.customCamera.transform.position = this.myCharacter.transform.position + this.originSpawnPoint;
+            this.customCamera.transform.position = Vector3.op_Addition(this.myCharacter.transform.position,this.originSpawnPoint);
             this.StartCoroutine(this.InputControlLoop());
         });
     }
@@ -125,7 +125,7 @@ export default class NewTypescript extends ZepetoScriptBehaviour {
                     //left-right
                     var optMoveDir = new Vector3(moveDir.x, 0, 0);
                     optMoveDir = Vector3.op_Multiply(optMoveDir, Time.deltaTime * 80 );
-                    this.myCharacter.Move(camRot * optMoveDir);
+                    this.myCharacter.Move(Quaternion.op_Multiply(camRot,optMoveDir));
                 }
             }
         }

@@ -1,7 +1,7 @@
 import {ZepetoScriptBehaviour} from 'ZEPETO.Script'
 import {ZepetoWorldMultiplay} from 'ZEPETO.World'
 import {Room, RoomData} from 'ZEPETO.Multiplay'
-import {Player, State, Vector3} from 'ZEPETO.Multiplay.Schema'
+import {Player, State, Vector3,Transform} from 'ZEPETO.Multiplay.Schema'
 import {CharacterState, SpawnInfo, ZepetoPlayers, ZepetoPlayer, LocalPlayer} from 'ZEPETO.Character.Controller'
 import * as UnityEngine from "UnityEngine";
 import PlayerController from './PlayerController'
@@ -10,14 +10,15 @@ import Carpet from './Carpet'
 import CharacterControllerSample from './CharacterControllerSample'
 export default class boatClientStarter extends ZepetoScriptBehaviour {
     public multiplay: ZepetoWorldMultiplay;
-
     private room: Room;
     private currentPlayers: Map<string, Player> = new Map<string, Player>();
 //add
     public ui : UnityEngine.GameObject;
     public carpetPrefab : UnityEngine.GameObject;
-    public boatHeight : float = -18;
-
+    public boatHeight : float;
+    public gesture:UnityEngine.AnimationClip;
+    //플레이어 위치 바꿀 때 사용 
+    public Playerpos:UnityEngine.Vector3;
     private playerController : PlayerController;
     private uiController : UIController; 
     private carpetGo : UnityEngine.GameObject;
@@ -25,8 +26,8 @@ export default class boatClientStarter extends ZepetoScriptBehaviour {
     private carpetOnOff : bool = false;
     private isMove : bool = false;
     private moveP : UnityEngine.Vector3 = new UnityEngine.Vector3(0,0,0);
-    private boatCreatePoint : UnityEngine.Vector3 = new UnityEngine.Vector3(3,-18,-3.8);
-    
+    public boatCreatePoint : UnityEngine.Vector3 = new UnityEngine.Vector3(3,-18,-3.8);
+    private posThreshold: number =2;
     private Start() {
         var go = UnityEngine.Object.Instantiate<UnityEngine.GameObject>(this.ui);
         this.uiController = go.GetComponent<UIController>();
@@ -37,8 +38,20 @@ export default class boatClientStarter extends ZepetoScriptBehaviour {
 
         this.multiplay.RoomJoined += (room: Room) => {
             room.OnStateChange += this.OnStateChange;
-        };
+            room.AddMessageHandler("onChangedTransform",(message:Transform)=>{
+                var global=ZepetoPlayers.instance.GetPlayer(message.clientId).character;
+                var local = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;
 
+                ZepetoPlayers.instance.GetPlayer(message.clientId).character.Teleport(this.ParseVector3(message.position),new UnityEngine.Quaternion(message.rotation.x,message.rotation.y,message.rotation.z,1));
+                ZepetoPlayers.instance.GetPlayer(message.clientId).character.transform.SetPositionAndRotation(this.ParseVector3(message.position),new UnityEngine.Quaternion(message.rotation.x,message.rotation.y,message.rotation.z,1));
+
+                if(UnityEngine.Vector3.op_Equality(global.transform.position,local.transform.position)){
+                    local.Teleport(global.transform.position,global.transform.rotation);
+                }
+
+            })
+        };
+        //this.Playerpos=ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.localPosition;
         this.StartCoroutine(this.SendMessageLoop(0.1));
     }
 
@@ -103,6 +116,9 @@ export default class boatClientStarter extends ZepetoScriptBehaviour {
                         this.CreateCarpet(this.playerController.gameObject.transform.position);
                         this.playerController.Ride(this.carpet);
                         this.sendIsRide(this.carpetOnOff);
+                        //플레이어 위치 수정 
+                        //this.setPlayerpos(_player.zepetoPlayer.character.transform.localPosition);
+                        _player.zepetoPlayer.character.transform.localPosition= UnityEngine.Vector3.op_Subtraction(_player.zepetoPlayer.character.transform.localPosition,this.Playerpos);
                         
                         
                     }
@@ -113,9 +129,12 @@ export default class boatClientStarter extends ZepetoScriptBehaviour {
                         this.sendIsRide(this.carpetOnOff);
                         UnityEngine.GameObject.Destroy(this.carpetGo);
                         console.log(`boat Point 2 : ${this.boatCreatePoint.x} ${this.boatCreatePoint.y} ${this.boatCreatePoint.z}`);
-                        _player.zepetoPlayer.character.Teleport(this.boatCreatePoint,_player.zepetoPlayer.character.transform.rotation);
+                        _player.zepetoPlayer.character.Teleport(this.boatCreatePoint, _player.zepetoPlayer.character.transform.rotation);
                         //this.r_Teleport(this.boatCreatePoint);
-                        _player.zepetoPlayer.character.StopMoving();
+                        //_player.zepetoPlayer.character.StopMoving();
+                        //수정
+                        //_player.zepetoPlayer.character.SetGesture(this.gesture);
+                        this.carpetOff();
                     }
                     
                     
@@ -186,7 +205,7 @@ export default class boatClientStarter extends ZepetoScriptBehaviour {
     private OnUpdatePlayer(sessionId: string, player: Player) {
 
         const position = this.ParseVector3(player.transform.position);
-
+        const rotation = this.ParseVector3(player.transform.rotation);
         const zepetoPlayer = ZepetoPlayers.instance.GetPlayer(sessionId);
 
         //add
@@ -196,6 +215,7 @@ export default class boatClientStarter extends ZepetoScriptBehaviour {
         if(player.isRide&&_player.character.gameObject.transform.parent==null){
             
             _player.character.StopMoving();
+            //y값 수정
             var obj = UnityEngine.GameObject.Instantiate(this.carpetPrefab,new UnityEngine.Vector3(_player.character.transform.position.x,_player.character.transform.position.y,_player.character.transform.position.z),_player.character.transform.rotation) as UnityEngine.GameObject;
             _player.character.transform.transform.SetParent(obj.transform);
             obj.AddComponent<Carpet>();
@@ -217,23 +237,32 @@ export default class boatClientStarter extends ZepetoScriptBehaviour {
             if(zepetoPlayer.character.transform.parent.transform.position.y==this.boatHeight) this.StartCoroutine(this.moveVehicle(player.isRide,zepetoPlayer.character.transform.parent.gameObject,zepetoPlayer.character.transform.parent.position,position));
             else
             zepetoPlayer.character.transform.parent.transform.position=position;
-        }
-        else zepetoPlayer.character.MoveToPosition(position);
+        }else if(UnityEngine.Vector3.Distance(zepetoPlayer.character.transform.position,position)>this.posThreshold){
+            console.log("distance",player.gestureState,UnityEngine.Vector3.Distance(zepetoPlayer.character.transform.position,position));
+            zepetoPlayer.character.transform.position=position;
+            zepetoPlayer.character.transform.rotation=UnityEngine.Quaternion.Euler(rotation);        
+        }else zepetoPlayer.character.MoveToPosition(position);
         if(!player.isRide) this.StopCoroutine(this.moveVehicle);
+
         //-------------
 
         if (player.state === CharacterState.JumpIdle || player.state === CharacterState.JumpMove)
             zepetoPlayer.character.Jump();
     }
     private *moveVehicle(isRide : boolean , vehilceObj : UnityEngine.GameObject,startPos : UnityEngine.Vector3 , endPos : UnityEngine.Vector3){//add
+        var dpos = new UnityEngine.Vector3(endPos.x-startPos.x,endPos.y-startPos.y,endPos.z-startPos.z);
+        var cPos = startPos;
         if(vehilceObj!=null){
-            var dir = endPos.z-vehilceObj.transform.position.z;
-            dir/10;
-            var i = 1;
-            vehilceObj.transform.position=UnityEngine.Vector3.Lerp(startPos,endPos,0.1/10);
+            var i = 0;
+            while(i<6){
+                cPos.x +=dpos.x/6;
+                cPos.y +=dpos.y/6;
+                cPos.z +=dpos.z/6;
+                vehilceObj.transform.position = cPos;
+                i+=1;
+                yield new UnityEngine.WaitForSecondsRealtime(UnityEngine.Time.deltaTime);
+            }
         }
-         
-        yield new UnityEngine.WaitForSecondsRealtime(0.1/10);
     }
     private SendTransform(transform: UnityEngine.Transform) {
         const data = new RoomData();
@@ -264,7 +293,7 @@ export default class boatClientStarter extends ZepetoScriptBehaviour {
     }
     private CreateCarpet(pos : UnityEngine.Vector3)//add
     {
-        this.carpetGo = UnityEngine.Object.Instantiate(this.carpetPrefab, new UnityEngine.Vector3(pos.x,this.boatHeight-18,pos.z), UnityEngine.Quaternion.identity ) as UnityEngine.GameObject;
+        this.carpetGo = UnityEngine.Object.Instantiate(this.carpetPrefab, new UnityEngine.Vector3(pos.x,this.boatHeight,pos.z), UnityEngine.Quaternion.identity ) as UnityEngine.GameObject;
         
         console.log(`[CreateCarpet] carpetGo : ${this.carpetGo}`);
         
@@ -289,6 +318,7 @@ export default class boatClientStarter extends ZepetoScriptBehaviour {
         this.carpetGo.transform.DetachChildren();
         this.playerController.offController();
         this.sendIsRide(this.carpetOnOff);
+        console.log("carpet name" , this.carpetGo.name);
         UnityEngine.GameObject.Destroy(this.carpetGo);
     }
     private ParseVector3(vector3: Vector3): UnityEngine.Vector3 {
@@ -299,5 +329,27 @@ export default class boatClientStarter extends ZepetoScriptBehaviour {
             vector3.z
         );
     }
+    
+    public customTeleport(p:UnityEngine.Vector3,r:UnityEngine.Quaternion){
+        if(this.room){
+            const data = new RoomData();
+            const pos = new RoomData();
+            pos.Add("x",p.x);
+            pos.Add("y",p.y);
+            pos.Add("z",p.z);
+            data.Add("position",pos.GetObject());
 
+            const rot=new RoomData();
+            rot.Add("x",r.x);
+            rot.Add("y",r.y);
+            rot.Add("z",r.z);
+            data.Add("rotation",rot.GetObject());
+            this.room.Send("onTeleport",data.GetObject());
+            
+        }
+    }
+    public setPlayerpos(position:UnityEngine.Vector3){
+        this.Playerpos=position;
+    }
+    
 }
