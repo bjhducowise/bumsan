@@ -312,7 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   script:
     keys:
-    - carpetBtn
+    - vehicleGenerateBtn
     unityValues:
     - {fileID: 6511925305410147217}
     values:

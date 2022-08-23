@@ -5,6 +5,7 @@ import {Player, State, Vector3} from 'ZEPETO.Multiplay.Schema'
 import {CharacterState, SpawnInfo, ZepetoPlayers, ZepetoPlayer, LocalPlayer, ZepetoCharacter} from 'ZEPETO.Character.Controller'
 import * as UnityEngine from "UnityEngine";
 import VehicleSystem from './VehicleSystem'
+import vehicleMovementSynchronization from './vehicleMovementSynchronization'
 export default class boatClientStarter extends ZepetoScriptBehaviour {
     @Header("Zepeto Multiplay")
     public multiplay: ZepetoWorldMultiplay;
@@ -136,36 +137,21 @@ export default class boatClientStarter extends ZepetoScriptBehaviour {
         else if(!player.isRide&&(_player.character.gameObject.transform.parent!=null)){
             _player.character.enabled = true;
             var _playerParent = _player.character.gameObject.transform.parent.gameObject;
+            _player.character.transform.parent.gameObject.GetComponent<vehicleMovementSynchronization>().stopMoveVehicle();
             _player.character.transform.parent.transform.DetachChildren();
             UnityEngine.GameObject.Destroy(_playerParent);
-            this.StopCoroutine(this.moveVehicle);
             
         }
         
         else if(player.isRide&&_player.character.gameObject.transform.parent!=null) {
             _player.character.gameObject.transform.parent.transform.rotation = UnityEngine.Quaternion.Euler(rotation);
-            this.StartCoroutine(this.moveVehicle(player.isRide,zepetoPlayer.character.transform.parent.gameObject,zepetoPlayer.character.transform.parent.position,position));
+            _player.character.transform.parent.gameObject.GetComponent<vehicleMovementSynchronization>().startMoveVehicle(zepetoPlayer.character.transform.parent.position,position);
         }
         else zepetoPlayer.character.MoveToPosition(position);
-        if(!player.isRide) this.StopCoroutine(this.moveVehicle);
+        if(!player.isRide) _player.character.transform.parent.gameObject.GetComponent<vehicleMovementSynchronization>().stopMoveVehicle();
 
         if (player.state === CharacterState.JumpIdle || player.state === CharacterState.JumpMove)
             zepetoPlayer.character.Jump();
-    }
-    private *moveVehicle(isRide : boolean , vehilceObj : UnityEngine.GameObject,startPos : UnityEngine.Vector3 , endPos : UnityEngine.Vector3){//add
-        var dpos = new UnityEngine.Vector3(endPos.x-startPos.x,endPos.y-startPos.y,endPos.z-startPos.z);
-        var cPos = startPos;
-        if(vehilceObj!=null){
-            var i = 0;
-            while(i<6){
-                cPos.x +=dpos.x/6;
-                cPos.y +=dpos.y/6;
-                cPos.z +=dpos.z/6;
-                vehilceObj.transform.position = cPos;
-                i+=1;
-                yield new UnityEngine.WaitForSecondsRealtime(UnityEngine.Time.deltaTime);
-            }
-        }
     }
     private SendTransform(transform: UnityEngine.Transform) {
         const data = new RoomData();

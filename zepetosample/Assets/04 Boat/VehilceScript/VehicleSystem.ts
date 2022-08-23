@@ -13,7 +13,7 @@ export default class VehicleSystem extends ZepetoScriptBehaviour {
 
     @Header("Vehicle Object")
     public vehiclePrefab : UnityEngine.GameObject;
-    public vehicleInstatiateWeight : UnityEngine.Vector3;
+    public vehicleInstantiateWeight : UnityEngine.Vector3;
     private vehilceInstanteObject : UnityEngine.GameObject;
     private vehicleOnOff : bool = false;
     private vehicleCreatePoint : UnityEngine.Vector3 = new UnityEngine.Vector3(0,0,0);
@@ -27,7 +27,7 @@ export default class VehicleSystem extends ZepetoScriptBehaviour {
             //this.uiController.hideVehicleButton();
             this._player = ZepetoPlayers.instance.LocalPlayer;
             this.playerController = this._player.zepetoPlayer.character.gameObject.AddComponent<PlayerController>();
-            this.uiController.carpetBtn.onClick.AddListener(()=>{
+            this.uiController.vehicleGenerateBtn.onClick.AddListener(()=>{
             this.clientstarter = this.gameObject.GetComponent<boatClientStarter>();
             this.vehicleOnOff = !this.vehicleOnOff;
             
@@ -35,7 +35,7 @@ export default class VehicleSystem extends ZepetoScriptBehaviour {
                 this.vehicleCreatePoint =this._player.zepetoPlayer.character.transform.position;
                 this._player.StopMoving();
                 var instantiateVector = this._player.zepetoPlayer.character.gameObject.transform.position;
-                instantiateVector = instantiateVector+this.vehicleInstatiateWeight;
+                instantiateVector = instantiateVector+this.vehicleInstantiateWeight;
                 this.vehilceInstanteObject = this.createVehicleClient(instantiateVector,UnityEngine.Quaternion.identity);
                 this._player.zepetoPlayer.character.gameObject.GetComponent<UnityEngine.CharacterController>().enabled =false;
                 this._player.zepetoPlayer.character.gameObject.GetComponent<ZepetoCharacter>().enabled =false;

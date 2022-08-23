@@ -2,16 +2,16 @@ import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { Button } from "UnityEngine.UI"
 export default class UIController extends ZepetoScriptBehaviour {
 
-    public carpetBtn : Button;
+    public vehicleGenerateBtn : Button;
     
     public  showVehicleButton()
     {
-        this.carpetBtn.gameObject.SetActive(true);
+        this.vehicleGenerateBtn.gameObject.SetActive(true);
     }
 
     public  hideVehicleButton()
     {
-        this.carpetBtn.gameObject.SetActive(false);
+        this.vehicleGenerateBtn.gameObject.SetActive(false);
     }
 
 }

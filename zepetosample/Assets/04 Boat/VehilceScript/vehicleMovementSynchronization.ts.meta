@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: d0a2876882666314eb1dbbdd86f840fe
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine = require(\"UnityEngine\");\r\nclass vehicleMovementSynchronization
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    startMoveVehicle(startPos,
+    endPos) {\r\n        this.StartCoroutine(this.moveVehicle(startPos, endPos));\r\n   
+    }\r\n    stopMoveVehicle() {\r\n        this.StopCoroutine(this.moveVehicle);\r\n   
+    }\r\n    *moveVehicle(startPos, endPos) {\r\n        var dpos = new UnityEngine.Vector3(endPos.x
+    - startPos.x, endPos.y - startPos.y, endPos.z - startPos.z);\r\n        var cPos
+    = startPos;\r\n        var i = 0;\r\n        while (i < 6) {\r\n            cPos.x
+    += dpos.x / 6;\r\n            cPos.y += dpos.y / 6;\r\n            cPos.z +=
+    dpos.z / 6;\r\n            this.gameObject.transform.position = cPos;\r\n           
+    i += 1;\r\n            yield new UnityEngine.WaitForSecondsRealtime(UnityEngine.Time.deltaTime);\r\n       
+    }\r\n    }\r\n}\r\nexports.default = vehicleMovementSynchronization;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidmVoaWNsZU1vdmVtZW50U3luY2hyb25pemF0aW9uLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsidmVoaWNsZU1vdmVtZW50U3luY2hyb25pemF0aW9uLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXFEO0FBQ3JELDJDQUEyQztBQUMzQyxNQUFxQiw4QkFBK0IsU0FBUSxxQ0FBcUI7SUFFdEUsZ0JBQWdCLENBQUMsUUFBOEIsRUFBRSxNQUE0QjtRQUNoRixJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxXQUFXLENBQUMsUUFBUSxFQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUM7SUFDM0QsQ0FBQztJQUNNLGVBQWU7UUFDbEIsSUFBSSxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUMsV0FBVyxDQUFDLENBQUM7SUFDekMsQ0FBQztJQUNPLENBQUMsV0FBVyxDQUFDLFFBQThCLEVBQUcsTUFBNEI7UUFDOUUsSUFBSSxJQUFJLEdBQUcsSUFBSSxXQUFXLENBQUMsT0FBTyxDQUFDLE1BQU0sQ0FBQyxDQUFDLEdBQUMsUUFBUSxDQUFDLENBQUMsRUFBQyxNQUFNLENBQUMsQ0FBQyxHQUFDLFFBQVEsQ0FBQyxDQUFDLEVBQUMsTUFBTSxDQUFDLENBQUMsR0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUM7UUFDaEcsSUFBSSxJQUFJLEdBQUcsUUFBUSxDQUFDO1FBQ3BCLElBQUksQ0FBQyxHQUFHLENBQUMsQ0FBQztRQUNWLE9BQU0sQ0FBQyxHQUFDLENBQUMsRUFBQztZQUNOLElBQUksQ0FBQyxDQUFDLElBQUcsSUFBSSxDQUFDLENBQUMsR0FBQyxDQUFDLENBQUM7WUFDbEIsSUFBSSxDQUFDLENBQUMsSUFBRyxJQUFJLENBQUMsQ0FBQyxHQUFDLENBQUMsQ0FBQztZQUNsQixJQUFJLENBQUMsQ0FBQyxJQUFHLElBQUksQ0FBQyxDQUFDLEdBQUMsQ0FBQyxDQUFDO1lBQ2xCLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUM7WUFDMUMsQ0FBQyxJQUFFLENBQUMsQ0FBQztZQUNMLE1BQU0sSUFBSSxXQUFXLENBQUMsc0JBQXNCLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQztTQUM1RTtJQUNMLENBQUM7Q0FDSjtBQXJCRCxpREFxQkMifQ==","assetPath":"Assets/04
+    Boat/VehilceScript/vehicleMovementSynchronization.ts","manifest":{"properties":[],"name":"vehicleMovementSynchronization","description":""},"isCompiled":true}'
+  typescriptHash: 570f4ad6b256398fa9ca531f90a78aa1
+  onlyWriteTrigger: 0
