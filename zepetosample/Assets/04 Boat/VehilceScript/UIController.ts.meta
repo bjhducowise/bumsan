@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 86ab5b25786e5b94d911a3c2e10b565f
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    UIController extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    showVehicleButton()
+    {\r\n        this.carpetBtn.gameObject.SetActive(true);\r\n    }\r\n    hideVehicleButton()
+    {\r\n        this.carpetBtn.gameObject.SetActive(false);\r\n    }\r\n}\r\nexports.default
+    = UIController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVUlDb250cm9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVUlDb250cm9sbGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXFEO0FBRXJELE1BQXFCLFlBQWEsU0FBUSxxQ0FBcUI7SUFJbkQsaUJBQWlCO1FBRXJCLElBQUksQ0FBQyxTQUFTLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUM5QyxDQUFDO0lBRU8saUJBQWlCO1FBRXJCLElBQUksQ0FBQyxTQUFTLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztJQUMvQyxDQUFDO0NBRUo7QUFkRCwrQkFjQyJ9","assetPath":"Assets/04
+    Boat/VehilceScript/UIController.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"carpetBtn","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"UIController","description":""},"isCompiled":true}'
+  typescriptHash: 55954f0d66b35967ae8f89bb24081ad2
+  onlyWriteTrigger: 0

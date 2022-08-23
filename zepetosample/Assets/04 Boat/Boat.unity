@@ -189,14 +189,26 @@ MonoBehaviour:
     - cameraParent
     - customCamera
     - cameraDistance
+    - maximumXAngle
+    - maximumYAngle
+    - cameraXSpeed
+    - cameraYSpeed
     unityValues:
     - {fileID: 18612690}
     - {fileID: 1586236833}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - 
     - 
     - '{"type":"System.Single, mscorlib","value":"4"}'
+    - '{"type":"System.Single, mscorlib","value":"180"}'
+    - '{"type":"System.Single, mscorlib","value":"90"}'
+    - '{"type":"System.Single, mscorlib","value":"0.7"}'
+    - '{"type":"System.Single, mscorlib","value":"0.7"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: b31c8d3efc9d9a94f9d421605345cf4f, type: 3}
@@ -585,6 +597,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213743992}
   - component: {fileID: 1213743991}
+  - component: {fileID: 1213743993}
   m_Layer: 0
   m_Name: ClientStarter
   m_TagString: Untagged
@@ -607,16 +620,13 @@ MonoBehaviour:
   script:
     keys:
     - multiplay
-    - ui
-    - carpetPrefab
+    - posThreshold
     unityValues:
     - {fileID: 1380226698}
-    - {fileID: 2787167779785370926, guid: 4978de91c194d504bac3bc3bab9dc9f8, type: 3}
-    - {fileID: 7371520906655822160, guid: 607b0e717e82c7748896ff527ec280c3, type: 3}
+    - {fileID: 0}
     values:
     - 
-    - 
-    - 
+    - '{"type":"System.Single, mscorlib","value":"5"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 73afe5debced78f4fb915e1dcc7889bf, type: 3}
@@ -635,6 +645,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1213743993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213743990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - ui
+    - vehiclePrefab
+    - vehicleInstatiateWeight
+    unityValues:
+    - {fileID: 2787167779785370926, guid: 4978de91c194d504bac3bc3bab9dc9f8, type: 3}
+    - {fileID: 7371520906655822160, guid: 607b0e717e82c7748896ff527ec280c3, type: 3}
+    - {fileID: 0}
+    values:
+    - 
+    - 
+    - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":0.0,\"y\":0.0,\"z\":0.0}"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: dba9547a9058bfa4f8981e35ab8643cb, type: 3}
+    isExpaned: 0
 --- !u!1 &1380226697
 GameObject:
   m_ObjectHideFlags: 0

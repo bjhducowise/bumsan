@@ -3,7 +3,7 @@ import {Vector3, Time, Mathf, Quaternion } from "UnityEngine"
 import { Action$1 } from "System"
 import * as UnityEngine from "UnityEngine";
 export default class Carpet extends ZepetoScriptBehaviour {
-
+/*
     public speed = 5;
     public rotateAction : Action$1<number>;
     private isMovingTrue : bool = false;
@@ -53,6 +53,6 @@ export default class Carpet extends ZepetoScriptBehaviour {
         this.transform.position = endValue;
     }
     
-    
+    */
 
 }

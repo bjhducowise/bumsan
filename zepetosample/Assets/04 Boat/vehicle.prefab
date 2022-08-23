@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7371520907033563125}
   - component: {fileID: 7371520907033563122}
   - component: {fileID: 7371520907033563127}
-  - component: {fileID: 7371520907033563126}
   m_Layer: 0
   m_Name: vehicle
   m_TagString: Untagged
@@ -127,41 +126,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1631892, y: 0.045615643, z: 1.1631892}
   m_Center: {x: -0, y: 0.022807822, z: 0}
---- !u!114 &7371520907033563126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7371520906655822160}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  script:
-    keys:
-    - isBlockRotating
-    - timeToMove
-    - moveSpeed
-    - rigidbody
-    - eulerAngleVelocity
-    - characterRotateAroundSpeed
-    unityValues:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 7371520907033563125}
-    - {fileID: 0}
-    - {fileID: 0}
-    values:
-    - '{"type":"System.Boolean, mscorlib","value":"False"}'
-    - '{"type":"System.Single, mscorlib","value":"5"}'
-    - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":0.0,\"y\":0.0,\"z\":5.010000228881836}"}'
-    - 
-    - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":0.0,\"y\":0.0,\"z\":0.0}"}'
-    - '{"type":"System.Single, mscorlib","value":"0"}'
-    unityArrayValues: []
-    arrayValues: []
-    script: {fileID: 4458252877524076426, guid: e3ed891c8fb97cc4eb706528fef245a9, type: 3}
-    isExpaned: 0
