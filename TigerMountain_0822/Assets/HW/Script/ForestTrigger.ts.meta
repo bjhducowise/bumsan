@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: 351aeda57c4b12740830476488abeb9c
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst GoBackBtn_1 = require(\"./GoBackBtn\");\r\nclass
+    ForestTrigger extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    OnTriggerEnter(coll)
+    {\r\n        if (coll.gameObject.name == $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name)
+    {\r\n            console.log(\"forest\");\r\n            this.GoScript.GetComponent($typeof(GoBackBtn_1.default)).SetCave(false);\r\n           
+    this.GoScript.GetComponent($typeof(GoBackBtn_1.default)).SetForest(true);\r\n       
+    }\r\n    }\r\n}\r\nexports.default = ForestTrigger;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRm9yZXN0VHJpZ2dlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkZvcmVzdFRyaWdnZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFDckQsNkNBQW1EO0FBQ25ELDZFQUE0RDtBQUM1RCwyQ0FBb0M7QUFFcEMsTUFBcUIsYUFBYyxTQUFRLHFDQUFxQjtJQUc1RCxjQUFjLENBQUMsSUFBYTtRQUN4QixJQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsSUFBSSxJQUFFLGdEQUF1QixtQkFBbUIsQ0FBMUMsMkNBQWEsQ0FBQyxRQUFRLEVBQXFCLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsTUFBTSxFQUFFLFNBQVMsQ0FBQyxJQUFJLEVBQUM7WUFDdkksT0FBTyxDQUFDLEdBQUcsQ0FBQyxRQUFRLENBQUMsQ0FBQztZQUN0QixJQUFJLENBQUMsUUFBUSxDQUFDLFlBQVksU0FBQyxtQkFBUyxHQUFJLE9BQU8sQ0FBQyxLQUFLLENBQUMsQ0FBQztZQUN2RCxJQUFJLENBQUMsUUFBUSxDQUFDLFlBQVksU0FBQyxtQkFBUyxHQUFJLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztTQUMzRDtJQUNMLENBQUM7Q0FFSjtBQVhELGdDQVdDIn0=","assetPath":"Assets/HW/Script/ForestTrigger.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"GoScript","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"ForestTrigger","description":""},"isCompiled":true}'
+  typescriptHash: fd66f57b182182ee5a364cf171386433
+  onlyWriteTrigger: 0

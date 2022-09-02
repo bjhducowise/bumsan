@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 3db9fb3e1d35aa04382c828dfde2bf20
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine_AI_1 = require(\"UnityEngine.AI\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    WildBoarCreature extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Update()
+    {\r\n        this.agent = this.GetComponent($typeof(UnityEngine_AI_1.NavMeshAgent));\r\n       
+    this.agent.destination = new UnityEngine_1.Vector3(this.x, this.y, this.z);\r\n   
+    }\r\n    SetRange() {\r\n        this.x = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.position.x
+    + UnityEngine_1.Random.Range(0, 8);\r\n        this.z = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.position.z
+    + UnityEngine_1.Random.Range(0, 8);\r\n        this.y = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.position.y;\r\n   
+    }\r\n}\r\nexports.default = WildBoarCreature;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiV2lsZEJvYXJDcmVhdHVyZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIldpbGRCb2FyQ3JlYXR1cmUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBNkM7QUFDN0MsbURBQThDO0FBQzlDLDZFQUE2RTtBQUM3RSxpREFBcUQ7QUFFckQsTUFBcUIsZ0JBQWlCLFNBQVEscUNBQXFCO0lBUS9ELE1BQU07UUFDRixJQUFJLENBQUMsS0FBSyxHQUFDLElBQUksQ0FBQyxZQUFZLFNBQUMsNkJBQVksRUFBRyxDQUFDO1FBQzdDLElBQUksQ0FBQyxLQUFLLENBQUMsV0FBVyxHQUFHLElBQUkscUJBQU8sQ0FBQyxJQUFJLENBQUMsQ0FBQyxFQUFDLElBQUksQ0FBQyxDQUFDLEVBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQyxDQUFDO0lBQy9ELENBQUM7SUFFRCxRQUFRO1FBQ0osSUFBSSxDQUFDLENBQUMsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsR0FBQyxvQkFBTSxDQUFDLEtBQUssQ0FBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDLENBQUM7UUFDMUcsSUFBSSxDQUFDLENBQUMsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsR0FBQyxvQkFBTSxDQUFDLEtBQUssQ0FBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDLENBQUM7UUFDMUcsSUFBSSxDQUFDLENBQUMsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQztJQUM1RixDQUFDO0NBRUo7QUFuQkQsbUNBbUJDIn0=","assetPath":"Assets/HW/Script/WildBoarCreature.ts","manifest":{"properties":[],"name":"WildBoarCreature","description":""},"isCompiled":true}'
+  typescriptHash: 914370dbb8479efc09e52a07baba9e2c
+  onlyWriteTrigger: 0

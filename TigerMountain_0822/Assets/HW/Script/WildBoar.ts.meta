@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 166d55aa1f0dcf44e95ee575b2ec5768
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_AI_1 = require(\"UnityEngine.AI\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass WildBoar extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Update() {\r\n        this.agent = this.GetComponent($typeof(UnityEngine_AI_1.NavMeshAgent));\r\n       
+    this.agent.destination = this.goal.transform.position;\r\n    }\r\n}\r\nexports.default
+    = WildBoar;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiV2lsZEJvYXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJXaWxkQm9hci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLG1EQUE4QztBQUM5QyxpREFBcUQ7QUFFckQsTUFBcUIsUUFBUyxTQUFRLHFDQUFxQjtJQUt2RCxNQUFNO1FBQ0YsSUFBSSxDQUFDLEtBQUssR0FBQyxJQUFJLENBQUMsWUFBWSxTQUFDLDZCQUFZLEVBQUcsQ0FBQztRQUM3QyxJQUFJLENBQUMsS0FBSyxDQUFDLFdBQVcsR0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUM7SUFDeEQsQ0FBQztDQUVKO0FBVkQsMkJBVUMifQ==","assetPath":"Assets/HW/Script/WildBoar.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"goal","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"WildBoar","description":""},"isCompiled":true}'
+  typescriptHash: 583e198299df688320c1581b632686a3
+  onlyWriteTrigger: 0

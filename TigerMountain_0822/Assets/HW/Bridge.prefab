@@ -1,0 +1,3613 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3221641008198885086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3221641008198885165}
+  m_Layer: 0
+  m_Name: Bridge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3221641008198885165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3221641008198885086}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.76, y: -0.5134558, z: -15.169214}
+  m_LocalScale: {x: 1.503066, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8278424363658563942}
+  - {fileID: 8278424364182768866}
+  - {fileID: 8278424365540880151}
+  - {fileID: 8278424363884307466}
+  - {fileID: 8278424365425278035}
+  - {fileID: 8278424365566401545}
+  - {fileID: 8278424365200247660}
+  - {fileID: 8278424364792603658}
+  - {fileID: 8278424364693094744}
+  - {fileID: 8278424364498922897}
+  - {fileID: 8278424363832035330}
+  - {fileID: 8278424365506654055}
+  - {fileID: 8278424364081521267}
+  - {fileID: 8278424363870870590}
+  - {fileID: 8278424364227974809}
+  - {fileID: 8278424365641361795}
+  - {fileID: 8278424364276708412}
+  - {fileID: 8278424364864349649}
+  - {fileID: 8278424363865729338}
+  - {fileID: 8278424364882381481}
+  - {fileID: 8278424365266319571}
+  - {fileID: 8278424363598527283}
+  - {fileID: 8278424364762311590}
+  - {fileID: 8278424364792980812}
+  - {fileID: 8278424364187776064}
+  - {fileID: 8278424364276536057}
+  - {fileID: 8278424364171656980}
+  - {fileID: 8278424363534749210}
+  - {fileID: 8278424364545731025}
+  - {fileID: 8278424363857275052}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &3221641008198884673
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644218196746}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884716
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644218196746}
+  m_ConnectedBody: {fileID: 3221641008198884690}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.05700022, y: 0, z: 0.36700058}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884687
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644297512778}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198883989
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644297512778}
+  m_ConnectedBody: {fileID: 3221641008198884685}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.05700195, y: 0, z: 0.36700058}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884677
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644486049511}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198883984
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644486049511}
+  m_ConnectedBody: {fileID: 3221641008198884680}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.06600094, y: 0, z: 0.3800001}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884702
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644486137890}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884709
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644486137890}
+  m_ConnectedBody: {fileID: 3221641008198884674}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.06800228, y: 0, z: 0.38100052}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884654
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644569435202}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884725
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644569435202}
+  m_ConnectedBody: {fileID: 3221641008198884676}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.066999555, y: 0, z: 0.36699963}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884699
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644573930959}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884710
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644573930959}
+  m_ConnectedBody: {fileID: 3221641008198884702}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.066001356, y: 0, z: 0.38000107}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884674
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644592414363}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884713
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644592414363}
+  m_ConnectedBody: {fileID: 3221641008198884701}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.05699998, y: 0, z: 0.3670025}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884645
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644597921337}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884720
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644597921337}
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 37.244106, y: -0.88345575, z: -13.506213}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884722
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644698003624}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198883992
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644698003624}
+  m_ConnectedBody: {fileID: 3221641008198884698}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.056999564, y: 0, z: 0.36700058}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884676
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644875028197}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198883987
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644875028197}
+  m_ConnectedBody: {fileID: 3221641008198884722}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.06499386, y: 0, z: 0.38799858}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884649
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644880372705}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884724
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644880372705}
+  m_ConnectedBody: {fileID: 3221641008198884678}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.05699992, y: 0, z: 0.36700058}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884648
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644894760657}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884727
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644894760657}
+  m_ConnectedBody: {fileID: 3221641008198884689}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.057000875, y: 0, z: 0.36700058}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884686
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644914049753}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198883988
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644914049753}
+  m_ConnectedBody: {fileID: 3221641008198884687}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.06600058, y: 0, z: 0.3800001}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884650
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644939027063}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884721
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833644939027063}
+  m_ConnectedBody: {fileID: 3221641008198884673}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.064994395, y: -0.000000059604645, z: 0.38799858}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884652
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645147976168}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884731
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645147976168}
+  m_ConnectedBody: {fileID: 3221641008198884691}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.0570004, y: 0, z: 0.3670025}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884690
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645212386497}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884729
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645212386497}
+  m_ConnectedBody: {fileID: 3221641008198884699}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.06700295, y: 0, z: 0.36699867}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884680
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645303604056}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198883990
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645303604056}
+  m_ConnectedBody: {fileID: 3221641008198884654}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.056999087, y: 0, z: 0.36700058}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884689
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645352052172}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884732
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645352052172}
+  m_ConnectedBody: {fileID: 3221641008198884645}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.067001104, y: 0, z: 0.36699986}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884694
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645377312466}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884733
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645377312466}
+  m_ConnectedBody: {fileID: 3221641008198884655}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.06700158, y: 0, z: 0.36699963}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884698
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645437068732}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884705
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645437068732}
+  m_ConnectedBody: {fileID: 3221641008198884686}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.0670023, y: 0, z: 0.36699963}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884655
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645502789256}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884730
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645502789256}
+  m_ConnectedBody: {fileID: 3221641008198884648}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.06599975, y: 0, z: 0.3800001}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884691
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645677015560}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884734
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645677015560}
+  m_ConnectedBody: {fileID: 3221641008198884683}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.06700015, y: 0, z: 0.36699867}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884684
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645743063479}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198883994
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833645743063479}
+  m_ConnectedBody: {fileID: 3221641008198884694}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.05700159, y: 0, z: 0.36700058}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884683
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833646027309170}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198883985
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833646027309170}
+  m_ConnectedBody: {fileID: 3221641008198884649}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.06699908, y: 0, z: 0.36200047}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884678
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833646080618250}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884717
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833646080618250}
+  m_ConnectedBody: {fileID: 3221641008198884677}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.067002654, y: 0, z: 0.36699963}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884692
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833646134406865}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884707
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833646134406865}
+  m_ConnectedBody: {fileID: 3221641008198884684}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.066998005, y: 0, z: 0.36200047}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884701
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833646135078807}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884712
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833646135078807}
+  m_ConnectedBody: {fileID: 3221641008198884695}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.06700331, y: 0, z: 0.36699867}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884695
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833646181998973}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198884706
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833646181998973}
+  m_ConnectedBody: {fileID: 3221641008198884652}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.06599915, y: 0, z: 0.37999916}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &3221641008198884685
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833646234422147}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3221641008198883995
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942833646234422147}
+  m_ConnectedBody: {fileID: 3221641008198884692}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: -0.33}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.0669992, y: 0, z: 0.36699963}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!1001 &6763658051251787883
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1770029
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.589001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!4 &8278424364882381481 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051251787883}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5942833646027309170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051251787883}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658051446281114
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.8699999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.880001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!4 &8278424364693094744 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051446281114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5942833646234422147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051446281114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658051544135443
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.301001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833646080618250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051544135443}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424364864349649 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051544135443}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658051614734024
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.9369993
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.1830015
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!4 &8278424364792603658 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051614734024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5942833646134406865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051614734024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658051615373198
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.91999984
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833646135078807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051615373198}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424364792980812 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051615373198}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658051641325924
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.98700285
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.693
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833646181998973 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051641325924}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424364762311590 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051641325924}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658051705929125
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6799968
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.984001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833645437068732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051705929125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424365506654055 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051705929125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658051784191633
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.1279998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.097001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!4 &8278424365425278035 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051784191633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5942833645502789256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051784191633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658051840899905
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4340035
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.793
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!4 &8278424365641361795 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051840899905}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5942833645303604056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051840899905}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658051910373067
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.0609975
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.7940006
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!4 &8278424365566401545 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051910373067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5942833645377312466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051910373067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658051935452629
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.251
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.6900005
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833645352052172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051935452629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424365540880151 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051935452629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658051945835025
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1100035
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.285999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833645677015560 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051945835025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424365266319571 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658051945835025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658052011891118
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.0039973
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.491001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833645743063479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052011891118}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424365200247660 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052011891118}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658052249941704
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.1939998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.387001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833644894760657 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052249941704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424363884307466 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052249941704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658052267953916
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5580034
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.399
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833644875028197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052267953916}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424363870870590 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052267953916}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658052273306616
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.244001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.897
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833644880372705 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052273306616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424363865729338 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052273306616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658052281629294
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833644939027063 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052281629294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424363857275052 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052281629294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658052306983616
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.7469993
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.287002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833644914049753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052306983616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424363832035330 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052306983616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658052477174692
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 886061648, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Drag
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 886061648, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.3900833
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.2812157
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!4 &8278424363658563942 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052477174692}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658052540869105
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.053003
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.983002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833645147976168 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052540869105}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424363598527283 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052540869105}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658052605287640
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.6619953
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20.205002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!4 &8278424363534749210 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052605287640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5942833645212386497 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052605287640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658052936530707
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.60499525
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20.902002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!4 &8278424364545731025 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052936530707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5942833644218196746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052936530707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658052982259539
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.8129992
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.5770016
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833644297512778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052982259539}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424364498922897 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658052982259539}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658053021329026
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.8630005
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.087002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!4 &8278424364187776064 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658053021329026}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5942833644592414363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658053021329026}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658053026815520
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.3179998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.9930007
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!4 &8278424364182768866 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658053026815520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5942833644597921337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658053026815520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658053040598486
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7289977
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.508003
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!4 &8278424364171656980 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658053040598486}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5942833644573930959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658053040598486}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658053126893745
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6229969
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.681002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833644698003624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658053126893745}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424364081521267 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658053126893745}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658053204371198
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3680034
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.503
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833644486049511 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658053204371198}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424364276708412 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658053204371198}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658053204459579
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7949978
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.798002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!1 &5942833644486137890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658053204459579}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8278424364276536057 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658053204459579}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6763658053254202459
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3221641008198885165}
+    m_Modifications:
+    - target: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_Name
+      value: Suspension Bridge (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4910034
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.096
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 886061649, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+--- !u!4 &8278424364227974809 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404589586676060866, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658053254202459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5942833644569435202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127158432816715801, guid: 9db05b08b4ca21148bd20c48e128e3a1, type: 3}
+  m_PrefabInstance: {fileID: 6763658053254202459}
+  m_PrefabAsset: {fileID: 0}

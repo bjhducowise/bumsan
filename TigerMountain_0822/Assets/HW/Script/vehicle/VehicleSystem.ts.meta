@@ -1,0 +1,72 @@
+fileFormatVersion: 2
+guid: 0de44345bb3370a45828df41dde35d93
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst __UnityEngine__ = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst UnityEngine = require(\\\"UnityEngine\\\");\\r\\nconst
+    UIController_1 = require(\\\"./UIController\\\");\\r\\nconst boatClientStarter_1
+    = require(\\\"./boatClientStarter\\\");\\r\\nconst PlayerController_1 = require(\\\"./PlayerController\\\");\\r\\nclass
+    VehicleSystem extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    constructor()
+    {\\r\\n        super(...arguments);\\r\\n        this.vehicleOnOff = false;\\r\\n       
+    this.vehicleCreatePoint = new UnityEngine.Vector3(0, 0, 0);\\r\\n    }\\r\\n   
+    Start() {\\r\\n        var go = UnityEngine.Object.Instantiate(this.ui);\\r\\n       
+    this.uiController = go.GetComponent($typeof(UIController_1.default));\\r\\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\\r\\n            this.uiController.hideVehicleButton();\\r\\n           
+    this._player = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer;\\r\\n           
+    this.playerController = this._player.zepetoPlayer.character.gameObject.AddComponent($typeof(PlayerController_1.default));\\r\\n           
+    this.uiController.vehicleGenerateBtn.onClick.AddListener(() => {\\r\\n               
+    this.clientstarter = this.gameObject.GetComponent($typeof(boatClientStarter_1.default));\\r\\n               
+    this.vehicleOnOff = !this.vehicleOnOff;\\r\\n                if (this.vehicleOnOff)
+    {\\r\\n                    this.vehicleCreatePoint = this._player.zepetoPlayer.character.transform.position;\\r\\n                   
+    this._player.StopMoving();\\r\\n                    var instantiateVector = this._player.zepetoPlayer.character.gameObject.transform.position;\\r\\n                   
+    instantiateVector = UnityEngine.Vector3.op_Addition(instantiateVector, this.vehicleInstantiateWeight);\\r\\n                   
+    this.vehilceInstanteObject = this.createVehicleClient(instantiateVector, UnityEngine.Quaternion.LookRotation(UnityEngine.Vector3.back,
+    UnityEngine.Vector3.up));\\r\\n                    //this.vehilceInstanteObject
+    = this.createVehicleClient(instantiateVector,this._player.transform.rotation);\\r\\n                   
+    this._player.zepetoPlayer.character.gameObject.GetComponent($typeof(__UnityEngine__.CharacterController)).enabled
+    = false;\\r\\n                    this._player.zepetoPlayer.character.gameObject.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter)).enabled
+    = false;\\r\\n                    this._player.zepetoPlayer.character.gameObject.transform.position
+    = this.vehilceInstanteObject.transform.position;\\r\\n                    //\uBCF4\uD2B8
+    \uC0DD\uC131 \uC2DC \uD50C\uB808\uC774\uC5B4\uC758 \uBC29\uD5A5 \uC124\uC815\uC744
+    \uC704\uD55C \uCF54\uB4DC \\r\\n                    this._player.zepetoPlayer.character.gameObject.transform.rotation
+    = UnityEngine.Quaternion.LookRotation(UnityEngine.Vector3.forward, UnityEngine.Vector3.up);
+    //add\\r\\n                    this._player.zepetoPlayer.character.gameObject.transform.SetParent(this.vehilceInstanteObject.transform);\\r\\n                   
+    //this.playerController.Ride(this.carpet)\\r\\n                    this.clientstarter.sendIsRide(this.vehicleOnOff);
+    //clientstarter\\r\\n                }\\r\\n                if (!this.vehicleOnOff)
+    {\\r\\n                    $extension(\\\"ZEPETO.Character.Controller.Utils\\\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.gameObject.transform.position
+    = (new UnityEngine.Vector3(this.vehilceInstanteObject.transform.position.x, 0,
+    this.vehilceInstanteObject.transform.position.z));\\r\\n                    this.vehilceInstanteObject.transform.DetachChildren();\\r\\n                   
+    this.playerController.offController();\\r\\n                    this.clientstarter.sendIsRide(this.vehicleOnOff);\\r\\n                   
+    UnityEngine.GameObject.Destroy(this.vehilceInstanteObject);\\r\\n                   
+    this._player.zepetoPlayer.character.Teleport(this.vehicleCreatePoint, this._player.zepetoPlayer.character.transform.rotation);\\r\\n                   
+    this._player.zepetoPlayer.character.StopMoving();\\r\\n                }\\r\\n           
+    });\\r\\n        });\\r\\n    }\\r\\n    createVehicleClient(pos, rot) {\\r\\n       
+    return UnityEngine.Object.Instantiate(this.vehiclePrefab, pos, rot);\\r\\n   
+    }\\r\\n    createVehicleServer(pos, rot) {\\r\\n        return UnityEngine.Object.Instantiate(this.vehiclePrefab,
+    pos, rot);\\r\\n    }\\r\\n    clientShowVehicleButton() {\\r\\n        this.uiController.showVehicleButton();\\r\\n   
+    }\\r\\n    clientHideVehicleButton() {\\r\\n        this.uiController.hideVehicleButton();\\r\\n   
+    }\\r\\n}\\r\\nexports.default = VehicleSystem;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVmVoaWNsZVN5c3RlbS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlZlaGljbGVTeXN0ZW0udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsNkVBQTBGO0FBQzFGLGlEQUFxRDtBQUNyRCwyQ0FBMkM7QUFDM0MsaURBQTBDO0FBQzFDLDJEQUFvRDtBQUNwRCx5REFBa0Q7QUFDbEQsTUFBcUIsYUFBYyxTQUFRLHFDQUFxQjtJQUFoRTs7UUFXWSxpQkFBWSxHQUFVLEtBQUssQ0FBQztRQUM1Qix1QkFBa0IsR0FBeUIsSUFBSSxXQUFXLENBQUMsT0FBTyxDQUFDLENBQUMsRUFBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDLENBQUM7SUE0RHRGLENBQUM7SUF4REcsS0FBSztRQUNELElBQUksRUFBRSxHQUFHLFdBQVcsQ0FBQyxNQUFNLENBQUMsV0FBVyxDQUF5QixJQUFJLENBQUMsRUFBRSxDQUFDLENBQUM7UUFDekUsSUFBSSxDQUFDLFlBQVksR0FBRyxFQUFFLENBQUMsWUFBWSxTQUFDLHNCQUFZLEVBQUcsQ0FBQztRQUNwRCwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxrQkFBa0IsQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ3ZELElBQUksQ0FBQyxZQUFZLENBQUMsaUJBQWlCLEVBQUUsQ0FBQztZQUN0QyxJQUFJLENBQUMsT0FBTyxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQztZQUNsRCxJQUFJLENBQUMsZ0JBQWdCLEdBQUcsSUFBSSxDQUFDLE9BQU8sQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsMEJBQWdCLEVBQUcsQ0FBQztZQUN4RyxJQUFJLENBQUMsWUFBWSxDQUFDLGtCQUFrQixDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRSxFQUFFO2dCQUM3RCxJQUFJLENBQUMsYUFBYSxHQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLDJCQUFpQixFQUFHLENBQUM7Z0JB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\",\"assetPath\":\"Assets/HW/Script/vehicle/VehicleSystem.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"ui\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[{\"name\":\"Header\",\"args\":[\"\\\"Custom
+    UI Prefab\\\"\"]}]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"vehiclePrefab\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[{\"name\":\"Header\",\"args\":[\"\\\"Vehicle
+    Object\\\"\"]}]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"vehicleInstantiateWeight\",\"type\":\"UnityEngine.Vector3\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"VehicleSystem\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 3efab442c99426cbc35dad957e61d7db
+  onlyWriteTrigger: 0

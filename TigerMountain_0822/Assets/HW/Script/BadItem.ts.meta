@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: f74b1f064bc3940448204109e5734423
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nclass BadItem extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Update() {\r\n        this.transform.Rotate(0, 1, 0);\r\n    }\r\n   
+    OnTriggerEnter(coll) {\r\n        if (coll.gameObject.name == $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name)
+    {\r\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.additionalRunSpeed
+    = -2;\r\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.localScale
+    = new UnityEngine_1.Vector3(0.5, 0.5, 0.5);\r\n            console.log(''speed
+    down'');\r\n            this.StartCoroutine(this.Fade(2));\r\n        }\r\n   
+    }\r\n    *Fade(tick) {\r\n        yield new UnityEngine_1.WaitForSeconds(tick);\r\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.additionalRunSpeed
+    = 0;\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.localScale
+    = new UnityEngine_1.Vector3(1, 1, 1);\r\n        console.log(\"default speed\");\r\n   
+    }\r\n}\r\nexports.default = BadItem;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQmFkSXRlbS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkJhZEl0ZW0udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFDckQsNkVBQXlEO0FBQ3pELDZDQUFpRjtBQUVqRixNQUFxQixPQUFRLFNBQVEscUNBQXFCO0lBRXRELE1BQU07UUFDRixJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxDQUFDLEVBQUMsQ0FBQyxFQUFDLENBQUMsQ0FBQyxDQUFDO0lBQ2pDLENBQUM7SUFFRCxjQUFjLENBQUMsSUFBYTtRQUN4QixJQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsSUFBSSxJQUFFLGdEQUF1QixtQkFBbUIsQ0FBMUMsMkNBQWEsQ0FBQyxRQUFRLEVBQXFCLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsTUFBTSxFQUFFLFNBQVMsQ0FBQyxJQUFJLEVBQUM7WUFDdkksMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsa0JBQWtCLEdBQUcsQ0FBQyxDQUFDLENBQUM7WUFDbEYsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLFVBQVUsR0FBRyxJQUFJLHFCQUFPLENBQUMsR0FBRyxFQUFDLEdBQUcsRUFBQyxHQUFHLENBQUMsQ0FBQztZQUMxRyxPQUFPLENBQUMsR0FBRyxDQUFDLFlBQVksQ0FBQyxDQUFDO1lBQzFCLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO1NBQ3JDO0lBRUwsQ0FBQztJQUNELENBQUMsSUFBSSxDQUFDLElBQVc7UUFDYixNQUFNLElBQUksNEJBQWMsQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUMvQiwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxrQkFBa0IsR0FBRyxDQUFDLENBQUM7UUFDakYsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLFVBQVUsR0FBRyxJQUFJLHFCQUFPLENBQUMsQ0FBQyxFQUFDLENBQUMsRUFBQyxDQUFDLENBQUMsQ0FBQztRQUNwRyxPQUFPLENBQUMsR0FBRyxDQUFDLGVBQWUsQ0FBQyxDQUFDO0lBQ2pDLENBQUM7Q0FFSjtBQXRCRCwwQkFzQkMifQ==","assetPath":"Assets/HW/Script/BadItem.ts","manifest":{"properties":[],"name":"BadItem","description":""},"isCompiled":true}'
+  typescriptHash: 40d5fe4c215cc5cefe7e8a513dfd756a
+  onlyWriteTrigger: 0

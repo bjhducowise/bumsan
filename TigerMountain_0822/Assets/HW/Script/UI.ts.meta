@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 4d5d687da60907d4cba1f066ea2ebe30
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst LangChoice_1 = require(\"./LangChoice\");\r\nclass
+    UI extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Awake() {\r\n       
+    this.KorUI.SetActive(false);\r\n        this.EngUI.SetActive(false);\r\n    }\r\n   
+    Click() {\r\n        var kor = this.langScript.GetComponent($typeof(LangChoice_1.default)).getKor();\r\n       
+    var eng = this.langScript.GetComponent($typeof(LangChoice_1.default)).getEng();\r\n       
+    if (kor == true) {\r\n            this.KorUI.SetActive(true);\r\n           
+    this.EngUI.SetActive(false);\r\n        }\r\n        else if (eng == true) {\r\n           
+    this.KorUI.SetActive(false);\r\n            this.EngUI.SetActive(true);\r\n       
+    }\r\n    }\r\n}\r\nexports.default = UI;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVUkuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJVSS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCw2Q0FBeUM7QUFDekMsNkNBQXNDO0FBRXRDLE1BQXFCLEVBQUcsU0FBUSxxQ0FBcUI7SUFPakQsS0FBSztRQUNELElBQUksQ0FBQyxLQUFLLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQzVCLElBQUksQ0FBQyxLQUFLLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQ2hDLENBQUM7SUFDRCxLQUFLO1FBRUQsSUFBSSxHQUFHLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsb0JBQVUsR0FBSSxNQUFNLEVBQUUsQ0FBQztRQUM5RCxJQUFJLEdBQUcsR0FBRyxJQUFJLENBQUMsVUFBVSxDQUFDLFlBQVksU0FBQyxvQkFBVSxHQUFJLE1BQU0sRUFBRSxDQUFDO1FBRTlELElBQUcsR0FBRyxJQUFFLElBQUksRUFBQztZQUNULElBQUksQ0FBQyxLQUFLLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1lBQzNCLElBQUksQ0FBQyxLQUFLLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1NBQy9CO2FBQUssSUFBRyxHQUFHLElBQUUsSUFBSSxFQUFDO1lBQ2YsSUFBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7WUFDNUIsSUFBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDOUI7SUFDTCxDQUFDO0NBRUo7QUF6QkQscUJBeUJDIn0=","assetPath":"Assets/HW/Script/UI.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"langScript","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"KorUI","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"EngUI","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"UI","description":""},"isCompiled":true}'
+  typescriptHash: c4d0724ef95e7c534c6bafebf96725e7
+  onlyWriteTrigger: 0

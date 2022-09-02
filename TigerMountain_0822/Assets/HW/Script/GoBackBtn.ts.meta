@@ -1,0 +1,69 @@
+fileFormatVersion: 2
+guid: 5426e7d6bfff8784fbc3f391ea409ab8
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst Timer_1 = require(\"./Timer\");\r\nconst
+    boatClientStarter_1 = require(\"./vehicle/boatClientStarter\");\r\nclass GoBackBtn
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n       
+    super(...arguments);\r\n        this.Vally = false;\r\n        this.Cave = false;\r\n       
+    this.Forest = false;\r\n        this.Mountain = false;\r\n    }\r\n    Start()
+    {\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    });\r\n    }\r\n    GoBtn() {\r\n        if (this.Vally) {\r\n            this.pos
+    = this.zepetoCharacter.transform.position;\r\n            this.VallySideMap();\r\n           
+    this.Timerscript.GetComponent($typeof(Timer_1.default)).SetTimerPause(true);\r\n       
+    }\r\n        else if (this.Cave) {\r\n            this.pos = this.zepetoCharacter.transform.position;\r\n           
+    this.CaveSideMap();\r\n            this.Timerscript.GetComponent($typeof(Timer_1.default)).SetTimerPause(true);\r\n       
+    }\r\n        else if (this.Forest) {\r\n            this.pos = this.zepetoCharacter.transform.position;\r\n           
+    this.ForestSideMap();\r\n            this.Timerscript.GetComponent($typeof(Timer_1.default)).SetTimerPause(true);\r\n       
+    }\r\n        else if (this.Mountain) {\r\n            this.pos = this.zepetoCharacter.transform.position;\r\n           
+    this.MountainSideMap();\r\n            this.Timerscript.GetComponent($typeof(Timer_1.default)).SetTimerPause(true);\r\n       
+    }\r\n    }\r\n    BackBtn() {\r\n        if (this.zepetoCharacter == null) {\r\n           
+    return 0;\r\n        }\r\n        this.zepetoCharacter.Teleport(this.pos, UnityEngine_1.Quaternion.identity);\r\n       
+    //this.cs.GetComponent<boatClientStarter>().customTeleport(this.pos,Quaternion.identity);\r\n       
+    this.gobtn.SetActive(true);\r\n        this.Timerscript.GetComponent($typeof(Timer_1.default)).SetTimerPause(false);\r\n   
+    }\r\n    VallySideMap() {\r\n        if (this.zepetoCharacter == null) {\r\n           
+    return 0;\r\n        }\r\n        this.zepetoCharacter.Teleport(new UnityEngine_1.Vector3(7.89,
+    -0.17, 129.16), UnityEngine_1.Quaternion.identity);\r\n        //this.cs.GetComponent<boatClientStarter>().customTeleport(new
+    Vector3(29,-14,-42),Quaternion.identity);\r\n        this.gobtn.SetActive(false);\r\n   
+    }\r\n    CaveSideMap() {\r\n        if (this.zepetoCharacter == null) {\r\n           
+    return 0;\r\n        }\r\n        this.zepetoCharacter.Teleport(new UnityEngine_1.Vector3(7.89,
+    -19.55, 111.87), UnityEngine_1.Quaternion.identity);\r\n        console.log(\"cave
+    teleport\");\r\n        this.gobtn.SetActive(false);\r\n        //this.cs.GetComponent<boatClientStarter>().customTeleport(new
+    Vector3(9,-11,-104),Quaternion.identity);\r\n    }\r\n    ForestSideMap() {\r\n       
+    if (this.zepetoCharacter == null) {\r\n            return 0;\r\n        }\r\n       
+    this.zepetoCharacter.Teleport(new UnityEngine_1.Vector3(-20.91, -2.99, 159.63),
+    UnityEngine_1.Quaternion.identity);\r\n        console.log(\"forest teleport\");\r\n       
+    this.gobtn.SetActive(false);\r\n    }\r\n    MountainSideMap() {\r\n        if
+    (this.zepetoCharacter == null) {\r\n            return 0;\r\n        }\r\n       
+    this.zepetoCharacter.Teleport(new UnityEngine_1.Vector3(-100.4, -15.39, 37.5),
+    UnityEngine_1.Quaternion.identity);\r\n        console.log(\"mountain teleport\");\r\n       
+    this.gobtn.SetActive(false);\r\n    }\r\n    SetVally(isVally) {\r\n        this.Vally
+    = isVally;\r\n    }\r\n    SetCave(isCave) {\r\n        this.Cave = isCave;\r\n   
+    }\r\n    SetForest(isForest) {\r\n        this.Forest = isForest;\r\n    }\r\n   
+    SetMountain(isMount) {\r\n        this.Mountain = isMount;\r\n    }\r\n    GetVally()
+    {\r\n        return this.Vally;\r\n    }\r\n    GetCave() {\r\n        return
+    this.Cave;\r\n    }\r\n    GetForest() {\r\n        return this.Forest;\r\n   
+    }\r\n    GetMount() {\r\n        return this.Mountain;\r\n    }\r\n}\r\nexports.default
+    = GoBackBtn;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR29CYWNrQnRuLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiR29CYWNrQnRuLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQThEO0FBQzlELDZFQUE0RDtBQUM1RCxpREFBcUQ7QUFFckQsbUNBQTRCO0FBQzVCLG1FQUE0RDtBQUU1RCxNQUFxQixTQUFVLFNBQVEscUNBQXFCO0lBQTVEOztRQUdXLFVBQUssR0FBUyxLQUFLLENBQUM7UUFDcEIsU0FBSSxHQUFTLEtBQUssQ0FBQztRQUNuQixXQUFNLEdBQVMsS0FBSyxDQUFDO1FBQ3JCLGFBQVEsR0FBUyxLQUFLLENBQUM7SUEwRmxDLENBQUM7SUFwRkcsS0FBSztRQUNELDJDQUFhLENBQUMsUUFBUSxDQUFDLGtCQUFrQixDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDdkQsSUFBSSxDQUFDLGVBQWUsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQztRQUNyRixDQUFDLENBQUMsQ0FBQztJQUNQLENBQUM7SUFFRCxLQUFLO1FBQ0QsSUFBRyxJQUFJLENBQUMsS0FBSyxFQUFDO1lBQ1YsSUFBSSxDQUFDLEdBQUcsR0FBQyxJQUFJLENBQUMsZUFBZSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUM7WUFDakQsSUFBSSxDQUFDLFlBQVksRUFBRSxDQUFDO1lBQ3BCLElBQUksQ0FBQyxXQUFXLENBQUMsWUFBWSxTQUFDLGVBQUssR0FBSSxhQUFhLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDOUQ7YUFBTSxJQUFJLElBQUksQ0FBQyxJQUFJLEVBQUM7WUFDakIsSUFBSSxDQUFDLEdBQUcsR0FBQyxJQUFJLENBQUMsZUFBZSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUM7WUFDakQsSUFBSSxDQUFDLFdBQVcsRUFBRSxDQUFDO1lBQ25CLElBQUksQ0FBQyxXQUFXLENBQUMsWUFBWSxTQUFDLGVBQUssR0FBSSxhQUFhLENBQUMsSUFBSSxDQUFD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","assetPath":"Assets/HW/Script/GoBackBtn.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"Timerscript","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"Vally","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"Cave","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"Forest","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"Mountain","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"pos","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"cs","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"","name":"zepetoCharacter","type":"any","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"gobtn","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"GoBackBtn","description":""},"isCompiled":true}'
+  typescriptHash: efa4b0f828af456a2d1f7b6f68329e50
+  onlyWriteTrigger: 0

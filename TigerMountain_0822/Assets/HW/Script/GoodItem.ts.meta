@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 83c35130c2ea16d4797350cc735978bb
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nclass GoodItem extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Update() {\r\n        this.transform.Rotate(0, 1, 0);\r\n    }\r\n   
+    OnTriggerEnter(coll) {\r\n        if (coll.gameObject.name == $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name)
+    {\r\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.additionalRunSpeed
+    = 5;\r\n            console.log(''speedup'');\r\n            this.StartCoroutine(this.Fade(2));\r\n       
+    }\r\n    }\r\n    *Fade(tick) {\r\n        yield new UnityEngine_1.WaitForSeconds(tick);\r\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.additionalRunSpeed
+    = 0;\r\n        console.log(\"default speed\");\r\n    }\r\n}\r\nexports.default
+    = GoodItem;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR29vZEl0ZW0uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJHb29kSXRlbS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCw2RUFBeUQ7QUFDekQsNkNBQXVEO0FBRXZELE1BQXFCLFFBQVMsU0FBUSxxQ0FBcUI7SUFFdkQsTUFBTTtRQUNGLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLENBQUMsRUFBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDLENBQUM7SUFDakMsQ0FBQztJQUVELGNBQWMsQ0FBQyxJQUFhO1FBRXhCLElBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxJQUFJLElBQUUsZ0RBQXVCLG1CQUFtQixDQUExQywyQ0FBYSxDQUFDLFFBQVEsRUFBcUIsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxNQUFNLEVBQUUsU0FBUyxDQUFDLElBQUksRUFBQztZQUN2SSwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxrQkFBa0IsR0FBRyxDQUFDLENBQUM7WUFDakYsT0FBTyxDQUFDLEdBQUcsQ0FBQyxTQUFTLENBQUMsQ0FBQztZQUN2QixJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQztTQUNyQztJQUVMLENBQUM7SUFFRCxDQUFDLElBQUksQ0FBQyxJQUFXO1FBQ2IsTUFBTSxJQUFJLDRCQUFjLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDL0IsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsa0JBQWtCLEdBQUcsQ0FBQyxDQUFDO1FBQ2pGLE9BQU8sQ0FBQyxHQUFHLENBQUMsZUFBZSxDQUFDLENBQUM7SUFDakMsQ0FBQztDQUVKO0FBdEJELDJCQXNCQyJ9","assetPath":"Assets/HW/Script/GoodItem.ts","manifest":{"properties":[],"name":"GoodItem","description":""},"isCompiled":true}'
+  typescriptHash: cea196c62307878a78fc2cba291b4381
+  onlyWriteTrigger: 0

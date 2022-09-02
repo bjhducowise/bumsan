@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 26b4007e1f5d9754492702d9f40bc7a4
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    LangChoice extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Kor() {\r\n       
+    this.isKor = true;\r\n        this.isEng = false;\r\n    }\r\n    Eng() {\r\n       
+    this.isEng = true;\r\n        this.isKor = false;\r\n    }\r\n    getKor() {
+    return this.isKor; }\r\n    getEng() { return this.isEng; }\r\n}\r\nexports.default
+    = LangChoice;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTGFuZ0Nob2ljZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkxhbmdDaG9pY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFFckQsTUFBcUIsVUFBVyxTQUFRLHFDQUFxQjtJQUt6RCxHQUFHO1FBQ0MsSUFBSSxDQUFDLEtBQUssR0FBQyxJQUFJLENBQUM7UUFDaEIsSUFBSSxDQUFDLEtBQUssR0FBQyxLQUFLLENBQUM7SUFDckIsQ0FBQztJQUVELEdBQUc7UUFDQyxJQUFJLENBQUMsS0FBSyxHQUFDLElBQUksQ0FBQztRQUNoQixJQUFJLENBQUMsS0FBSyxHQUFDLEtBQUssQ0FBQztJQUNyQixDQUFDO0lBRUQsTUFBTSxLQUFXLE9BQU8sSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFBLENBQUM7SUFDcEMsTUFBTSxLQUFXLE9BQU8sSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFBLENBQUM7Q0FFdkM7QUFsQkQsNkJBa0JDIn0=","assetPath":"Assets/HW/Script/LangChoice.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"isKor","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"isEng","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"LangChoice","description":""},"isCompiled":true}'
+  typescriptHash: e407ec68c5ec9483a18bd87fbd0ff931
+  onlyWriteTrigger: 0

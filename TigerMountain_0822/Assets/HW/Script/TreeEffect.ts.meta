@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: b0bcfd4239c5f064681dc10946ed9b41
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nclass
+    TreeEffect extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Awake() {\r\n       
+    this.particle1.Stop();\r\n        this.particle2.Stop();\r\n    }\r\n    OnTriggerEnter(coll)
+    {\r\n        if (coll.gameObject.name == $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name)
+    {\r\n            this.audioSource.Play();\r\n            this.particle1.Play();\r\n           
+    this.particle2.Play();\r\n        }\r\n        console.log(\"trigger enter \");\r\n   
+    }\r\n}\r\nexports.default = TreeEffect;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVHJlZUVmZmVjdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlRyZWVFZmZlY3QudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpREFBcUQ7QUFDckQsNkVBQTREO0FBSTVELE1BQXFCLFVBQVcsU0FBUSxxQ0FBcUI7SUFTekQsS0FBSztRQUNELElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxFQUFFLENBQUM7UUFDdEIsSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLEVBQUUsQ0FBQztJQUMxQixDQUFDO0lBQ0QsY0FBYyxDQUFDLElBQWU7UUFDMUIsSUFBRyxJQUFJLENBQUMsVUFBVSxDQUFDLElBQUksSUFBRSxnREFBdUIsbUJBQW1CLENBQTFDLDJDQUFhLENBQUMsUUFBUSxFQUFxQiwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLE1BQU0sRUFBRSxTQUFTLENBQUMsSUFBSSxFQUFDO1lBQ3ZJLElBQUksQ0FBQyxXQUFXLENBQUMsSUFBSSxFQUFFLENBQUM7WUFDeEIsSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLEVBQUUsQ0FBQztZQUN0QixJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksRUFBRSxDQUFDO1NBRXpCO1FBQ0QsT0FBTyxDQUFDLEdBQUcsQ0FBQyxnQkFBZ0IsQ0FBQyxDQUFDO0lBQ2xDLENBQUM7Q0FFSjtBQXZCRCw2QkF1QkMifQ==","assetPath":"Assets/HW/Script/TreeEffect.ts","manifest":{"properties":[{"assembly":"UnityEngine.AudioModule","name":"audioSource","type":"UnityEngine.AudioSource","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.ParticleSystemModule","name":"particle1","type":"UnityEngine.ParticleSystem","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.ParticleSystemModule","name":"particle2","type":"UnityEngine.ParticleSystem","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"TreeEffect","description":""},"isCompiled":true}'
+  typescriptHash: e62edf629ad5ff20a2586564800a4af8
+  onlyWriteTrigger: 0

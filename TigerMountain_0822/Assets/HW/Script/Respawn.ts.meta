@@ -1,0 +1,49 @@
+fileFormatVersion: 2
+guid: c62e7f0fc0829a14cb6fd758292045cf
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst GoBackBtn_1 = require(\"./GoBackBtn\");\r\nclass
+    Respawn extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    });\r\n    }\r\n    /*OnTriggerEnter(coll:Collider){\r\n        if (this.zepetoCharacter
+    == null) {console.log(\"null\"); return 0;}\r\n        this.zepetoCharacter.Teleport(new
+    Vector3(14,-2,17),Quaternion.identity);\r\n        //this.zepetoCharacter.transform.position
+    = new Vector3(14,-2,17);\r\n        console.log(\"teleport\");\r\n    }*/\r\n   
+    OnTriggerEnter(coll) {\r\n        var vally = this.GoScript.GetComponent($typeof(GoBackBtn_1.default)).GetVally();\r\n       
+    var cave = this.GoScript.GetComponent($typeof(GoBackBtn_1.default)).GetCave();\r\n       
+    var forest = this.GoScript.GetComponent($typeof(GoBackBtn_1.default)).GetForest();\r\n       
+    var mount = this.GoScript.GetComponent($typeof(GoBackBtn_1.default)).GetMount();\r\n       
+    if (this.zepetoCharacter == null) {\r\n            console.log(\"null\");\r\n           
+    return 0;\r\n        }\r\n        if (vally) {\r\n            this.zepetoCharacter.Teleport(new
+    UnityEngine_1.Vector3(10.45, -11.4, 15.29), UnityEngine_1.Quaternion.identity);\r\n       
+    }\r\n        else if (cave) {\r\n            this.zepetoCharacter.Teleport(new
+    UnityEngine_1.Vector3(9.94, -10.48, 73.2), UnityEngine_1.Quaternion.identity);\r\n       
+    }\r\n        else if (forest) {\r\n            this.zepetoCharacter.Teleport(new
+    UnityEngine_1.Vector3(-45.272, -13.85, 138.75), UnityEngine_1.Quaternion.identity);\r\n       
+    }\r\n        else if (mount) {\r\n            this.zepetoCharacter.Teleport(new
+    UnityEngine_1.Vector3(-100.4, -15.39, 78.08), UnityEngine_1.Quaternion.identity);\r\n       
+    }\r\n        else {\r\n            this.zepetoCharacter.Teleport(new UnityEngine_1.Vector3(14,
+    -2, 17), UnityEngine_1.Quaternion.identity);\r\n        }\r\n    }\r\n}\r\nexports.default
+    = Respawn;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUmVzcGF3bi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlJlc3Bhd24udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBd0U7QUFDeEUsNkVBQTZFO0FBQzdFLGlEQUFxRDtBQUNyRCwyQ0FBb0M7QUFFcEMsTUFBcUIsT0FBUSxTQUFRLHFDQUFxQjtJQUl0RCxLQUFLO1FBQ0QsMkNBQWEsQ0FBQyxRQUFRLENBQUMsa0JBQWtCLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUN2RCxJQUFJLENBQUMsZUFBZSxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDO1FBQ3JGLENBQUMsQ0FBQyxDQUFDO0lBR1AsQ0FBQztJQUVEOzs7OztPQUtHO0lBQ0gsY0FBYyxDQUFDLElBQWU7UUFFMUIsSUFBSSxLQUFLLEdBQUcsSUFBSSxDQUFDLFFBQVEsQ0FBQyxZQUFZLFNBQUMsbUJBQVMsR0FBSSxRQUFRLEVBQUUsQ0FBQztRQUMvRCxJQUFJLElBQUksR0FBRyxJQUFJLENBQUMsUUFBUSxDQUFDLFlBQVksU0FBQyxtQkFBUyxHQUFJLE9BQU8sRUFBRSxDQUFDO1FBQzdELElBQUksTUFBTSxHQUFHLElBQUksQ0FBQyxRQUFRLENBQUMsWUFBWSxTQUFDLG1CQUFTLEdBQUksU0FBUyxFQUFFLENBQUM7UUFDakUsSUFBSSxLQUFLLEdBQUcsSUFBSSxDQUFDLFFBQVEsQ0FBQyxZQUFZLFNBQUMsbUJBQVMsR0FBSSxRQUFRLEVBQUUsQ0FBQztRQUUvRCxJQUFJLElBQUksQ0FBQyxlQUFlLElBQUksSUFBSSxFQUFFO1lBQUMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxNQUFNLENBQUMsQ0FBQztZQUFDLE9BQU8sQ0FBQyxDQUFDO1NBQUM7UUFDbEUsSUFBRyxLQUFLLEVBQUM7WUFDTCxJQUFJLENBQUMsZUFBZSxDQUFDLFFBQVEsQ0FBQyxJQUFJLHFCQUFPLENBQUMsS0FBSyxFQUFDLENBQUMsSUFBSSxFQUFDLEtBQUssQ0FBQyxFQUFDLHdCQUFVLENBQUMsUUFBUSxDQUFDLENBQUM7U0FDckY7YUFBTSxJQUFJLElBQUksRUFBQztZQUNaLElBQUksQ0FBQyxlQUFlLENBQUMsUUFBUSxDQUFDLElBQUkscUJBQU8sQ0FBQyxJQUFJLEVBQUMsQ0FBQyxLQUFLLEVBQUMsSUFBSSxDQUFDLEVBQUMsd0JBQVUsQ0FBQyxRQUFRLENBQUMsQ0FBQztTQUNwRjthQUFLLElBQUcsTUFBTSxFQUFDO1lBQ1osSUFBSSxDQUFDLGVBQWUsQ0FBQyxRQUFRLENBQUMsSUFBSSxxQkFBTyxDQUFDLENBQUMsTUFBTSxFQUFDLENBQUMsS0FBSyxFQUFDLE1BQU0sQ0FBQyxFQUFDLHdCQUFVLENBQUMsUUFBUSxDQUFDLENBQUM7U0FDekY7YUFBSyxJQUFHLEtBQUssRUFBQztZQUNYLElBQUksQ0FBQyxlQUFlLENBQUMsUUFBUSxDQUFDLElBQUkscUJBQU8sQ0FBQyxDQUFDLEtBQUssRUFBQyxDQUFDLEtBQUssRUFBQyxLQUFLLENBQUMsRUFBQyx3QkFBVSxDQUFDLFFBQVEsQ0FBQyxDQUFDO1NBQ3ZGO2FBQ0c7WUFDQSxJQUFJLENBQUMsZUFBZSxDQUFDLFFBQVEsQ0FBQyxJQUFJLHFCQUFPLENBQUMsRUFBRSxFQUFDLENBQUMsQ0FBQyxFQUFDLEVBQUUsQ0FBQyxFQUFDLHdCQUFVLENBQUMsUUFBUSxDQUFDLENBQUM7U0FDNUU7SUFDTCxDQUFDO0NBRUo7QUF4Q0QsMEJBd0NDIn0=","assetPath":"Assets/HW/Script/Respawn.ts","manifest":{"properties":[{"assembly":"ZEPETO.Character.Controller","name":"zepetoCharacter","type":"ZEPETO.Character.Controller.ZepetoCharacter","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"GoScript","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Respawn","description":""},"isCompiled":true}'
+  typescriptHash: 20b7e59f9fc2eec2163fa08b4c7bd1be
+  onlyWriteTrigger: 0

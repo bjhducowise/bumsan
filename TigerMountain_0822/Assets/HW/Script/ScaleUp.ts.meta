@@ -1,0 +1,46 @@
+fileFormatVersion: 2
+guid: 939fe38016138d74380045736e10a7e4
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass ScaleUp extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.y =
+    -12;\r\n    }\r\n    Awake() {\r\n        this.timer = 0;\r\n        this.Time
+    = 0;\r\n        this.checkTime = 10;\r\n        this.originpos = this.transform.position;\r\n       
+    this.originscale = this.transform.localScale;\r\n    }\r\n    Update() {\r\n       
+    this.Time += UnityEngine_1.Time.deltaTime;\r\n        if (this.Time < this.checkTime)
+    {\r\n            this.transform.localScale = UnityEngine_1.Vector3.op_Addition(this.transform.localScale,
+    this.scaleupdate);\r\n        }\r\n        if (this.transform.position.y < this.y)
+    {\r\n            this.transform.position = this.originpos;\r\n            this.transform.localScale
+    = this.originscale;\r\n            this.Time = 0;\r\n            this.checkTime
+    = 10;\r\n        }\r\n    }\r\n    OnCollisionEnter(coll) {\r\n        if (coll.gameObject.name
+    == $extension(\"ZEPETO.Character.Controller.Utils\").GetPlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId).character.name)
+    {\r\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.StopMoving();\r\n           
+    const character = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n           
+    character.SetGesture(this.gesture);\r\n            this.StartCoroutine(this.StopCharacterGesture(this.gesture.length
+    - 0.6));\r\n        }\r\n    }\r\n    *StopCharacterGesture(length) {\r\n       
+    yield new UnityEngine_1.WaitForSeconds(length);\r\n        const character =
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    character.CancelGesture();\r\n    }\r\n}\r\nexports.default = ScaleUp;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2NhbGVVcC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNjYWxlVXAudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSw2Q0FBbUg7QUFFbkgsNkVBQTREO0FBQzVELGlEQUFxRDtBQUVyRCxNQUFxQixPQUFRLFNBQVEscUNBQXFCO0lBQTFEOztRQVNZLE1BQUMsR0FBUSxDQUFDLEVBQUUsQ0FBQztJQW1EckIsQ0FBQztJQTdDRCxLQUFLO1FBQ0QsSUFBSSxDQUFDLEtBQUssR0FBQyxDQUFDLENBQUM7UUFDYixJQUFJLENBQUMsSUFBSSxHQUFDLENBQUMsQ0FBQztRQUNaLElBQUksQ0FBQyxTQUFTLEdBQUMsRUFBRSxDQUFDO1FBQ2xCLElBQUksQ0FBQyxTQUFTLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUM7UUFDekMsSUFBSSxDQUFDLFdBQVcsR0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLFVBQVUsQ0FBQztJQUMvQyxDQUFDO0lBQ0QsTUFBTTtRQUVGLElBQUksQ0FBQyxJQUFJLElBQUUsa0JBQUksQ0FBQyxTQUFTLENBQUM7UUFDMUIsSUFBRyxJQUFJLENBQUMsSUFBSSxHQUFDLElBQUksQ0FBQyxTQUFTLEVBQUM7WUFDeEIsSUFBSSxDQUFDLFNBQVMsQ0FBQyxVQUFVLEdBQUcscUJBQU8sQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxVQUFVLEVBQUMsSUFBSSxDQUFDLFdBQVcsQ0FBQyxDQUFDO1NBRS9GO1FBRUQsSUFBRyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLEdBQUcsSUFBSSxDQUFDLENBQUMsRUFBQztZQUNsQyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDO1lBQ3pDLElBQUksQ0FBQyxTQUFTLENBQUMsVUFBVSxHQUFHLElBQUksQ0FBQyxXQUFXLENBQUM7WUFDN0MsSUFBSSxDQUFDLElBQUksR0FBQyxDQUFDLENBQUM7WUFDWixJQUFJLENBQUMsU0FBUyxHQUFDLEVBQUUsQ0FBQztTQUNyQjtJQUdMLENBQUM7SUFFRCxnQkFBZ0IsQ0FBQyxJQUFjO1FBQzNCLElBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxJQUFJLElBQUUsZ0RBQXVCLG1CQUFtQixDQUExQywyQ0FBYSxDQUFDLFFBQVEsRUFBcUIsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxNQUFNLEVBQUUsU0FBUyxDQUFDLElBQUksRUFBQztZQUN2SSwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxVQUFVLEVBQUUsQ0FBQztZQUduRSxNQUFNLFNBQVMsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQztZQUM1RSxTQUFTLENBQUMsVUFBVSxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQztZQUNuQyxJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxvQkFBb0IsQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLE1BQU0sR0FBRyxHQUFHLENBQUMsQ0FBQyxDQUFDO1NBR2pGO0lBQ0wsQ0FBQztJQUNELENBQUMsb0JBQW9CLENBQUMsTUFBYTtRQUMvQixNQUFNLElBQUksNEJBQWMsQ0FBQyxNQUFNLENBQUMsQ0FBQztRQUNqQyxNQUFNLFNBQVMsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQztRQUM1RSxTQUFTLENBQUMsYUFBYSxFQUFFLENBQUM7SUFFMUIsQ0FBQztDQUdKO0FBNURMLDBCQTRESyJ9","assetPath":"Assets/HW/Script/ScaleUp.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"scaleupdate","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.AnimationModule","name":"gesture","type":"UnityEngine.AnimationClip","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"ScaleUp","description":""},"isCompiled":true}'
+  typescriptHash: 2c1a48151480d97bada4ce831d341028
+  onlyWriteTrigger: 0
